@@ -1,0 +1,4 @@
+﻿LSN_FSC,passagers,reference_bulletin_2025_millions,recalcule_millions,ecart_millions,conforme_arrondi_001_million,ecart_relatif_pct,compatible_tolerance_01_pct
+MET_INTERIEUR,19636085,19.63,19.636085,0.0060850000000023385,False,0.030998471726960464,True
+MET_RAD,11425451,11.43,11.425451,-0.004548999999999026,True,-0.03979877515309734,True
+MET_TRA,8210634,8.21,8.210634,0.0006339999999998014,True,0.007722289890375169,True

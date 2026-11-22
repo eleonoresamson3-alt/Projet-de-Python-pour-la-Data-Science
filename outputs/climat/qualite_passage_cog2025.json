@@ -1,0 +1,14 @@
+{
+  "codes_source_hors_fictifs": 34916,
+  "codes_cibles_cog2025": 34854,
+  "codes_univers_recensement": 34858,
+  "communes_rp_sans_ligne_sdes": 4,
+  "population_2022_communes_sans_sdes": 0.0,
+  "codes_rattaches": 45,
+  "codes_non_resolus_geographiquement": 0,
+  "codes_officiels_hors_univers_recensement": 17,
+  "vp_2022_exclus_jointure": 23314.0,
+  "vp_2022_resolus": 38774079.0,
+  "somme_conservee_chaque_annee_chaque_sous_parc": true,
+  "limite": "Rattachements officiels COG2025 verifies; millesime geographique SDES exact non precise; aucune ventilation des codes non resolus."
+}

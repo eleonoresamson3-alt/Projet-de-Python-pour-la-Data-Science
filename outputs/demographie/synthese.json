@@ -1,0 +1,15 @@
+{
+  "communes_metropole": 34746,
+  "population_2016": 64468792.0,
+  "population_2022": 65846255.0,
+  "croissance_population_2016_2022_pct": 2.136635350636018,
+  "mediane_tcam_communes_pct": 0.0,
+  "moyenne_tcam_communes_non_ponderee_pct": 0.0531685439284286,
+  "nombre_communes_en_croissance": 15109,
+  "nombre_communes_en_declin": 14696,
+  "nombre_communes_stables": 4935,
+  "population_communes_croissance_2022": 37386987.0,
+  "communes_mobilite_comparables_2016_2022": 34734,
+  "source": "Insee, RP2022, géographie COG2025",
+  "champ": "France métropolitaine"
+}

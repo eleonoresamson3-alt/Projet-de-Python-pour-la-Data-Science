@@ -1,0 +1,25 @@
+{
+  "client_date": "2026-10-26",
+  "main_period": [
+    2015,
+    2024
+  ],
+  "lsn_domestic_monthly_rows": 240,
+  "pap_observed_monthly_rows": 15767,
+  "pap_airport_1_match_pct": 100.0,
+  "pap_airport_2_match_pct": 99.65751252616224,
+  "domestic_pax_2019": 26753422,
+  "domestic_pax_2024": 20160921,
+  "external_validation_bulletin_2025_within_01_pct": true,
+  "external_validation_exact_rounding_all": false,
+  "co2_total_france_2024_mt_csv": 22.2,
+  "legal_status_after_2026_05_24": "Prolongation non établie par les sources primaires consultées ; aucune variable de traitement postérieure construite.",
+  "warnings": [
+    "PAP : secret statistique et seuil mensuel ; une absence n'est jamais un zéro.",
+    "PAP : deux sens réunis, contrairement à l'ancien intitulé de l'URL.",
+    "Bulletin mai2026 vs ZIP juillet2026 : total intérieur2025 diffère de 6085 passagers (+0,031%), écart conservé.",
+    "Une baisse du trafic aérien et une hausse des entrées/sorties en gares ne mesurent pas un report modal.",
+    "Émissions CO2 CSV : 22,2 Mt en 2024 ; page ministère : 22,1 Mt. Écart de source conservé et signalé."
+  ],
+  "domestic_growth_2019_2024_pct": -24.6417112547322
+}

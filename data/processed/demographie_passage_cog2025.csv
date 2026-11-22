@@ -1,0 +1,2075 @@
+code_commune_source,code_commune_cog2025,type_commune_source,nom_commune_source
+01039,01138,COMD,Béon
+01059,01453,COMD,Brénaz
+01091,01033,COMD,Châtillon-en-Michaille
+01097,01453,COMD,Chavornay
+01119,01080,COMD,Corcelles
+01120,01262,COMA,Cordieux
+01122,01185,COMD,Cormaranche-en-Bugey
+01137,01426,COMD,Cuisiat
+01144,01025,COMD,Dommartin
+01154,01130,COMD,Étrez
+01182,01338,COMD,Groslée
+01186,01185,COMD,Hostiaz
+01205,01033,COMD,Lancrans
+01218,01453,COMD,Lochieu
+01221,01036,COMD,Lompnieu
+01271,01286,COMD,Nattages
+01300,01204,COMD,Le Poizat
+01312,01426,COMD,Pressiat
+01324,01245,COMA,Rignat
+01330,01187,COMD,Ruffieu
+01340,01015,COMD,Saint-Bois
+01413,01215,COMD,Surjoux
+01414,01036,COMD,Sutrieu
+01417,01185,COMD,Thézillieu
+01442,01036,COMD,Vieu
+02026,02458,COMD,Artonges
+02077,02564,COMD,Berzy-le-Sec
+02147,02458,COMD,La Celle-sous-Montmirail
+02161,02053,COMD,La Chapelle-Monthodon
+02285,59545,COMA,Escaufourt
+02300,02738,COMA,Fargniers
+02301,02018,COMD,Faucoucourt
+02325,02458,COMD,Fontenelle-en-Brie
+02348,02439,COMD,Glennes
+02434,02018,COMD,Lizy
+02475,02360,COMD,Menneville
+02479,02439,COMD,Merval
+02597,02439,COMD,Perles
+02630,02738,COMA,Quessy
+02646,02439,COMD,Révillon
+02669,02053,COMD,Saint-Agnan
+02695,02054,COMD,Saint-Thibaut
+02733,02153,COMD,Suzy
+02771,02439,COMD,Vauxcéré
+02811,02439,COMD,Villers-en-Prayères
+02825,02738,COMA,Vouël
+03123,03158,COMD,Givarlais
+03153,03158,COMD,Louroux-Hodement
+03318,03168,COMD,Vitray
+04003,04081,COMA,Albiosc
+04010,04136,COMA,Argens
+04011,04023,COMA,Astoin
+04029,04155,COMA,Blégiers
+04052,04144,COMA,Châteauneuf-lès-Moustiers
+04082,04023,COMA,Esparron-la-Bâtie
+04100,04120,COMD,Larche
+04105,04192,COMA,Lincel
+04131,04124,COMA,Montpezat
+04153,04204,COMA,Le Poil
+04165,04023,COMA,Reynier
+04198,04033,COMD,Saint-Vincent-les-Forts
+05005,05118,COMD,Antonaves
+05020,05132,COMD,Bénévent-et-Charbillac
+05034,05118,COMD,Châteauneuf-de-Chabre
+05067,05132,COMD,Les Infournas
+05088,05024,COMD,Montmorin
+05120,05001,COMD,Ristolas
+05125,05061,COMA,Romette
+05150,05024,COMD,Sainte-Marie
+07016,07011,COMD,Asperjoc
+07043,07334,COMA,Brahic
+07046,07031,COMA,Casteljau
+07057,07334,COMA,Chassagnes
+07135,07262,COMD,Laval-d'Aurelle
+07164,07334,COMA,Naves
+07246,07284,COMA,Saint-Jean-de-Pourcharesse
+07256,07165,COMD,Saint-Julien-Labrousse
+08007,08116,COMD,Les Alleux
+08009,08311,COMD,Amblimont
+08012,08437,COMA,Andevanne
+08042,08173,COMD,Balaives-et-Butz
+08050,08437,COMA,Barricourt
+08051,08069,COMA,Bay
+08068,08490,COMD,Blaise
+08072,08491,COMD,Bosseval-et-Briancourt
+08079,08173,COMD,Boutancourt
+08112,08057,COMA,Châtillon-sur-Bar
+08114,08115,COMD,Chéhéry
+08152,08173,COMD,Élan
+08177,08189,COMA,Foulzy
+08213,08366,COMA,La Hardoye
+08258,08113,COMA,Logny-lès-Chaumont
+08261,08116,COMD,Louvergny
+08265,08366,COMA,Mainbresson
+08266,08366,COMA,Mainbressy
+08267,08145,COMD,Mairy
+08285,08328,COMA,Meillier-Fontaine
+08294,08053,COMD,La Moncelle
+08337,08362,COMA,Pargny-Resson
+08345,08333,COMA,Primat
+08359,08437,COMA,Rémonville
+08371,08053,COMD,Rubécourt-et-Lamécourt
+08441,08198,COMD,Termes
+08443,08490,COMD,Terron-sur-Aisne
+08475,08053,COMD,Villers-Cernay
+08493,08490,COMD,Vrizy
+08495,08113,COMA,Wadimont
+09028,09296,COMD,Aulos
+09036,09306,COMA,Banat
+09135,09334,COMD,Goulier
+09255,09056,COMD,Saint-Amans
+09286,09334,COMD,Sem
+09287,09088,COMD,Senconac
+09302,09334,COMD,Suc-et-Sentenac
+09317,09062,COMD,Uchentein
+10036,10058,COMA,Beauvoir-sur-Sarce
+10277,10003,COMD,Palis
+10311,10148,COMA,Quincey
+10415,10003,COMD,Villemaur-sur-Vanne
+11050,11304,COMD,Brenac
+11097,11323,COMD,Conilhac-de-la-Montagne
+11171,11080,COMD,Gueytes-et-Labastide
+11298,11251,COMD,Pradelles-en-Val
+11329,11131,COMD,Rouvenac
+11349,11128,COMA,Saint-Just-de-Bélengard
+12014,12224,COMD,Aurelle-Verlac
+12040,12270,COMD,Buzeins
+12076,12218,COMD,Conques
+12081,12177,COMD,Coussergues
+12087,12177,COMD,Cruéjouls
+12114,12218,COMD,Grand-Vabre
+12123,12270,COMD,Lapanouse
+12126,12270,COMD,Lavernhe
+12173,12218,COMD,Noailhac
+12196,12270,COMD,Recoules-Prévinquières
+12245,12021,COMD,Saint-Salvadou
+12285,12021,COMD,Vabre-Tizac
+13201,13055,ARM,Marseille 1er Arrondissement
+13202,13055,ARM,Marseille 2e Arrondissement
+13203,13055,ARM,Marseille 3e Arrondissement
+13204,13055,ARM,Marseille 4e Arrondissement
+13205,13055,ARM,Marseille 5e Arrondissement
+13206,13055,ARM,Marseille 6e Arrondissement
+13207,13055,ARM,Marseille 7e Arrondissement
+13208,13055,ARM,Marseille 8e Arrondissement
+13209,13055,ARM,Marseille 9e Arrondissement
+13210,13055,ARM,Marseille 10e Arrondissement
+13211,13055,ARM,Marseille 11e Arrondissement
+13212,13055,ARM,Marseille 12e Arrondissement
+13213,13055,ARM,Marseille 13e Arrondissement
+13214,13055,ARM,Marseille 14e Arrondissement
+13215,13055,ARM,Marseille 15e Arrondissement
+13216,13055,ARM,Marseille 16e Arrondissement
+14002,14150,COMD,Acqueville
+14011,14581,COMD,Anctoville
+14013,14150,COMD,Angoville
+14028,14371,COMD,Auquainville
+14029,14371,COMD,Les Autels-Saint-Bazile
+14031,14431,COMD,Les Authieux-Papion
+14051,14231,COMA,Beaufour
+14052,14061,COMD,Beaulieu
+14056,14027,COMD,Bauquay
+14058,14371,COMD,Bellou
+14065,14726,COMD,Bernières-le-Patry
+14073,14579,COMD,La Bigne
+14074,14005,COMD,Billy
+14081,14654,COMD,Boissey
+14099,14654,COMD,Bretteville-sur-Dives
+14105,14576,COMD,La Brévière
+14109,14098,COMD,Brouay
+14112,14266,COMA,Bully
+14113,14726,COMD,Burcy
+14114,14712,COMA,Bures-sur-Dives
+14115,14061,COMD,Bures-les-Monts
+14128,14027,COMD,Campandré-Valcongrain
+14129,14061,COMD,Campeaux
+14139,14061,COMD,Carville
+14142,14342,COMD,Castilly
+14144,14689,COMD,Caumont-sur-Orne
+14148,14371,COMD,Cerqueux
+14151,14658,COMD,Champ-du-Boult
+14152,14174,COMD,La Chapelle-Engerbold
+14153,14576,COMD,La Chapelle-Haute-Grue
+14154,14570,COMD,La Chapelle-Yvon
+14155,14371,COMD,Cheffreville-Tonnencourt
+14156,14726,COMD,Chênedollé
+14157,14098,COMD,Cheux
+14158,14456,COMD,Chicheboville
+14164,14349,COMD,Clinchamps-sur-Orne
+14176,14005,COMD,Conteville
+14187,14762,COMD,Coulonces
+14188,14579,COMD,Coulvain
+14189,14431,COMD,Coupesarte
+14192,14658,COMD,Courson
+14201,14431,COMD,Crèvecœur-en-Auge
+14208,14431,COMD,Croissanville
+14210,14371,COMD,La Croupte
+14213,14689,COMD,Curcy-sur-Orne
+14217,14672,COMD,Dampierre
+14219,14027,COMD,Danvou-la-Ferrière
+14222,14726,COMD,Le Désert
+14253,14726,COMD,Estry
+14255,14061,COMD,Étouvy
+14259,14371,COMD,Familly
+14264,14061,COMD,La Ferrière-Harang
+14265,14371,COMD,Fervaques
+14267,14581,COMD,Feuguerolles-sur-Seulles
+14268,14005,COMD,Fierville-Bray
+14279,14658,COMD,Fontenermont
+14294,14554,COMD,Garcelles-Secqueville
+14296,14658,COMD,Le Gast
+14300,14743,COMD,Gerrots
+14313,14431,COMD,Grandchamp-le-Château
+14317,14061,COMD,La Graverie
+14324,14689,COMD,Hamars
+14330,14371,COMD,Heurtevent
+14331,14654,COMD,Hiéville
+14339,14538,COMD,Hubert-Folie
+14340,14515,COMA,Huppain
+14350,14672,COMD,La Lande-sur-Drôme
+14356,14543,COMD,Lasson
+14359,14431,COMD,Lécaude
+14361,14174,COMD,Lénault
+14372,14143,COMD,Livry
+14373,14475,COMD,Le Locheur
+14376,14581,COMD,Longraye
+14386,14431,COMD,Magny-la-Campagne
+14387,14431,COMD,Magny-le-Freule
+14388,14762,COMD,Maisoncelles-la-Jourdan
+14395,14061,COMD,Malloué
+14413,14347,COMD,Le Mesnil-Auzouf
+14414,14371,COMD,Le Mesnil-Bacley
+14415,14658,COMD,Le Mesnil-Benoist
+14416,14658,COMD,Le Mesnil-Caussois
+14417,14658,COMD,Mesnil-Clinchamps
+14418,14371,COMD,Le Mesnil-Durand
+14420,14371,COMD,Le Mesnil-Germain
+14422,14431,COMD,Le Mesnil-Mauger
+14423,14098,COMD,Le Mesnil-Patry
+14429,14371,COMD,Meulles
+14432,14475,COMD,Missy
+14433,14654,COMD,Mittois
+14440,14061,COMD,Montamy
+14441,14061,COMD,Mont-Bertrand
+14442,14726,COMD,Montchamp
+14443,14061,COMD,Montchauvet
+14444,14431,COMD,Monteille
+14450,14654,COMD,Montviette
+14459,14371,COMD,Les Moutiers-Hubert
+14462,14342,COMD,Neuilly-la-Forêt
+14471,14371,COMD,Notre-Dame-de-Courson
+14472,14654,COMD,L'Oudon
+14477,14027,COMD,Ondefontaine
+14479,14581,COMD,Orbois
+14481,14342,COMD,Les Oubeaux
+14489,14654,COMD,Ouville-la-Bien-Tournée
+14493,14431,COMD,Percy-en-Auge
+14503,14726,COMD,Pierres
+14505,14150,COMD,Placy
+14508,14027,COMD,Le Plessis-Grimoult
+14517,14005,COMD,Poussy-la-Campagne
+14518,14371,COMD,Préaux-Saint-Sébastien
+14521,14726,COMD,Presles
+14523,14174,COMD,Proussy
+14525,14098,COMD,Putot-en-Bessin
+14532,14061,COMD,Le Reculey
+14537,14046,COMA,Robehomme
+14539,14726,COMD,La Rocque
+14544,14027,COMD,Roucamps
+14545,14762,COMD,Roullours
+14549,14726,COMD,Rully
+14551,14591,COMD,Russy
+14560,14231,COMA,Saint-Aubin-Lébizay
+14564,14726,COMD,Saint-Charles-de-Percy
+14568,14098,COMD,Sainte-Croix-Grand-Tonne
+14573,14061,COMD,Saint-Denis-Maisoncelles
+14580,14654,COMD,Saint-Georges-en-Auge
+14583,14576,COMD,Saint-Germain-de-Montgommery
+14584,14762,COMD,Saint-Germain-de-Tallevende-la-Lande-Vaumont
+14585,14174,COMD,Saint-Germain-du-Crioult
+14596,14672,COMD,Saint-Jean-des-Essartiers
+14597,14357,COMD,Saint-Jean-le-Blanc
+14599,14570,COMD,Saint-Julien-de-Mailloc
+14600,14431,COMD,Saint-Julien-le-Faucon
+14608,14527,COMD,Saint-Loup-de-Fribois
+14611,14658,COMD,Saint-Manvieu-Bocage
+14615,14371,COMD,Sainte-Marguerite-des-Loges
+14616,14654,COMD,Sainte-Marguerite-de-Viette
+14618,14061,COMD,Sainte-Marie-Laumont
+14623,14408,COMD,Saint-Martin-de-Fontenay
+14628,14689,COMD,Saint-Martin-de-Sallen
+14629,14061,COMD,Saint-Martin-des-Besaces
+14632,14061,COMD,Saint-Martin-Don
+14633,14371,COMD,Saint-Martin-du-Mesnil-Oury
+14634,14371,COMD,Saint-Michel-de-Livet
+14636,14061,COMD,Saint-Ouen-des-Besaces
+14638,14371,COMD,Saint-Ouen-le-Houx
+14642,14194,COMA,Saint-Paul-de-Courtonne
+14647,14570,COMD,Saint-Pierre-de-Mailloc
+14653,14174,COMD,Saint-Pierre-la-Vieille
+14655,14061,COMD,Saint-Pierre-Tarentaine
+14662,14357,COMD,Saint-Vigor-des-Mézerets
+14670,14543,COMD,Secqueville-en-Bessin
+14671,14658,COMD,Sept-Frères
+14673,14581,COMD,Sermentot
+14686,14726,COMD,Le Theil-Bocage
+14688,14654,COMD,Thiéville
+14691,14538,COMD,Tilly-la-Campagne
+14693,14570,COMD,Tordouet
+14695,14581,COMD,Torteval-Quesnay
+14696,14371,COMD,Tortisambert
+14702,14475,COMD,Tournay-sur-Odon
+14703,14150,COMD,Tournebu
+14704,14061,COMD,Le Tourneur
+14717,14762,COMD,Truttemer-le-Grand
+14718,14762,COMD,Truttemer-le-Petit
+14722,14143,COMD,La Vacquerie
+14725,14333,COMA,Vasouy
+14727,14035,COMD,Vaubadon
+14729,14654,COMD,Vaudeloges
+14730,14762,COMD,Vaudry
+14746,14726,COMD,Viessoix
+14749,14431,COMD,Vieux-Fumé
+14750,14654,COMD,Vieux-Pont-en-Auge
+14763,14342,COMD,Vouilly
+15044,15138,COMD,Chastel-sur-Murat
+15062,15003,COMA,Drignac
+15071,15181,COMD,Fournoulès
+15099,15142,COMD,Lavastrie
+15109,15153,COMA,Loupiac
+15115,15038,COMA,Marchal
+15136,15027,COMD,Mourjou
+15145,15142,COMD,Oradour
+15150,15268,COMD,Pers
+15177,15153,COMA,Saint-Christophe-les-Gorges
+15210,15202,COMA,Saint-Rémy-de-Salers
+15227,15142,COMD,Sériers
+15239,15153,COMA,Tourniac
+16010,16186,COMD,Ambleville
+16017,16339,COMD,Anville
+16051,16339,COMD,Bonneville
+16092,16082,COMD,Chavenat
+16126,16253,COMA,Embourie
+16129,16204,COMD,Éraville
+16140,16206,COMD,Fontclaireau
+16147,16198,COMD,Gardes-le-Pontaroux
+16149,16192,COMD,Genouillac
+16172,16082,COMD,Juillaguet
+16179,16224,COMD,Lamérac
+16202,16153,COMD,Mainxe
+16214,16192,COMD,Mazières
+16226,16393,COMD,Montignac-Charente
+16228,16339,COMD,Montigné
+16247,16204,COMD,Nonaville
+16259,16192,COMD,La Péruse
+16262,16286,COMD,Plaizac
+16322,16106,COMD,Saint-Germain-de-Confolens
+16327,16028,COMA,Saint-Hilaire
+16344,16281,COMD,Saint-Projet-Saint-Constant
+16351,16233,COMD,Saint-Simeux
+16355,16097,COMD,Saint-Sulpice-de-Cognac
+16376,16192,COMD,Suris
+16386,16204,COMD,Touzac
+16391,16110,COMD,Tuzie
+16410,16110,COMD,Villegats
+16411,16005,COMD,Villejésus
+16417,16204,COMD,Viville
+17001,17397,COMA,Agonnay
+17040,17277,COMD,La Benâte
+17090,17240,COMA,Chardes
+17123,17397,COMA,Coulonge-sur-Charente
+17144,17026,COMA,Ébéon
+17169,17344,COMD,La Frédière
+17189,17219,COMD,Hiers-Brouage
+17272,17340,COMD,Péré
+17334,17268,COMD,Saint-Georges-de-Longuepierre
+17456,17240,COMA,Vallet
+19032,19019,COMD,Brivezac
+19127,19098,COMD,Marc-la-Tour
+19183,19010,COMD,Saint-Bazile-de-la-Roche
+19185,19101,COMD,Saint-Bonnet-Avalouze
+19197,19275,COMA,Saint-Dézery
+19223,19248,COMD,Saint-Martin-Sepert
+19230,19248,COMD,Saint-Pardoux-Corbier
+19267,19275,COMA,La Tourette
+19282,19123,COMD,Venarsal
+21073,21272,COMD,Bierre-lès-Semur
+21213,21452,COMD,Crimolois
+21443,21433,COMA,Mornay
+21453,21304,COMA,Neuvelle-lès-Grancey
+21486,21352,COMD,Pluvault
+21507,21183,COMD,Premières
+21621,21623,COMD,Tart-l'Abbaye
+21697,21433,COMA,La Villeneuve-sur-Vingeanne
+22007,22055,COMD,Binic
+22027,22241,COMD,Le Cambout
+22038,22206,COMD,Châtelaudren
+22043,22241,COMD,Coëtlogon
+22058,22183,COMD,La Ferrière
+22066,22046,COMD,Le Gouray
+22078,22264,COMD,Hengoat
+22080,22203,COMD,L'Hermitage-Lorge
+22100,22219,COMD,Langast
+22102,22046,COMD,Langourla
+22123,22050,COMD,Léhon
+22151,22093,COMD,Meslin
+22154,22093,COMD,Morieux
+22167,22107,COMD,Perret
+22173,22093,COMD,Planguenoual
+22191,22046,COMD,Plessala
+22192,22209,COMD,Plessix-Balisson
+22200,22237,COMD,Pléven
+22247,22264,COMD,Pommerit-Jaudy
+22253,22264,COMD,Pouldouran
+22290,22107,COMD,Saint-Gelven
+22292,22046,COMD,Saint-Gilles-du-Mené
+22297,22046,COMD,Saint-Gouéno
+22298,22158,COMD,Saint-Guen
+22303,22046,COMD,Saint-Jacut-du-Mené
+22309,22147,COMD,Saint-Launeuc
+22357,22209,COMD,Trégon
+23023,23149,COMD,Blaudeix
+23094,23093,COMA,Gouzougnat
+23126,23189,COMD,Masbaraud-Mérignat
+23153,23090,COMA,Pigerolles
+24013,24053,COMD,Atur
+24033,24253,COMD,Beaussac
+24044,24026,COMD,Blis-et-Born
+24047,24147,COMD,La Boissière-d'Ans
+24065,24312,COMD,Breuilh
+24072,24068,COMA,Cadouin
+24079,24064,COMD,Cantillac
+24089,24325,COMD,Cazoulès
+24092,24362,COMD,Cendrieux
+24093,24554,COMD,Cercles
+24099,24253,COMD,Champeaux-et-la-Chapelle-Pommier
+24103,24026,COMD,Le Change
+24112,24086,COMA,La Chapelle-Péchaud
+24118,24316,COMD,Chenaud
+24127,24364,COMD,Coly
+24166,24026,COMD,Eyliac
+24170,24064,COMD,Eyvirat
+24198,24064,COMD,La Gonterie-Boulouneix
+24201,24260,COMA,Grand-Castang
+24203,24253,COMD,Les Graulges
+24204,24117,COMD,Grèzes
+24219,24028,COMD,Labouquerie
+24233,24259,COMD,Laveyssière
+24235,24253,COMD,Léguillac-de-Cercles
+24239,24540,COMD,Ligueux
+24249,24172,COMD,Manaurie
+24258,24312,COMD,Marsaneix
+24270,24026,COMD,Milhac-d'Auberoche
+24283,24253,COMD,Monsec
+24310,24028,COMD,Nojals-et-Clotte
+24314,24325,COMD,Orliaguet
+24315,24068,COMA,Paleyrac
+24343,24376,COMD,Puymangou
+24344,24253,COMD,Puyrenier
+24363,24035,COMD,Saint-Amand-de-Belvès
+24369,24026,COMD,Saint-Antoine-d'Auberoche
+24387,24356,COMA,Saint-Cernin-de-Reillac
+24389,24172,COMD,Saint-Cirq
+24391,24064,COMD,Saint-Crépin-de-Richemont
+24402,24423,COMD,Sainte-Eulalie-d'Eymet
+24427,24259,COMD,Saint-Jean-d'Eyraud
+24430,24064,COMD,Saint-Julien-de-Bourdeilles
+24431,24259,COMD,Saint-Julien-de-Crempse
+24433,24423,COMD,Saint-Julien-d'Eymet
+24435,24362,COMD,Saint-Laurent-des-Bâtons
+24439,24053,COMD,Saint-Laurent-sur-Manoire
+24447,24053,COMD,Sainte-Marie-de-Chignac
+24467,24354,COMA,Saint-Michel-de-Rivière
+24469,24354,COMA,Saint-Michel-l'Écluse-et-Léparon
+24475,24147,COMD,Saint-Pantaly-d'Ans
+24497,24028,COMD,Sainte-Sabine-Born
+24503,24253,COMD,Saint-Sulpice-de-Mareuil
+24530,24064,COMD,Sencenac-Puy-de-Fourches
+24561,24064,COMD,Valeuil
+24579,24253,COMD,Vieux-Mareuil
+25010,25223,COMD,Alaise
+25034,25035,COMD,Auxon-Dessous
+25064,25433,COMA,Blanchefontaine
+25076,25434,COMD,Bonnevaux-le-Prieuré
+25140,25156,COMD,Chaux-lès-Clerval
+25144,25505,COMA,Chazelot
+25146,25101,COMA,Chazoy
+25165,25101,COMA,Cordiron
+25167,25374,COMA,Cottier
+25168,25223,COMD,Coulans-sur-Lizon
+25205,25223,COMD,Doulaize
+25272,25018,COMA,Glainans
+25282,25060,COMD,Goux-les-Usiers
+25291,25417,COMA,Granges-de-Vienney
+25303,25390,COMD,Hauterive-la-Fresse
+25337,25357,COMA,Lièvremont
+25347,25390,COMD,La Longeville
+25353,25468,COMA,Lusans
+25358,25537,COMA,Maisières-Notre-Dame
+25363,25187,COMA,Mambouhans
+25396,25505,COMA,Montferney
+25398,25390,COMD,Montflovin
+25407,25275,COMA,Montursin
+25409,25505,COMA,Morchamps
+25484,25223,COMD,Refranche
+25509,25438,COMD,Routelle
+25533,25223,COMD,Saraz
+25543,25385,COMA,Servigney
+25549,25060,COMD,Sombacour
+25568,25018,COMA,Tournedoz
+25606,25275,COMA,Vernois-le-Fol
+25620,25390,COMD,Ville-du-Pont
+26184,26210,COMD,Miribel
+26187,26001,COMD,Molières-Glandaz
+26219,26216,COMD,Mureils
+26297,26210,COMD,Saint-Bonnet-de-Valclérieux
+26354,26086,COMD,Treschenu-Creyers
+26366,26179,COMD,Veaunes
+27007,27049,COMD,Ajou
+27041,27049,COMD,La Barre-en-Ouche
+27060,27213,COMD,Berthenonville
+27088,27049,COMD,Bosc-Renoult-en-Ouche
+27092,27062,COMD,Bosguérard-de-Marcouville
+27121,27213,COMD,Bus-Saint-Rémy
+27128,27213,COMD,Cantiers
+27131,27425,COMD,Carsix
+27143,27685,COMD,Champignolles
+27159,27112,COMD,Cintray
+27166,27198,COMD,Condé-sur-Iton
+27175,27070,COMD,Corny
+27195,27578,COMD,Dame-Marie
+27197,27213,COMD,Dampsmesnil
+27221,27049,COMD,Épinay
+27253,27425,COMD,Fontaine-la-Soret
+27255,27213,COMD,Fontenay-en-Vexin
+27257,27213,COMD,Forêt-la-Folie
+27262,27213,COMD,Fourges
+27265,27679,COMD,Francheville
+27270,27070,COMD,Fresne-l'Archevêque
+27274,27294,COMD,Gaillardbois-Cressenville
+27283,27049,COMD,Gisay-la-Coudre
+27292,27049,COMD,Gouttières
+27296,27049,COMD,Granchain
+27305,27112,COMD,La Guéroulde
+27308,27213,COMD,Guitry
+27344,27062,COMD,Houlbec-près-le-Gros-Theil
+27356,27049,COMD,Jonquerets-de-Livet
+27362,27049,COMD,Landepéreuse
+27449,27213,COMD,Panilleuse
+27452,27425,COMD,Perriers-la-Campagne
+27479,27153,COMA,Provemont
+27484,27277,COMD,Quessigny
+27499,27049,COMD,La Roussière
+27506,27011,COMD,Saint-Amand-des-Hautes-Terres
+27510,27448,COMD,Saint-Aquilin-de-Pacy
+27513,27049,COMD,Saint-Aubin-des-Hayes
+27515,27049,COMD,Saint-Aubin-le-Guichard
+27519,27022,COMD,Sainte-Barbe-sur-Gaillon
+27523,27516,COMD,Saint-Clair-d'Arcey
+27526,27107,COMD,Sainte-Croix-sur-Aizier
+27566,27049,COMD,Sainte-Marguerite-en-Ouche
+27573,27578,COMD,Saint-Nicolas-d'Attez
+27581,27263,COMD,Saint-Ouen-des-Champs
+27596,27049,COMD,Saint-Pierre-du-Mesnil
+27600,27516,COMD,Saint-Quentin-des-Isles
+27607,27263,COMD,Saint-Thurien
+27628,27049,COMD,Thevray
+27648,27412,COMD,Tostes
+27651,27471,COMD,Tournedos-sur-Seine
+27653,27213,COMD,Tourny
+27687,27022,COMD,Vieux-Villez
+28002,28199,COMD,Allaines-Mervilliers
+28011,28023,COMA,Armenonville-les-Gâtineaux
+28020,28406,COMD,Baignolet
+28025,28319,COMD,Barmainville
+28043,28226,COMA,Blévy
+28063,28236,COMD,Brunelles
+28112,28236,COMD,Coudreceau
+28125,28226,COMA,Dampierre-sur-Blévy
+28145,28406,COMD,Fains-la-Folie
+28165,28331,COMD,Frétigny
+28174,28386,COMA,Gâtelles
+28179,28406,COMD,Germignonville
+28228,28120,COMA,Mainterne
+28238,28360,COMA,Marville-les-Bois
+28258,28422,COMD,Montainville
+28276,28319,COMD,Neuvy-en-Beauce
+28307,28056,COMA,Prouais
+28311,28199,COMD,Le Puiset
+28320,28422,COMD,Rouvray-Saint-Florentin
+28338,28034,COMA,Saint-Germain-la-Gâtine
+28361,28015,COMD,Bleury-Saint-Symphorien
+28376,28018,COMD,Soizé
+28381,28373,COMA,Tardais
+28399,28279,COMA,Vacheresses-les-Basses
+28412,28406,COMD,Villeau
+28413,28373,COMA,La Ville-aux-Nonains
+28416,28422,COMD,Villeneuve-Saint-Nicolas
+28420,28120,COMA,Vitray-sous-Brézolles
+29052,29003,COMD,Esquibien
+29092,29241,COMA,Kernével
+29127,29266,COMD,Loc-Eguiner-Saint-Thégonnec
+29129,29227,COMD,Locmaria-Berrien
+29149,29076,COMD,Milizac
+29203,29021,COMD,Plounéour-Trez
+29219,29199,COMD,Le Ponthou
+30094,30329,COMD,Corbès
+31016,31085,COMA,Argut-Dessus
+31154,31085,COMA,Couledoux
+31298,31471,COMD,Lez
+31307,31412,COMD,Lunax
+32011,32426,COMA,Artiguedieu
+32067,32365,COMD,Cabas-Loumassès
+32074,32344,COMD,Cannet
+32168,32079,COMD,Labarrère
+32179,32462,COMA,Lagraulas
+32260,32365,COMD,Monbardon
+32413,32365,COMD,Sarcos
+33107,33106,COMD,Castillon-de-Castets
+33267,33380,COMD,Marcillac
+33371,33018,COMD,Saint-Antoine
+33409,33008,COMD,Saint-Genis-du-Bois
+33495,33018,COMD,Salignac
+34093,34144,COMD,Dio-et-Valquières
+34330,34246,COMD,Vérargues
+35011,35292,COMD,Baillé
+35048,35168,COMD,Campel
+35053,35220,COMD,Chancé
+35074,35096,COMA,Chaumeré
+35083,35191,COMD,Coglès
+35100,35163,COMD,Dompierre-du-Chemin
+35112,35062,COMD,Fleurigné
+35113,35004,COMD,La Fontenelle
+35147,35308,COMD,Lanhélin
+35209,35069,COMD,Ossé
+35254,35069,COMD,Saint-Aubin-du-Pavail
+35267,35257,COMD,Saint-Étienne-en-Coglès
+35269,35282,COMD,Saint-Georges-de-Chesné
+35293,35282,COMD,Saint-Marc-sur-Couesnon
+35301,35184,COMD,Saint-M'Hervon
+35303,35004,COMD,Saint-Ouen-la-Rouërie
+35323,35191,COMD,La Selle-en-Coglès
+35341,35004,COMD,Tremblay
+35344,35308,COMD,Tressé
+35348,35282,COMD,Vendel
+36039,36070,COMA,Chantôme
+36072,36244,COMD,Faverolles-en-Berry
+36151,36229,COMD,Parpeçay
+36183,36229,COMD,Sainte-Cécile
+36201,36093,COMD,Saint-Martin-de-Lamps
+36245,36202,COMD,Villers-les-Ormes
+37102,37123,COMD,Les Essards
+37209,37254,COMD,Saint-Bauld
+38016,38479,COMD,Arzay
+38021,38225,COMD,Autrans
+38025,38284,COMD,Balbins
+38028,38001,COMD,La Bâtie-Divisin
+38121,38479,COMD,Commelle
+38125,38456,COMD,Cordéac
+38165,38001,COMD,Fitilieu
+38274,38479,COMD,Nantoin
+38302,38073,COMD,Le Périer
+38305,38292,COMD,Le Pin
+38306,38163,COMD,Pinsot
+38367,38395,COMD,Saint-Bernard
+38435,38395,COMD,Saint-Pancrasse
+38534,38253,COMD,Vénosc
+38541,38022,COMD,Veyrins-Thuellin
+39005,39385,COMA,Abergement-Saint-Jean
+39012,25527,COMA,Antorpe
+39044,39022,COMA,Beauvoisin
+39064,39576,COMD,Bonnaud
+39075,39199,COMD,Bréry
+39115,39258,COMD,Château-des-Prés
+39186,39491,COMD,Cuttura
+39195,39273,COMD,Dessia
+39213,39329,COMD,Esserval-Combe
+39243,39577,COMD,Froideville
+39256,39198,COMD,Goux
+39264,39576,COMD,Grusse
+39294,39368,COMD,Lézat
+39340,39329,COMD,Molpré
+39347,39273,COMD,Montagna-le-Templier
+39369,39010,COMA,Morval
+39371,39368,COMD,La Mouille
+39383,39205,COMA,Nenon
+39414,39190,COMD,Le Petit-Mercey
+39417,39130,COMD,Les Piards
+39438,39286,COMD,Ponthoux
+39440,39286,COMD,Pratz
+39442,39130,COMD,Prénovel
+39474,39576,COMD,Sainte-Agnès
+39482,39017,COMD,Saint-Germain-lès-Arlay
+39542,39583,COMD,Valfin-sur-Valouse
+39548,39434,COMD,Vaux-sur-Poligny
+39549,39576,COMD,Vercia
+39562,39130,COMD,Villard-sur-Bienne
+39578,39086,COMA,Viremont
+40009,40197,COMD,Arjuzanx
+40048,40243,COMD,Boos
+40107,40197,COMD,Garrosse
+40302,40197,COMD,Sindères
+41005,41248,COMD,Arville
+41011,41171,COMD,Baigneaux
+41015,41171,COMD,Beauvilliers
+41021,41273,COMA,La Bosse
+41023,41151,COMD,Bourré
+41033,41142,COMD,Chambon-sur-Cisse
+41056,41173,COMD,La Colombe
+41064,41055,COMD,Coulanges
+41076,41273,COMA,Écoman
+41082,41059,COMD,Feings
+41092,41059,COMD,Fougères-sur-Bièvre
+41133,41173,COMD,Membrolles
+41165,41248,COMD,Oigny
+41169,41142,COMD,Orchaise
+41170,41059,COMD,Ouchamps
+41183,41173,COMD,Prénouvellon
+41197,41248,COMD,Saint-Agil
+41202,41248,COMD,Saint-Avit
+41210,41171,COMD,Sainte-Gemmes
+41227,41149,COMA,Saint-Quentin-lès-Troo
+41240,41055,COMD,Seillac
+41244,41173,COMD,Semerville
+41257,41059,COMD,Thenay
+41263,41070,COMD,Tréhet
+41264,41173,COMD,Tripleville
+41270,41173,COMD,Verdes
+41272,41167,COMD,Veuves
+42004,42268,COMD,Amions
+42080,42225,COMA,La Cula
+42082,42268,COMD,Dancé
+42109,42084,COMD,L'Hôpital-sous-Rochefort
+42114,42039,COMD,Jeansagnière
+42190,42218,COMA,Rochetaillée
+42250,42279,COMA,Saint-Just-sur-Loire
+42252,42084,COMD,Saint-Laurent-Rochefort
+42291,42245,COMD,Saint-Thurin
+43176,43221,COMD,Saint-Didier-d'Allier
+43255,43090,COMD,Vazeilles-près-Saugues
+44004,44163,COMD,Anetz
+44008,44029,COMD,Barbechat
+44011,44213,COMD,Belligné
+44017,44180,COMD,Bonnœuvre
+44034,44213,COMD,La Chapelle-Saint-Sauveur
+44040,44005,COMD,Chéméré
+44059,44021,COMD,Fresnay-en-Retz
+44093,44180,COMD,Maumusson
+44147,44213,COMD,La Rouxière
+44181,44087,COMD,Saint-Même-le-Tenu
+44191,44180,COMD,Saint-Sulpice-des-Landes
+44219,44180,COMD,Vritz
+44225,44180,COMD,Freigné
+45003,45240,COMA,Allainville-en-Beauce
+45007,45155,COMA,Arrabloy
+45048,45253,COMA,Bouzonville-en-Beauce
+45057,45191,COMD,Labrosse
+45090,45035,COMA,Chemault
+45106,45191,COMD,Coudray
+45140,45240,COMA,Faronville
+45163,45160,COMA,Guignonville
+45172,45025,COMA,Izy
+45190,45191,COMD,Mainvilliers
+45192,45191,COMD,Manchecourt
+45221,45191,COMD,Nangeville
+45236,45191,COMD,Orveau-Bellesauve
+45295,45240,COMA,Saint-Péravy-Épreux
+45304,45162,COMA,Sébouville
+45318,45240,COMA,Teillay-le-Gaudin
+45319,45118,COMA,Teillay-Saint-Benoît
+45349,45348,COMA,Yèvre-le-Châtel
+46014,46263,COMD,Bagat-en-Quercy
+46019,46138,COMD,Beaumat
+46048,46311,COMD,Calviac
+46067,46232,COMD,Cazillac
+46071,46311,COMD,Comiac
+46077,46156,COMD,Cours
+46099,46033,COMD,Fargues
+46110,46138,COMD,Fontanes-du-Causse
+46141,46311,COMD,Lacam-d'Ourcet
+46150,46311,COMD,Lamativie
+46158,46262,COMD,Lascabanes
+46217,46172,COMD,Pern
+46248,46063,COMD,Sainte-Alauzie
+46274,46262,COMD,Saint-Laurent-Lolmie
+46275,46252,COMD,Saint-Martin-de-Vers
+46278,46033,COMD,Saint-Matré
+46285,46263,COMD,Saint-Pantaléon
+46287,46103,COMD,Saint-Paul-de-Loubressac
+46291,46138,COMD,Saint-Sauveur-la-Vallée
+46298,46083,COMD,Sarrazac
+46300,46033,COMD,Saux
+46325,46138,COMD,Vaillac
+46327,46156,COMD,Valroufié
+46331,46268,COMD,Vers
+47116,47302,COMA,Gueyze
+47149,47221,COMA,Lisse
+47166,47302,COMA,Meylan
+47268,47206,COMA,Saint-Pierre-de-Caubel
+47322,47134,COMA,Villeneuve-de-Mézin
+48011,48034,COMA,Auxillac
+48014,48027,COMD,Bagnols-les-Bains
+48023,48027,COMD,Belvezet
+48035,48034,COMA,La Capelle
+48040,48027,COMD,Chasseradès
+48047,48009,COMD,La Chaze-de-Peyre
+48049,48099,COMD,Chirac
+48057,48127,COMD,Estables
+48060,48009,COMD,Fau-de-Peyre
+48062,48105,COMD,Fontanes
+48076,48009,COMD,Javols
+48078,48126,COMD,Lachamp
+48084,48139,COMD,Laval-Atger
+48093,48027,COMD,Mas-d'Orcières
+48101,48146,COMD,Montbrun
+48102,48034,COMA,Montjézieu
+48120,48087,COMD,Prinsuéjols
+48122,48146,COMD,Quézac
+48125,48094,COMD,Le Recoux
+48133,48127,COMD,Saint-Amans
+48134,48152,COMD,Saint-Andéol-de-Clerguemort
+48142,48009,COMD,Sainte-Colombe-de-Peyre
+48154,48094,COMD,Saint-Georges-de-Lévéjac
+48162,48166,COMD,Saint-Julien-d'Arpaon
+48164,48027,COMD,Saint-Julien-du-Tournel
+48180,48094,COMD,Saint-Rome-de-Dolan
+48183,48009,COMD,Saint-Sauveur-de-Peyre
+48184,48038,COMD,Saint-Symphorien
+48189,48127,COMD,Servières
+48195,48094,COMD,Les Vignes
+48196,48039,COMA,Le Villard
+48197,48127,COMD,La Villedieu
+49001,49050,COMD,Les Alleuds
+49004,49307,COMD,Andard
+49005,49176,COMD,Andigné
+49006,49023,COMD,Andrezé
+49013,49228,COMD,Auverse
+49014,49331,COMD,Aviré
+49016,49328,COMD,Bagneux
+49019,49307,COMD,Bauné
+49024,49244,COMD,Beausse
+49025,49163,COMD,Beauvau
+49031,49018,COMD,Bocé
+49032,49307,COMD,La Bohalle
+49033,49218,COMD,La Boissière-sur-Èvre
+49034,49244,COMD,Botz-en-Mauges
+49037,49331,COMD,Le Bourg-d'Iré
+49039,49244,COMD,Bourgneuf-en-Mauges
+49040,49126,COMD,Bouzillé
+49042,49307,COMD,Brain-sur-l'Authion
+49043,49367,COMD,Brain-sur-Longuenée
+49044,49228,COMD,Breil
+49046,49060,COMD,Brézé
+49047,49125,COMD,Brigné
+49049,49138,COMD,Brion
+49051,49080,COMD,Brissarthe
+49052,49228,COMD,Broc
+49059,49373,COMD,Les Cerqueux-sous-Passavant
+49062,49228,COMD,Chalonnes-sous-le-Lude
+49065,49080,COMD,Champigné
+49066,49345,COMD,Champ-sur-Layon
+49069,49126,COMD,Champtoceaux
+49071,49092,COMD,Chanzeaux
+49072,49023,COMD,La Chapelle-du-Genêt
+49073,49248,COMD,La Chapelle-Hullin
+49074,49092,COMD,La Chapelle-Rousselin
+49075,49244,COMD,La Chapelle-Saint-Florent
+49077,49331,COMD,La Chapelle-sur-Oudon
+49078,49050,COMD,Charcé-Saint-Ellier-sur-Aubance
+49079,49018,COMD,Chartrené
+49081,49331,COMD,Châtelais
+49083,49218,COMD,Chaudron-en-Mauges
+49084,49163,COMD,Chaumont-d'Anjou
+49085,49218,COMD,La Chaussaire
+49087,49228,COMD,Chavaignes
+49088,49248,COMD,Chazé-Henry
+49091,49050,COMD,Chemellier
+49093,49220,COMD,Chemiré-sur-Sarthe
+49094,49261,COMD,Chênehutte-Trèves-Cunault
+49095,49067,COMD,Chenillé-Changé
+49096,49080,COMD,Cherré
+49097,49018,COMD,Cheviré-le-Rouge
+49098,49228,COMD,Chigné
+49101,49018,COMD,Clefs
+49103,49248,COMD,Combrée
+49104,49125,COMD,Concourson-sur-Layon
+49105,49080,COMD,Contigné
+49106,49307,COMD,Corné
+49108,49183,COMD,La Cornuaille
+49111,49092,COMD,Cossé-d'Anjou
+49115,49050,COMD,Coutures
+49116,49018,COMD,Cuon
+49117,49307,COMD,La Daguenière
+49118,49328,COMD,Dampierre-sur-Loire
+49119,49220,COMD,Daumeray
+49122,49228,COMD,Dénezé-sous-le-Lude
+49128,49018,COMD,Échemiré
+49133,49345,COMD,Faveraye-Mâchelles
+49134,49345,COMD,Faye-d'Anjou
+49136,49331,COMD,La Ferrière-de-Flée
+49137,49218,COMD,Le Fief-Sauvin
+49139,49194,COMD,Fontaine-Milon
+49141,49125,COMD,Forges
+49142,49373,COMD,La Fosse-de-Tigné
+49143,49018,COMD,Fougeré
+49145,49218,COMD,Le Fuilet
+49147,49021,COMD,Gée
+49148,49367,COMD,Gené
+49149,49261,COMD,Gennes
+49150,49228,COMD,Genneteil
+49151,49023,COMD,Gesté
+49153,49092,COMD,Valanjou
+49154,49261,COMD,Grézillé
+49156,49248,COMD,Grugé-l'Hôpital
+49157,49018,COMD,Le Guédeniau
+49158,49331,COMD,L'Hôtellerie-de-Flée
+49159,49174,COMD,Huillé
+49162,49023,COMD,Jallais
+49165,49023,COMD,La Jubaudière
+49168,49180,COMA,Jumelles
+49169,49092,COMD,La Jumellière
+49172,49126,COMD,Landemont
+49173,49228,COMD,Lasse
+49175,49228,COMD,Linières-Bouton
+49177,49126,COMD,Liré
+49179,49301,COMD,Le Longeron
+49181,49003,COMD,Louerre
+49184,49331,COMD,Louvaines
+49185,49163,COMD,Lué-en-Baugeois
+49186,49050,COMD,Luigné
+49187,49331,COMD,Marans
+49189,49080,COMD,Marigné
+49190,49244,COMD,Le Marillais
+49191,49086,COMD,Martigné-Briand
+49196,49200,COMD,La Meignanne
+49197,49228,COMD,Meigné-le-Vicomte
+49198,49125,COMD,Meigné
+49199,49092,COMD,Melay
+49202,49228,COMD,Méon
+49204,49244,COMD,Le Mesnil-en-Vallée
+49206,49301,COMD,Montfaucon-Montigné
+49207,49125,COMD,Montfort
+49208,49331,COMD,Montguillon
+49212,49244,COMD,Montjean-sur-Loire
+49213,49018,COMD,Montpollin
+49225,49092,COMD,Neuvy-en-Mauges
+49226,49248,COMD,Noëllet
+49227,49086,COMD,Notre-Dame-d'Allençon
+49229,49331,COMD,Noyant-la-Gravoyère
+49230,49003,COMD,Noyant-la-Plaine
+49232,49373,COMD,Nueil-sur-Layon
+49233,49331,COMD,Nyoiseau
+49234,49228,COMD,Parçay-les-Pins
+49238,49323,COMD,Pellouailles-les-Vignes
+49239,49023,COMD,Le Pin-en-Mauges
+49242,49200,COMD,Le Plessis-Macé
+49243,49023,COMD,La Poitevinière
+49245,49018,COMD,Pontigné
+49249,49367,COMD,La Pouëze
+49250,49248,COMD,La Prévière
+49251,49200,COMD,Pruillé
+49252,49218,COMD,Le Puiset-Doré
+49254,49080,COMD,Querré
+49256,49345,COMD,Rablay-sur-Layon
+49258,49301,COMD,La Renaudière
+49263,49301,COMD,Roussay
+49264,49301,COMD,Saint-André-de-la-Marche
+49265,49292,COMD,Saint-Aubin-de-Luigné
+49268,49092,COMD,Sainte-Christine
+49270,49126,COMD,Saint-Christophe-la-Couperie
+49273,49301,COMD,Saint-Crespin-sur-Moine
+49274,49060,COMD,Saint-Cyr-en-Bourg
+49276,49244,COMD,Saint-Florent-le-Vieil
+49277,49331,COMD,Sainte-Gemmes-d'Andigné
+49279,49261,COMD,Saint-Georges-des-Sept-Voies
+49280,49138,COMD,Saint-Georges-du-Bois
+49281,49092,COMD,Saint-Georges-des-Gardes
+49282,49125,COMD,Saint-Georges-sur-Layon
+49285,49301,COMD,Saint-Germain-sur-Moine
+49286,49373,COMD,Saint-Hilaire-du-Bois
+49287,49328,COMD,Saint-Hilaire-Saint-Florent
+49289,49298,COMD,Saint-Jean-de-Linières
+49290,49167,COMD,Saint-Jean-des-Mauvrets
+49293,49328,COMD,Saint-Lambert-des-Levées
+49295,49244,COMD,Saint-Laurent-de-la-Plaine
+49296,49126,COMD,Saint-Laurent-des-Autels
+49297,49244,COMD,Saint-Laurent-du-Mottay
+49300,49092,COMD,Saint-Lézin
+49303,49018,COMD,Saint-Martin-d'Arcé
+49304,49261,COMD,Saint-Martin-de-la-Place
+49305,49331,COMD,Saint-Martin-du-Bois
+49309,49248,COMD,Saint-Michel-et-Chanveaux
+49312,49023,COMD,Saint-Philbert-en-Mauges
+49313,49218,COMD,Saint-Pierre-Montlimart
+49314,49218,COMD,Saint-Quentin-en-Mauges
+49315,49018,COMD,Saint-Quentin-lès-Beaurepaire
+49316,49218,COMD,Saint-Rémy-en-Mauges
+49317,49050,COMD,Saint-Rémy-la-Varenne
+49318,49050,COMD,Saint-Saturnin-sur-Loire
+49319,49331,COMD,Saint-Sauveur-de-Flée
+49320,49126,COMD,Saint-Sauveur-de-Landemont
+49321,49160,COMD,Saint-Sigismond
+49322,49029,COMD,Saint-Sulpice
+49324,49218,COMD,La Salle-et-Chapelle-Aubry
+49325,49092,COMD,La Salle-de-Vihiers
+49327,49050,COMD,Saulgé-l'Hôpital
+49335,49080,COMD,Sœurdres
+49337,49377,COMD,Soucelles
+49342,49373,COMD,Tancoigné
+49346,49261,COMD,Le Thoureil
+49348,49373,COMD,Tigné
+49349,49301,COMD,Tillières
+49350,49301,COMD,Torfou
+49351,49092,COMD,La Tourlandry
+49354,49248,COMD,Le Tremblay
+49356,49373,COMD,Trémont
+49360,49126,COMD,La Varenne
+49363,49050,COMD,Vauchrétien
+49365,49125,COMD,Les Verchers-sur-Layon
+49366,49248,COMD,Vergonnes
+49372,49018,COMD,Le Vieil-Baugé
+49375,49023,COMD,Villedieu-la-Blouère
+49376,49183,COMD,Villemoisan
+49379,49373,COMD,Le Voide
+49380,49018,COMD,Vaulandry
+49382,49160,COMD,Le Fresne-sur-Loire
+50001,50041,COMD,Acqueville
+50007,50550,COMD,Ancteville
+50009,50565,COMD,Angey
+50010,50099,COMD,Angoville-au-Plain
+50014,50215,COMD,Anneville-sur-Mer
+50015,50272,COMD,Annoville
+50018,50487,COMD,Argouges
+50020,50041,COMD,Auderville
+50035,50236,COMD,Baudreville
+50037,50260,COMD,La Bazoge
+50043,50260,COMD,Bellefontaine
+50047,50188,COMA,La Beslière
+50051,50523,COMD,Beuzeville-au-Plain
+50053,50256,COMA,Les Biards
+50056,50359,COMD,Bion
+50057,50041,COMD,Biville
+50061,50215,COMD,Boisroger
+50063,50236,COMD,Bolleville
+50073,50041,COMD,Branville-Hague
+50075,50601,COMD,Brectouville
+50080,50099,COMD,Brévands
+50089,50099,COMD,Brucheville
+50100,50487,COMD,Carnet
+50103,50523,COMD,Carquebut
+50107,50099,COMD,Catz
+50113,50256,COMA,Chalandrey
+50116,50565,COMD,Champcey
+50119,50431,COMD,Les Champs-de-Losque
+50123,50239,COMD,La Chapelle-en-Juger
+50125,50260,COMD,Chasseguey
+50127,50523,COMD,Chef-du-Pont
+50128,50393,COMD,Le Chefresne
+50131,50260,COMD,Chérencé-le-Roussel
+50132,50168,COMD,Les Chéris
+50133,50391,COMD,Chèvreville
+50134,50363,COMD,Chevry
+50136,50273,COMD,Coigny
+50140,50419,COMD,Contrières
+50154,50487,COMD,La Croix-Avranchin
+50160,50412,COMD,Denneville
+50163,50041,COMD,Digulleville
+50170,50523,COMD,Écoquenéauville
+50171,50041,COMD,Éculleville
+50173,50129,COMD,Équeurdreville-Hainneville
+50179,50591,COMD,Ferrières
+50187,50041,COMD,Flottemanville-Hague
+50189,50436,COMD,Fontenay
+50191,50523,COMD,Foucarville
+50202,50601,COMD,Giéville
+50203,50129,COMD,La Glacerie
+50204,50236,COMD,Glatigny
+50213,50546,COMD,Gourfaleur
+50220,50041,COMD,Gréville-Hague
+50223,50419,COMD,Guéhébert
+50224,50601,COMD,Guilberville
+50242,50041,COMD,Herqueville
+50244,50419,COMD,Hérenguerville
+50245,50591,COMD,Heussé
+50249,50099,COMD,Houesville
+50254,50591,COMD,Husson
+50255,50419,COMD,Hyenville
+50257,50041,COMD,Jobourg
+50280,50292,COMD,Lozon
+50284,50410,COMD,Macey
+50286,50256,COMA,La Mancellière
+50287,50546,COMD,La Mancellière-sur-Vire
+50293,50391,COMD,Martigny
+50301,50197,COMD,Le Mesnil-Amand
+50306,50256,COMA,Le Mesnil-Bœufs
+50308,50550,COMD,Le Mesnilbus
+50309,50188,COMA,Le Mesnil-Drey
+50313,50546,COMD,Le Mesnil-Herman
+50316,50363,COMD,Le Mesnil-Opac
+50318,50260,COMD,Le Mesnil-Rainfray
+50320,50197,COMD,Le Mesnil-Rogues
+50322,50256,COMA,Le Mesnil-Thébault
+50323,50260,COMD,Le Mesnil-Tôve
+50325,50431,COMD,Le Mesnil-Vigot
+50329,50391,COMD,Milly
+50330,50236,COMD,Mobecq
+50337,50487,COMD,Montanel
+50339,50388,COMD,Montchaton
+50343,50236,COMD,Montgardon
+50344,50256,COMA,Montgothier
+50346,50256,COMA,Montigny
+50348,50099,COMD,Montmartin-en-Graignes
+50354,50215,COMD,Montsurvent
+50355,50565,COMD,Montviron
+50367,50256,COMA,Naftel
+50380,50492,COMD,Notre-Dame-d'Elle
+50381,50359,COMD,Notre-Dame-du-Touchet
+50385,50041,COMD,Omonville-la-Petite
+50386,50041,COMD,Omonville-la-Rogue
+50396,50082,COMD,Les Perques
+50404,50444,COMD,Placy-Montaigu
+50414,50492,COMD,Précorbin
+50415,50273,COMD,Prétot-Sainte-Suzanne
+50416,50129,COMD,Querqueville
+50418,50082,COMD,Quettetot
+50427,50523,COMD,Ravenoville
+50434,50565,COMD,La Rochelle-Normande
+50438,50550,COMD,La Ronde-Haye
+50439,50167,COMA,Ronthon
+50440,50639,COMD,Rouffigny
+50441,50492,COMD,Rouxeville
+50449,50550,COMD,Saint-Aubin-du-Perron
+50458,50099,COMD,Saint-Côme-du-Mont
+50460,50041,COMD,Sainte-Croix-Hague
+50465,50095,COMD,Saint-Ébremond-de-Bonfossé
+50470,50564,COMD,Saint-Georges-de-Bohon
+50477,50041,COMD,Saint-Germain-des-Vaux
+50494,50359,COMD,Saint-Jean-du-Corail
+50497,50273,COMD,Saint-Jores
+50501,50493,COMA,Saint-Léger
+50503,50412,COMD,Saint-Lô-d'Ourville
+50508,50591,COMD,Sainte-Marie-du-Bois
+50515,50484,COMD,Saint-Martin-de-Landelles
+50516,50025,COMD,Saint-Martin-des-Champs
+50520,50082,COMD,Saint-Martin-le-Hébert
+50524,50550,COMD,Saint-Michel-de-la-Pierre
+50534,50099,COMD,Saint-Pellerin
+50544,50236,COMD,Saint-Rémy-des-Landes
+50545,50546,COMD,Saint-Romphaire
+50557,50090,COMD,Saint-Symphorien-des-Monts
+50558,50236,COMD,Saint-Symphorien-le-Valois
+50561,50493,COMA,Saint-Ursin
+50573,50215,COMD,Servigny
+50581,50546,COMD,Soulles
+50583,50197,COMD,Sourdeval-les-Bois
+50586,50236,COMD,Surville
+50600,50041,COMD,Tonneville
+50602,50129,COMD,Tourlaville
+50605,50419,COMD,Trelly
+50611,50041,COMD,Urville-Nacqueville
+50614,50082,COMD,Le Valdécie
+50620,50041,COMD,Vasteville
+50622,50550,COMD,Vaudrimesnil
+50623,50041,COMD,Vauville
+50625,50582,COMD,Vengeons
+50627,50487,COMD,Vergoncey
+50630,50410,COMD,Vessey
+50631,50099,COMD,Les Veys
+50632,50256,COMA,Vezins
+50635,50492,COMD,Vidouville
+50638,50359,COMD,Villechien
+50640,50487,COMD,Villiers-le-Pré
+50644,50484,COMD,Virey
+50646,50082,COMD,Le Vrétot
+51021,51158,COMA,Aulnay-aux-Planches
+51024,51158,COMA,Aulnizeux
+51063,51457,COMD,Binson-et-Orquigny
+51064,51030,COMD,Bisseuil
+51205,51485,COMD,Dampierre-au-Temple
+51261,51075,COMD,Fresne-lès-Reims
+51271,51612,COMD,Gionges
+51331,51564,COMD,Louvois
+51347,51030,COMD,Mareuil-sur-Ay
+51383,51158,COMA,Morains
+51405,51248,COMA,Normée
+51411,51612,COMD,Oger
+51494,52182,COMA,Sainte-Livière
+51575,51611,COMA,Toulon-la-Montagne
+51637,51457,COMD,Villers-sous-Châtillon
+51651,51612,COMD,Voipreux
+51664,51171,COMD,Gernicourt
+52010,52088,COMA,Anglus
+52018,52140,COMD,Argentolles
+52020,52273,COMA,Arnoncourt-sur-Apance
+52032,52497,COMA,Avrainville
+52036,52449,COMD,Balesmes-sur-Marne
+52041,52400,COMA,Beaucharmoy
+52049,52140,COMD,Biernes
+52052,52140,COMD,Blaise
+52054,52008,COMA,Blancheville
+52068,52182,COMA,Braucourt
+52071,52491,COMA,Bressoncourt
+52073,52123,COMA,Breuil-sur-Marne
+52077,52197,COMA,Broncourt
+52078,52121,COMD,Brottes
+52080,52491,COMA,Brouthières
+52081,52426,COMA,Buchey
+52100,52140,COMD,Champcourt
+52111,52432,COMA,Charmoilles
+52112,52197,COMA,Charmoy
+52117,52189,COMA,Chatoillenot
+52139,52074,COMA,Colombey-lès-Choiseul
+52143,52083,COMA,Corgirnon
+52144,52269,COMA,Corlée
+52150,52189,COMA,Courcelles-Val-d'Esnoms
+52153,52114,COMA,Créancey
+52154,52205,COMA,Crenay
+52176,52353,COMA,Donnemarie
+52180,52411,COMD,Droyes
+52186,52332,COMA,Épinant
+52191,52353,COMA,Essey-les-Eaux
+52192,52114,COMA,Essey-les-Ponts
+52202,52497,COMA,Flornoy
+52209,52377,COMA,Fresnoy-en-Bassigny
+52210,70122,COMA,Frettes
+52215,52060,COMA,Genrupt
+52224,52064,COMD,Gonaincourt
+52225,52064,COMD,Goncourt
+52226,52265,COMA,Gourzon
+52236,52288,COMA,Harméville
+52238,52140,COMD,Harricourt
+52239,52529,COMD,Heuilley-Cotton
+52252,52246,COMA,Jorquenay
+52259,52251,COMA,Laharmand
+52261,52094,COMA,Lamargelle-aux-Bois
+52262,52140,COMD,Lamothe-en-Blaisy
+52263,52173,COMA,Landéville
+52268,52288,COMA,Laneuville-au-Bois
+52270,52432,COMA,Lannes
+52279,52140,COMD,Lavilleneuve-aux-Fresnes
+52281,52332,COMA,Lécourt
+52283,52332,COMA,Lénizeul
+52293,52411,COMD,Longeville-sur-la-Laines
+52296,52411,COMD,Louze
+52299,52456,COMA,Maconcourt
+52309,52058,COMA,Marault
+52314,52114,COMA,Marmesse
+52317,52332,COMA,Maulain
+52324,52074,COMA,Meuvy
+52329,52388,COMA,Montesson
+52333,52242,COMA,Montlandon
+52339,52469,COMA,Montsaon
+52340,52405,COMD,Montsaugeon
+52345,52094,COMA,Musseau
+52351,52064,COMD,Nijon
+52361,52353,COMA,Odival
+52368,52274,COMA,Ormoy-sur-Aube
+52379,52187,COMD,Pautaines-Augeville
+52381,52292,COMA,Percey-le-Pautel
+52387,52529,COMD,Piépape
+52389,52384,COMA,Pierrefontaines
+52402,52529,COMD,Prangey
+52404,52140,COMD,Pratz
+52408,52265,COMA,Prez-sur-Marne
+52409,52211,COMA,Provenchères-sur-Marne
+52410,52332,COMA,Provenchères-sur-Meuse
+52412,52050,COMA,Le Puits-des-Mèzes
+52417,52332,COMA,Ravennefontaines
+52418,52332,COMA,Récourt
+52427,52331,COMD,Robert-Magny
+52434,52058,COMA,Roôcourt-la-Côte
+52435,52242,COMA,Rosoy-sur-Amance
+52441,52479,COMA,Rozières
+52451,52031,COMA,Saint-Martin-sur-la-Renne
+52454,52529,COMD,Saint-Michel
+52460,52251,COMA,Sarcicourt
+52462,52177,COMA,Saucourt-sur-Rognon
+52466,52088,COMA,Sauvage-Magny
+52477,52118,COMA,Sommermont
+52478,52123,COMA,Sommeville
+52481,52491,COMA,Soulaincourt
+52496,52242,COMA,Troischamps
+52498,52432,COMA,Tronchoy
+52501,52031,COMA,Valdelancourt
+52508,52544,COMA,Vaux-la-Douce
+52509,52405,COMD,Vaux-sous-Aubigny
+52521,52383,COMA,Vieux-Moulins
+52527,52060,COMA,Villars-Saint-Marcellin
+52530,52094,COMA,Villemervry
+52531,52094,COMA,Villemoron
+52532,52497,COMA,Villiers-aux-Bois
+52533,52178,COMA,Villiers-aux-Chênes
+52537,52230,COMA,Villiers-sur-Marne
+53004,53124,COMD,Ampoigné
+53006,53029,COMD,Argenton-Notre-Dame
+53014,53062,COMD,Azé
+53032,53228,COMD,Blandouet
+53044,53118,COMA,Brétignolles-le-Moulin
+53050,53255,COMD,Chammes
+53065,53097,COMD,Châtres-la-Forêt
+53092,53161,COMD,Deux-Évailles
+53095,53017,COMD,Épineux-le-Seguin
+53138,53104,COMD,Longuefuye
+53159,53161,COMD,Montourtier
+53194,53137,COMD,Ruillé-le-Gravelais
+53205,53161,COMD,Saint-Céneré
+53207,53097,COMD,Saint-Christophe-du-Luat
+53215,53062,COMD,Saint-Fort
+53231,53029,COMD,Saint-Laurent-des-Mortiers
+53239,53249,COMD,Saint-Martin-de-Connée
+53241,53029,COMD,Saint-Michel-de-Feins
+53244,53161,COMD,Saint-Ouën-des-Vallons
+53252,53185,COMD,Saint-Samson
+53254,53136,COMD,Saint-Sulpice
+53274,53249,COMD,Vimarcé
+54341,54099,COMD,Mance
+54342,54099,COMD,Mancieulles
+54506,54557,COMD,Sexey-les-Bois
+55006,55040,COMA,Amblaincourt
+55016,55184,COMA,Aulnois-sous-Vertuzey
+55019,55388,COMA,Auzécourt
+55020,55117,COMA,Auzéville-en-Argonne
+55030,55150,COMD,Baudignécourt
+55052,55551,COMA,Billy-sous-les-Côtes
+55056,55385,COMA,Blercourt
+55086,55389,COMA,Bulainville
+55092,55093,COMA,Buxerulles
+55112,55358,COMA,Chennevières
+55126,55258,COMA,Corniéville
+55131,55518,COMA,Cousances-au-Bois
+55136,55551,COMA,Creuë
+55151,55274,COMA,Deuxnouds-aux-Bois
+55152,55040,COMA,Deuxnouds-devant-Beauzée
+55161,55179,COMA,Domremy-aux-Bois
+55164,55537,COMD,Douaumont
+55176,55442,COMA,Érize-la-Grande
+55190,55389,COMA,Fleury-sur-Aire
+55203,55123,COMA,Génicourt-sous-Condé
+55205,55026,COMA,Gérauvilliers
+55213,55258,COMA,Gironville-sous-les-Côtes
+55223,55267,COMA,Hadonville-lès-Lachaussée
+55230,55571,COMA,Haraumont
+55231,55123,COMA,Hargeville-sur-Chée
+55233,55551,COMA,Hattonchâtel
+55234,55551,COMA,Hattonville
+55235,55500,COMA,Haucourt-la-Rigole
+55238,55267,COMA,Haumont-lès-Lachaussée
+55240,55002,COMA,Hautecourt-lès-Broville
+55249,55500,COMA,Houdelaucourt-sur-Othain
+55259,55117,COMA,Jubécourt
+55273,55386,COMA,Lamarche-en-Woëvre
+55283,55274,COMA,Lavignéville
+55287,55276,COMA,Lempire-aux-Bois
+55294,55012,COMA,Liouville
+55305,55123,COMA,Louppy-sur-Chée
+55308,55179,COMA,Loxéville
+55309,55215,COMA,Luméville-en-Ornois
+55314,55114,COMA,Malaumont
+55318,55123,COMA,Les Marats
+55319,55012,COMA,Marbotte
+55342,55254,COMA,Mondrecourt
+55390,55358,COMA,Oëy
+55392,55500,COMA,Ollières
+55393,55191,COMA,Ornel
+55402,55117,COMA,Parois
+55413,55497,COMA,Rampont
+55418,55500,COMA,Réchicourt
+55432,55254,COMA,Rignaucourt
+55441,55148,COMA,Rosières-en-Blois
+55451,55012,COMA,Saint-Agnant-sous-les-Côtes
+55455,55551,COMA,Saint-Benoît-en-Woëvre
+55480,55517,COMA,Senard
+55486,55040,COMA,Seraucourt
+55491,55423,COMA,Sommaisne
+55499,55274,COMA,Spada
+55513,55215,COMA,Tourailles-sous-Bois
+55538,55472,COMA,Vaux-la-Grande
+55539,55472,COMA,Vaux-la-Petite
+55542,55186,COMA,Véel
+55548,55184,COMA,Vertuzey
+55550,55551,COMA,Viéville-sous-les-Côtes
+55558,55184,COMA,Ville-Issey
+55585,55093,COMA,Woinville
+56037,56197,COMD,La Chapelle-Caro
+56038,56061,COMD,La Chapelle-Gaceline
+56049,56213,COMD,Croixanvec
+56059,56102,COMD,Les Forges
+56064,56061,COMD,Glénac
+56142,56144,COMD,Moustoir-Remungol
+56183,56033,COMD,Quelneuc
+56187,56197,COMD,Quily
+56192,56144,COMD,Remungol
+57023,57086,COMA,Angviller-lès-Bisping
+57135,57209,COMA,Chémery
+57157,57132,COMA,Coutures
+57184,57021,COMD,Dornot
+57285,57097,COMA,Halling-lès-Boulay
+57378,57155,COMA,Landonvillers
+57432,57148,COMD,Maizery
+57722,57578,COMD,Vionville
+58022,58204,COMD,Balleray
+58091,58086,COMA,Cours
+58100,58026,COMD,Dompierre-sur-Héry
+58167,58026,COMD,Michaugues
+59070,59006,COMD,Bermeries
+59154,59588,COMD,Coudekerque-Village
+59248,59183,COMA,Fort-Mardyck
+59298,59350,COMA,Hellemmes-Lille
+59355,59350,COMA,Lomme
+59380,59183,COMA,Mardyck
+59404,59260,COMD,Les Moëres
+59540,59183,COMA,Saint-Pol-sur-Mer
+59561,59631,COMA,Selvigny
+60038,60256,COMD,Bachivillers
+60080,60209,COMD,Boissy-le-Bois
+60096,60245,COMD,Boutavent
+60300,60209,COMD,Hardivillers-en-Vexin
+60417,60570,COMD,Montherlant
+60453,60196,COMD,La Neuville-d'Aumont
+60455,60694,COMD,La Neuville-Garnier
+60532,60196,COMD,Ressons-l'Abbaye
+61003,61167,COMD,Anceins
+61004,61168,COMD,Antoigny
+61009,61474,COMD,Aubry-en-Exmes
+61016,61491,COMD,Autheuil
+61017,61275,COMD,Les Authieux-du-Puits
+61019,61474,COMD,Avernes-sous-Exmes
+61025,61211,COMD,La Baroche-sous-Lucé
+61027,61153,COMD,Batilly
+61031,61486,COMD,Beauchêne
+61033,61211,COMD,Beaulandais
+61045,61491,COMD,Bivilliers
+61047,61167,COMD,Bocquencé
+61057,61474,COMD,Le Bourg-Saint-Léonard
+61058,61007,COMD,Bréel
+61059,61491,COMD,Bresolettes
+61065,61491,COMD,Bubertré
+61073,61007,COMD,La Carneille
+61083,61474,COMD,Chambois
+61090,61491,COMD,Champs
+61106,61339,COMD,Chênedouit
+61109,61292,COMD,Clairefougère
+61110,61474,COMD,La Cochère
+61112,61309,COMD,Colonard-Corubert
+61115,61116,COMD,Condeau
+61125,61116,COMD,Coulonges-les-Sablons
+61127,61153,COMD,La Courbe
+61131,61474,COMD,Courménil
+61135,61096,COMD,Couterne
+61136,61167,COMD,Couvains
+61144,61309,COMD,Dancé
+61154,61196,COMD,Eperrais
+61155,61324,COMD,L'Épinay-le-Comte
+61157,61474,COMD,Exmes
+61161,61474,COMD,Fel
+61172,61228,COMD,Fontenai-les-Louvets
+61173,61153,COMD,Fontenai-sur-Orne
+61174,61339,COMD,La Forêt-Auvray
+61177,61486,COMD,Frênes
+61179,61339,COMD,La Fresnaye-au-Sauvage
+61184,61167,COMD,Gauville
+61185,61484,COMD,Gémages
+61186,61096,COMD,Geneslay
+61188,61275,COMD,La Genevraie
+61191,61167,COMD,Glos-la-Ferrière
+61192,61275,COMD,Godisson
+61200,61096,COMD,Haleine
+61201,61145,COMD,La Haute-Chapelle
+61204,61484,COMD,L'Hermitière
+61205,61167,COMD,Heugon
+61220,61230,COMD,La Lande-sur-Eure
+61223,61486,COMD,Larchamp
+61226,61491,COMD,Lignerolles
+61231,61228,COMD,Longuenoë
+61235,61211,COMD,Loré
+61236,61153,COMD,Loucé
+61239,61211,COMD,Lucé
+61246,61484,COMD,Mâle
+61247,61230,COMD,Malétable
+61249,61375,COMD,Marcei
+61250,61230,COMD,Marchainville
+61253,61081,COMD,Marmouillé
+61270,61339,COMD,Ménil-Jean
+61280,61230,COMD,Monceaux-au-Perche
+61282,61167,COMD,Monnai
+61285,61194,COMD,Montgaroult
+61296,61230,COMD,Moulicent
+61299,61429,COMD,Moussonvilliers
+61305,61230,COMD,Neuilly-sur-Eure
+61306,61081,COMD,Neuville-près-Sées
+61310,61275,COMD,Nonant-le-Pin
+61311,61429,COMD,Normandel
+61313,61007,COMD,Notre-Dame-du-Rocher
+61315,61474,COMD,Omméel
+61318,61196,COMD,Origny-le-Butin
+61320,61460,COMD,Orville
+61325,61196,COMD,La Perrière
+61335,61491,COMD,La Poterie-au-Perche
+61337,61309,COMD,Préaux-du-Perche
+61338,61491,COMD,Prépotin
+61340,61339,COMD,Rabodanges
+61343,61491,COMD,Randonnai
+61353,61007,COMD,Ronfeugerai
+61354,61339,COMD,Les Rotours
+61355,61145,COMD,Rouellé
+61356,61484,COMD,La Rouge
+61359,61484,COMD,Saint-Agnan-sur-Erre
+61364,61339,COMD,Saint-Aubert-sur-Orne
+61368,61309,COMD,Saint-Aubin-des-Grois
+61377,61486,COMD,Saint-Cornier-des-Landes
+61378,61339,COMD,Sainte-Croix-sur-Orne
+61380,61211,COMD,Saint-Denis-de-Villenette
+61383,61228,COMD,Saint-Didier-sous-Écouves
+61403,61294,COMD,Saint-Hilaire-la-Gérard
+61409,61309,COMD,Saint-Jean-de-la-Forêt
+61410,61486,COMD,Saint-Jean-des-Bois
+61417,61375,COMD,Saint-Loyer-des-Champs
+61428,61463,COMD,Saint-Maurice-du-Désert
+61431,61483,COMD,Saint-Michel-des-Andaines
+61434,61167,COMD,Saint-Nicolas-des-Laitiers
+61437,61196,COMD,Saint-Ouen-de-la-Cour
+61441,61153,COMD,Saint-Ouen-sur-Maire
+61449,61474,COMD,Saint-Pierre-la-Rivière
+61455,61324,COMD,Saint-Siméon
+61458,61230,COMD,Saint-Victor-de-Réno
+61465,61007,COMD,Ségrie-Fontaine
+61468,61194,COMD,Sentilly
+61469,61211,COMD,Sept-Forges
+61470,61153,COMD,Serans
+61471,61196,COMD,Sérigny
+61477,61474,COMD,Survie
+61478,61007,COMD,Taillebois
+61489,61007,COMD,Les Tourailles
+61496,61474,COMD,Urou-et-Crennes
+61504,61474,COMD,Villebadin
+61506,61167,COMD,Villers-en-Ouche
+61511,61375,COMD,Vrigny
+61513,61486,COMD,Yvrandes
+62110,62473,COMA,Berguette
+62294,62295,COMD,Enguinegatte
+62431,62471,COMD,Herbelles
+62461,62447,COMD,Huby-Saint-Leu
+62482,62178,COMD,Labuissière
+62549,62447,COMD,Marconne
+62575,62473,COMA,Molinghem
+62743,62447,COMD,Sainte-Austreberthe
+63018,63160,COMD,Aulhat-Saint-Privat
+63078,63448,COMD,Chaméane
+63133,63226,COMD,Dallet
+63316,63038,COMA,Saint-Anastaise
+63330,63109,COMD,Saint-Cirgues-sur-Couze
+64020,64225,COMD,Ance
+64030,64396,COMA,Arance
+64055,64064,COMA,Arros-d'Oloron
+64163,64010,COMA,Camou-Mixe-Suhast
+64164,64148,COMA,Capbis
+64169,64168,COMA,Cassaber
+64248,64396,COMA,Gouze
+64278,64049,COMA,Ithorots-Olhaïby
+64333,64396,COMA,Lendresse
+64384,64148,COMA,Mifaget
+64497,64430,COMA,Sainte-Suzanne
+64541,64300,COMD,Urdès
+64553,64113,COMA,Viellenave-sur-Bidouze
+65008,65141,COMA,Anéran-Camors
+65027,65282,COMD,Armenteule
+65122,65092,COMD,Camous
+65188,65192,COMD,Gavarnie
+65227,65099,COMA,Ilhan
+65246,65054,COMA,Lahitte
+65365,65003,COMA,Pouchergues
+67007,67544,COMA,Altenstadt
+67014,67418,COMD,Auenheim
+67015,67452,COMA,Avenheim
+67024,67495,COMD,Behlenheim
+67041,67004,COMD,Birkenwald
+67042,67104,COMA,Birlenbach
+67064,67074,COMA,Bremmelbach
+67114,67176,COMA,Eberbach-Wœrth
+67157,67034,COMA,Gimbrett
+67158,67539,COMD,Gingsheim
+67170,67176,COMA,Griesbach
+67171,67061,COMA,Griesbach-le-Bastberg
+67193,67206,COMA,Hermerswiller
+67207,67539,COMD,Hohatzenheim
+67211,67474,COMA,Hohwiller
+67219,67061,COMA,Imbsheim
+67224,67442,COMA,Irmstett
+67243,67452,COMA,Kleinfrankenheim
+67251,67339,COMA,Kuhlendorf
+67262,67206,COMA,Leiterswiller
+67284,67263,COMA,Mattstall
+67294,67160,COMA,Mitschdorf
+67297,67539,COMD,Mittelhausen
+67316,67388,COMA,Nehwiller-près-Wœrth
+67332,67351,COMA,Niederseebach
+67374,67495,COMD,Pfettisheim
+67376,67435,COMA,Bischtroff-sur-Sarre
+67390,67339,COMA,Reimerswiller
+67393,67034,COMA,Reitwiller
+67399,67061,COMA,Riedheim
+67402,67372,COMD,Ringeldorf
+67419,67034,COMA,Rumersheim
+67431,67004,COMD,Salenthal
+67439,67202,COMD,Schaffhouse-sur-Zorn
+67457,67339,COMA,Schwabwiller
+67469,67004,COMD,Singrist
+67496,67372,COMD,Uberach
+67512,67372,COMD,La Walck
+67533,67530,COMA,Wilshausen
+67549,67532,COMA,Wœllenheim
+67560,67153,COMD,Zœbersdorf
+67561,67435,COMA,Zollingen
+67562,67347,COMA,Zutzendorf
+68031,68006,COMD,Bernwiller
+68070,68056,COMD,Didenheim
+68164,68162,COMD,Kientzheim
+68206,68012,COMD,Michelbach
+68233,68201,COMD,Niederbruck
+68272,68143,COMD,Riedwihr
+68310,68162,COMD,Sigolsheim
+68314,68219,COMD,Soppe-le-Haut
+69015,69135,COMD,Avenas
+69025,69248,COMD,Bourg-de-Thizy
+69041,69248,COMD,La Chapelle-de-Mardore
+69048,69179,COMD,Chassagny
+69073,69157,COMD,Dareizé
+69101,69114,COMD,Jarnioux
+69128,69248,COMD,Mardore
+69129,69248,COMD,Marnand
+69144,69208,COMD,Nuelles
+69146,69024,COMD,Oingt
+69147,69157,COMD,Les Olmes
+69150,69135,COMD,Ouroux
+69152,69149,COMD,Pierre-Bénite
+69158,69066,COMD,Pont-Trambouze
+69159,69114,COMD,Pouilly-le-Monial
+69185,69135,COMD,Saint-Christophe
+69195,69228,COMD,Saint-Didier-sous-Riverie
+69210,69135,COMD,Saint-Jacques-des-Arrêts
+69211,69019,COMD,Saint-Jean-d'Ardières
+69213,69179,COMD,Saint-Jean-de-Touslas
+69222,69024,COMD,Saint-Laurent-d'Oingt
+69223,69157,COMD,Saint-Loup
+69224,69135,COMD,Saint-Mamert
+69237,69228,COMD,Saint-Sorlin
+69247,69066,COMD,Thel
+69251,69135,COMD,Trades
+69381,69123,ARM,Lyon 1er Arrondissement
+69382,69123,ARM,Lyon 2e Arrondissement
+69383,69123,ARM,Lyon 3e Arrondissement
+69384,69123,ARM,Lyon 4e Arrondissement
+69385,69123,ARM,Lyon 5e Arrondissement
+69386,69123,ARM,Lyon 6e Arrondissement
+69387,69123,ARM,Lyon 7e Arrondissement
+69388,69123,ARM,Lyon 8e Arrondissement
+69389,69123,ARM,Lyon 9e Arrondissement
+70033,70059,COMA,Aubertans
+70034,70101,COMA,Aubigney
+70068,70373,COMA,Betoncourt-les-Ménétriers
+70108,70285,COMD,Bussurel
+70123,70122,COMA,Champlitte-la-Ville
+70131,70492,COMA,Charentenay
+70173,70477,COMA,Corcelles
+70191,70492,COMA,Cubry-lès-Soing
+70223,70031,COMA,Étroitefontaine
+70241,70447,COMA,Les Fontenis
+70246,70247,COMA,Fouvent-le-Bas
+70264,70180,COMD,Georfans
+70281,70418,COMD,Greucourt
+70300,70122,COMA,Leffond
+70333,70122,COMA,Margilley
+70345,70489,COMD,Miellin
+70346,70487,COMA,Mignafans
+70354,70122,COMA,Montarlot-lès-Champlitte
+70370,70101,COMA,Montseugny
+70382,70122,COMA,Neuvelle-lès-Champlitte
+70391,70292,COMA,Noroy-lès-Jussey
+70434,70058,COMA,Quitteur
+70458,70247,COMA,Saint-Andoche
+70465,70373,COMA,Saint-Julien
+70475,70245,COMD,Saint-Valbert
+70497,70285,COMD,Tavey
+70530,70180,COMD,Vellechevreux-et-Courbenans
+70551,70418,COMD,Vezet
+70557,70152,COMD,Villefrancon
+70570,70045,COMA,Virey
+71055,71134,COMD,Brandon
+71180,71582,COMD,Donzy-le-National
+71260,71270,COMA,Loché
+71288,71582,COMD,Massy
+71304,71134,COMD,Montagny-sur-Grosne
+71375,71279,COMD,Le Rousset
+71432,71270,COMA,Saint-Jean-le-Priche
+71492,71042,COMD,Saint-Ythaire
+71511,71270,COMA,Sennecé-lès-Mâcon
+71587,71582,COMD,Vitry-lès-Cluny
+72063,72262,COMD,La Chapelle-Gaugain
+72069,72137,COMD,Chassé
+72081,72080,COMD,Cherreau
+72082,72308,COMD,Le Chevain
+72097,72138,COMD,Coulombiers
+72108,72025,COMD,Cré-sur-Loir
+72117,72176,COMD,Dissé-sous-le-Lude
+72159,72262,COMD,Lavenay
+72162,72137,COMD,Lignières-la-Carelle
+72203,72071,COMD,Montabon
+72207,72137,COMD,Montigny
+72240,72262,COMD,Poncé-sur-le-Loir
+72258,72137,COMD,Roullée
+72284,72138,COMD,Saint-Germain-sur-Sarthe
+72298,72382,COMD,Saint-Mars-de-Locquenay
+72304,72128,COMD,Sainte-Osmane
+72318,72137,COMD,Saint-Rigomer-des-Bois
+72384,72071,COMD,Vouvray-sur-Loir
+73002,73212,COMD,Aiguebelle
+73035,73261,COMA,Beaune
+73038,73150,COMD,Bellentre
+73045,73003,COMD,Le Bois
+73046,73187,COMD,Bonneval
+73056,73290,COMD,Bramans
+73060,73187,COMD,Celliers
+73062,73010,COMD,Cessens
+73080,73135,COMD,Le Châtel
+73093,73150,COMD,La Côte-d'Aime
+73102,73187,COMD,Doucy
+73108,73010,COMD,Épersy
+73111,73215,COMD,Étable
+73112,73187,COMD,Feissons-sur-Isère
+73115,73284,COMD,Fontaine-le-Puits
+73118,73151,COMD,Francin
+73126,73006,COMD,Granier
+73127,73236,COMD,Gresin
+73143,73290,COMD,Lanslebourg-Mont-Cenis
+73144,73290,COMD,Lanslevillard
+73148,73006,COMD,Longefoy
+73158,73010,COMD,Mognard
+73163,73235,COMD,Montaimont
+73167,73235,COMD,Montgellafrey
+73169,73006,COMD,Montgirod
+73174,73013,COMA,Montrond
+73185,73187,COMD,Naves
+73199,73187,COMD,Petit-Cœur
+73203,73135,COMD,Pontamafrey-Montpascal
+73209,73187,COMD,Pussy
+73238,73010,COMD,Saint-Germain-la-Chambotte
+73239,73010,COMD,Saint-Girod
+73244,73257,COMD,Saint-Jean-de-Belleville
+73260,73236,COMD,Saint-Maurice-de-Rotherens
+73266,73003,COMD,Saint-Oyen
+73287,73290,COMD,Sollières-Sardières
+73291,73006,COMD,Tessens
+73295,73261,COMA,Thyl
+73305,73150,COMD,Valezan
+73321,73257,COMD,Villarlurin
+73325,73006,COMD,Villette
+74011,74010,COMD,Annecy-le-Vieux
+74022,74282,COMD,Aviernoz
+74084,74167,COMD,Cons-Sainte-Colombe
+74093,74010,COMD,Cran-Gevrier
+74113,74220,COMA,Ésery
+74120,74282,COMD,Évires
+74182,74010,COMD,Meythet
+74187,74275,COMD,Montmin
+74204,74282,COMD,Les Ollières
+74217,74010,COMD,Pringy
+74245,74282,COMD,Saint-Martin-Bellevue
+74268,74010,COMD,Seynod
+75101,75056,ARM,Paris 1er Arrondissement
+75102,75056,ARM,Paris 2e Arrondissement
+75103,75056,ARM,Paris 3e Arrondissement
+75104,75056,ARM,Paris 4e Arrondissement
+75105,75056,ARM,Paris 5e Arrondissement
+75106,75056,ARM,Paris 6e Arrondissement
+75107,75056,ARM,Paris 7e Arrondissement
+75108,75056,ARM,Paris 8e Arrondissement
+75109,75056,ARM,Paris 9e Arrondissement
+75110,75056,ARM,Paris 10e Arrondissement
+75111,75056,ARM,Paris 11e Arrondissement
+75112,75056,ARM,Paris 12e Arrondissement
+75113,75056,ARM,Paris 13e Arrondissement
+75114,75056,ARM,Paris 14e Arrondissement
+75115,75056,ARM,Paris 15e Arrondissement
+75116,75056,ARM,Paris 16e Arrondissement
+75117,75056,ARM,Paris 17e Arrondissement
+75118,75056,ARM,Paris 18e Arrondissement
+75119,75056,ARM,Paris 19e Arrondissement
+75120,75056,ARM,Paris 20e Arrondissement
+76003,76020,COMA,Ambourville
+76027,76618,COMD,Assigny
+76031,76476,COMD,Auberville-la-Campagne
+76037,76618,COMD,Auquemesnil
+76044,76258,COMD,Auzouville-Auberbosc
+76073,76618,COMD,Belleville-sur-Mer
+76078,76258,COMD,Bennetot
+76080,76258,COMD,Bermonville
+76081,76618,COMD,Berneval-le-Grand
+76098,76618,COMD,Biville-sur-Mer
+76127,76146,COMD,Bosc-Roger-sur-Buchy
+76137,76618,COMD,Bracquemont
+76145,76618,COMD,Brunville
+76191,76034,COMD,Cressy
+76215,76618,COMD,Derchigny
+76248,76146,COMD,Estouteville-Écalles
+76277,76276,COMD,Le Fossé
+76301,76618,COMD,Glicourt
+76310,76618,COMD,Gouchaupre
+76326,76618,COMD,Greny
+76337,76618,COMD,Guilmécourt
+76358,76455,COMD,Le Héron
+76376,76618,COMD,Intraville
+76466,76217,COMA,Neuville-lès-Dieppe
+76496,76618,COMD,Penly
+76525,76258,COMD,Ricarville
+76539,76351,COMA,Rouelles
+76607,76258,COMD,Sainte-Marguerite-sur-Fauville
+76625,76401,COMD,Saint-Nicolas-de-Bliquetuit
+76639,76258,COMD,Saint-Pierre-Lavis
+76643,76618,COMD,Saint-Quentin-au-Bosc
+76659,76164,COMD,Saint-Wandrille-Rançon
+76674,76034,COMD,Sévis
+76696,76618,COMD,Tocqueville-sur-Eu
+76701,76476,COMD,Touffreville-la-Cable
+76704,76618,COMD,Tourville-la-Chapelle
+76713,76476,COMD,Triquerville
+76729,76041,COMD,Veauville-lès-Baons
+76742,76164,COMD,Villequier
+77166,77316,COMD,Écuelles
+77170,77316,COMD,Épisy
+77189,77262,COMA,Fontaine-sous-Montaiguillon
+77299,77316,COMD,Montarlot
+77324,77093,COMA,Moutils
+77351,77010,COMA,Ozouer-le-Repos
+77375,77261,COMA,Préaux
+77399,77504,COMD,Saint-Ange-le-Viel
+77491,77316,COMD,Veneux-les-Sablons
+77497,77421,COMA,Vieux-Maisons
+77499,77031,COMA,Vilbert
+77502,77020,COMA,Villegagnon
+78251,78551,COMD,Fourqueux
+78524,78158,COMD,Rocquencourt
+79004,79185,COMD,Aigonnay
+79006,79136,COMD,Les Alleuds
+79026,79014,COMD,Bagneux
+79027,79083,COMD,La Bataille
+79028,79049,COMD,Beaulieu-sous-Bressuire
+79035,79077,COMD,Le Beugnon
+79041,79005,COMD,Borcq-sur-Airvault
+79043,79014,COMD,Bouillé-Loretz
+79044,79063,COMD,Bouillé-Saint-Paul
+79051,79179,COMD,Le Breuil-Bernard
+79052,79049,COMD,Breuil-Chaussée
+79053,79013,COMD,Le Breuil-sous-Argenton
+79054,79196,COMD,Brie
+79060,79307,COMD,Caunay
+79065,79049,COMD,Chambroutet
+79068,79105,COMD,Chantecorps
+79072,79013,COMD,La Chapelle-Gaudin
+79073,79079,COMA,La Chapelle-Largeau
+79075,79179,COMD,La Chapelle-Saint-Étienne
+79093,79049,COMD,Clazay
+79098,79217,COMD,La Couarde
+79099,79013,COMD,La Coudre
+79107,79083,COMD,Crézières
+79113,79280,COMD,Étusson
+79143,79016,COMA,Les Jumeaux
+79155,79079,COMA,Loublande
+79168,79063,COMD,Massais
+79171,79329,COMD,Mauzé-Thouarsais
+79173,79174,COMD,Mazières-sur-Béronne
+79178,79329,COMD,Missé
+79180,79307,COMD,Montalembert
+79181,79061,COMD,Montigné
+79182,79123,COMD,Montigny
+79186,79079,COMA,Moulins
+79187,79013,COMD,Moutiers-sous-Argenton
+79188,79179,COMD,Moutiers-sous-Chantemerle
+79192,79049,COMD,Noirlieu
+79193,79049,COMD,Noirterre
+79199,79174,COMD,Paizay-le-Tort
+79205,79307,COMD,Pers
+79212,79307,COMD,Pliboux
+79219,79334,COMD,Priaires
+79222,79179,COMD,Pugny
+79224,49099,COMA,Le Puy-Saint-Bonnet
+79232,79123,COMD,La Ronde
+79233,79079,COMA,Rorthais
+79237,79079,COMA,Saint-Aubin-de-Baubigné
+79240,79185,COMD,Sainte-Blandine
+79260,79196,COMD,Saint-Jouin-de-Marnes
+79261,79179,COMD,Saint-Jouin-de-Milly
+79264,79174,COMD,Saint-Léger-de-la-Martinière
+79272,79123,COMD,Saint-Marsault
+79279,79174,COMD,Saint-Martin-lès-Melle
+79282,79061,COMD,Saint-Médard
+79288,79063,COMD,Saint-Pierre-à-Champ
+79292,79329,COMD,Sainte-Radegonde
+79296,79049,COMD,Saint-Sauveur
+79314,79064,COMD,Sompt
+79317,79005,COMD,Soulièvres
+79318,79285,COMD,Soutiers
+79321,79196,COMD,Taizé-Maulais
+79323,79079,COMA,Le Temple
+79324,79049,COMD,Terves
+79325,79005,COMD,Tessonnière
+79327,79185,COMD,Thorigné
+79328,79334,COMD,Thorigny-sur-le-Mignon
+79330,79083,COMD,Tillou
+79333,79013,COMD,Ulcot
+79344,79061,COMD,Verrines-sous-Celles
+80007,80436,COMA,Agnières
+80111,80443,COMA,Boisrault
+80175,80505,COMD,Carnoy
+80257,80554,COMA,Dreuil-lès-Molliens
+80289,80557,COMA,Estrées-en-Chaussée
+80363,80436,COMA,Frettemolle
+80382,80443,COMA,Gouy-l'Hôpital
+80394,80703,COMA,Guémicourt
+80398,80456,COMA,Guibermesnil
+80441,80406,COMA,Hocquincourt
+80447,80621,COMD,Hyencourt-le-Grand
+80454,80456,COMA,Laboissière-Saint-Martin
+80457,80630,COMA,Lahaye-Saint-Romain
+80483,80443,COMA,Lincheux-Hallivillers
+80492,80245,COMA,Longvillers
+80510,80222,COMA,Marcheville
+80532,80295,COMD,Méricourt-sur-Somme
+80551,80509,COMD,Misery
+80564,80456,COMA,Montmarquet
+80581,80582,COMA,Namps-au-Mont
+80594,80485,COMD,Neuville-lès-Lœuilly
+80608,80621,COMD,Omiécourt
+80610,80623,COMA,Onvillers
+80612,80443,COMA,Orival
+80689,80582,COMA,Rumaisnil
+80731,80443,COMA,Selincourt
+80739,80436,COMA,Souplicourt
+80745,80582,COMA,Taisnil
+80761,80485,COMD,Tilloy-lès-Conty
+80768,80443,COMA,Tronchoy
+80816,80211,COMA,Wailly
+80817,80406,COMA,Wanel
+80830,80155,COMD,Yaucourt-Bussus
+81057,81262,COMA,Campes
+81113,81218,COMD,Labastide-Dénat
+81226,81233,COMD,Ronel
+81241,81233,COMD,Saint-Antonin-de-Lacalm
+81260,81233,COMD,Saint-Lieux-Lafenasse
+81296,81233,COMD,Terre-Clapier
+81301,81233,COMD,Le Travet
+85021,85076,COMD,La Bernardière
+85027,85146,COMD,Boufféré
+85030,85084,COMD,Boulogne
+85037,85289,COMD,Breuil-Barret
+85041,85292,COMD,Cezais
+85043,85213,COMD,Chaillé-sous-les-Ormeaux
+85044,85009,COMD,Chaix
+85048,85302,COMD,Chambretaud
+85053,85289,COMD,La Chapelle-aux-Lys
+85063,85090,COMD,Les Châtelliers-Châteaumur
+85068,85036,COMA,La Claye
+85069,85008,COMD,Les Clouzeaux
+85079,85135,COMA,Dissais
+85091,85080,COMD,Fontaines
+85107,85146,COMD,La Guyonnière
+85122,85020,COMA,Lesson
+85150,85197,COMD,Mormaison
+85168,85162,COMD,Oulmes
+85180,85090,COMD,La Pommeraie-sur-Sèvre
+85203,85020,COMA,Sainte-Christine
+85217,85146,COMD,Saint-Georges-de-Montaigu
+85219,85154,COMD,Saint-Germain-l'Aiguiller
+85224,85146,COMD,Saint-Hilaire-de-Loulay
+85230,85040,COMA,Saint-Hilaire-du-Bois
+85233,85223,COMD,Saint-Jean-de-Beugné
+85257,85090,COMD,Saint-Michel-Mont-Mercure
+85263,85051,COMA,Saint-Philbert-du-Pont-Charrault
+85270,85277,COMA,Saint-Sornin
+85271,85292,COMD,Saint-Sulpice-en-Pareds
+85272,85197,COMD,Saint-Sulpice-le-Verdon
+85275,85034,COMA,Saint-Vincent-Puymaufrais
+85279,85019,COMD,Saligny
+85299,85177,COMD,Velluire
+85307,85001,COMD,La Faute-sur-Mer
+86021,86123,COMD,Benassay
+86030,86281,COMD,Blaslay
+86043,86082,COMD,Ceaux-en-Couhé
+86056,86123,COMD,La Chapelle-Montreuil
+86060,86281,COMD,Charrais
+86067,86082,COMD,Châtillon
+86071,86281,COMD,Cheneché
+86101,86225,COMA,Frontenay-sur-Dive
+86146,86115,COMD,Marigny-Brizay
+86155,86161,COMA,Messais
+86166,86123,COMD,Montreuil-Bonnin
+86179,86108,COMA,Notre-Dame-d'Or
+86185,86161,COMA,Ouzilly-Vignolles
+86188,86082,COMD,Payré
+86199,86070,COMA,Pouzioux
+86212,86137,COMA,Rossay
+86216,86161,COMA,Saint-Chartres
+86219,86019,COMD,Saint-Cyr
+86231,86247,COMD,Saint-Macoux
+86259,86245,COMD,Senillé
+86267,86066,COMA,Targé
+86277,86281,COMD,Varennes
+86278,86082,COMD,Vaux
+86283,86108,COMA,Verger-sur-Dive
+87026,87097,COMD,Bussière-Boffy
+87055,87028,COMD,Darnac
+87098,87092,COMA,Milhaguet
+87136,87028,COMD,Saint-Barbant
+87171,87027,COMA,Saint-Nicolas-Courbefy
+87173,87128,COMD,Saint-Pardoux
+87175,87180,COMA,Saint-Priest-le-Betoux
+87184,87128,COMD,Saint-Symphorien-sur-Couze
+87196,87028,COMD,Thiat
+88067,88322,COMA,Le Boulay
+88112,88361,COMD,Colroy-la-Grande
+88204,88465,COMD,Girmont
+88234,88029,COMD,Harsault
+88235,88029,COMD,Hautmougey
+88337,88465,COMD,Oncourt
+88393,88321,COMD,Rollainville
+88420,88322,COMA,Saint-Jean-du-Marché
+89001,89130,COMD,Accolay
+89047,89055,COMA,Bligny-en-Othe
+89052,89439,COMA,Bouilly
+89070,89086,COMD,Chambeugle
+89078,89003,COMD,Champvallon
+89090,89283,COMA,Chastenay
+89097,89086,COMD,Chêne-Arnoult
+89103,89086,COMD,Chevillon
+89107,89411,COMD,Chigy
+89109,89197,COMD,Cisery
+89114,89407,COMA,Commissey
+89138,89086,COMD,Dicy
+89140,89014,COMA,Dilo
+89157,89233,COMA,Essert
+89166,89414,COMA,Fleurigny
+89174,89405,COMD,Fontenailles
+89178,89086,COMD,Fontenouilles
+89192,89086,COMD,Grandchamp
+89213,89196,COMD,Laduz
+89231,89073,COMA,Louesme
+89241,89086,COMD,Malicorne
+89243,89086,COMD,Marchais-Beton
+89260,89405,COMD,Molesmes
+89275,89196,COMD,Neuilly
+89293,89420,COMD,Perreuse
+89294,89086,COMD,Perreux
+89317,89086,COMD,Prunoy
+89322,89439,COMA,Rebourseaux
+89330,89441,COMD,Sacy
+89340,89420,COMD,Sainte-Colombe-sur-Loing
+89343,89086,COMD,Saint-Denis-sur-Ouanne
+89356,89334,COMD,Saint-Martin-sur-Ocre
+89357,89414,COMA,Saint-Martin-sur-Oreuse
+89358,89086,COMD,Saint-Martin-sur-Ouanne
+89372,89407,COMA,Saint-Vinnemer
+89381,89197,COMD,Sceaux
+89389,89344,COMA,Septfonds
+89401,89263,COMA,Sougères-sur-Sinotte
+89421,89197,COMD,Trévilly
+89429,89411,COMD,Vareilles
+89435,89024,COMA,Vaux
+89448,89197,COMD,Vignes
+89454,89086,COMD,Villefranche
+89457,89196,COMD,Villemer
+89473,89003,COMD,Villiers-sur-Tholon
+89476,89472,COMA,La Villotte
+89484,89003,COMD,Volgré
+91222,91390,COMD,Estouches
+93059,93066,COMD,Pierrefitte-sur-Seine

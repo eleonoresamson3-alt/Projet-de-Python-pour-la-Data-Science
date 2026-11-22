@@ -1,0 +1,10 @@
+{
+  "url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/gares-de-voyageurs",
+  "resolved_url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/gares-de-voyageurs",
+  "retrieved_at_utc": "2026-10-26T15:17:36.173019+00:00",
+  "client_reference_date": "2026-10-26",
+  "bytes": 5605,
+  "sha256": "30cc5688236aac22423706e27e4eb336762627196b6f331a89cde02e28a8d3d4",
+  "last_modified": null,
+  "content_type": "application/json; charset=utf-8"
+}

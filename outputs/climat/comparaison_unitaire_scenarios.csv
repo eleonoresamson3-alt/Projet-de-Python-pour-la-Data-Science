@@ -1,0 +1,37 @@
+distance_scenario_km,occupants_voiture_thermique,mode_train,co2e_voiture_par_personne_kg,co2e_train_par_personne_kg,ecart_unitaire_scenario_kgco2e,statut
+20,1.0,TGV,2.845068244590867,0.0586,2.7864682445908673,Scenario a distance egale; aucun report modal ni emission evitee observe
+20,1.0,Intercités,2.845068244590867,0.1796,2.6654682445908673,Scenario a distance egale; aucun report modal ni emission evitee observe
+20,1.0,RER ou Transilien,2.845068244590867,0.1956,2.649468244590867,Scenario a distance egale; aucun report modal ni emission evitee observe
+20,1.0,TER,2.845068244590867,0.5538,2.291268244590867,Scenario a distance egale; aucun report modal ni emission evitee observe
+20,1.6,TGV,1.7781676528692918,0.0586,1.7195676528692918,Scenario a distance egale; aucun report modal ni emission evitee observe
+20,1.6,Intercités,1.7781676528692918,0.1796,1.5985676528692918,Scenario a distance egale; aucun report modal ni emission evitee observe
+20,1.6,RER ou Transilien,1.7781676528692918,0.1956,1.582567652869292,Scenario a distance egale; aucun report modal ni emission evitee observe
+20,1.6,TER,1.7781676528692918,0.5538,1.224367652869292,Scenario a distance egale; aucun report modal ni emission evitee observe
+20,2.0,TGV,1.4225341222954335,0.0586,1.3639341222954335,Scenario a distance egale; aucun report modal ni emission evitee observe
+20,2.0,Intercités,1.4225341222954335,0.1796,1.2429341222954335,Scenario a distance egale; aucun report modal ni emission evitee observe
+20,2.0,RER ou Transilien,1.4225341222954335,0.1956,1.2269341222954335,Scenario a distance egale; aucun report modal ni emission evitee observe
+20,2.0,TER,1.4225341222954335,0.5538,0.8687341222954336,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,1.0,TGV,14.225341222954334,0.293,13.932341222954337,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,1.0,Intercités,14.225341222954334,0.898,13.327341222954336,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,1.0,RER ou Transilien,14.225341222954334,0.9780000000000001,13.247341222954335,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,1.0,TER,14.225341222954334,2.769,11.456341222954336,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,1.6,TGV,8.890838264346458,0.293,8.597838264346459,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,1.6,Intercités,8.890838264346458,0.898,7.992838264346459,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,1.6,RER ou Transilien,8.890838264346458,0.9780000000000001,7.91283826434646,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,1.6,TER,8.890838264346458,2.769,6.12183826434646,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,2.0,TGV,7.112670611477167,0.293,6.819670611477167,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,2.0,Intercités,7.112670611477167,0.898,6.2146706114771675,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,2.0,RER ou Transilien,7.112670611477167,0.9780000000000001,6.134670611477168,Scenario a distance egale; aucun report modal ni emission evitee observe
+100,2.0,TER,7.112670611477167,2.769,4.343670611477168,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,1.0,TGV,71.12670611477168,1.4649999999999999,69.66170611477168,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,1.0,Intercités,71.12670611477168,4.49,66.63670611477168,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,1.0,RER ou Transilien,71.12670611477168,4.890000000000001,66.23670611477166,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,1.0,TER,71.12670611477168,13.844999999999999,57.28170611477168,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,1.6,TGV,44.454191321732296,1.4649999999999999,42.9891913217323,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,1.6,Intercités,44.454191321732296,4.49,39.964191321732294,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,1.6,RER ou Transilien,44.454191321732296,4.890000000000001,39.5641913217323,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,1.6,TER,44.454191321732296,13.844999999999999,30.609191321732297,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,2.0,TGV,35.56335305738584,1.4649999999999999,34.098353057385836,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,2.0,Intercités,35.56335305738584,4.49,31.073353057385837,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,2.0,RER ou Transilien,35.56335305738584,4.890000000000001,30.67335305738584,Scenario a distance egale; aucun report modal ni emission evitee observe
+500,2.0,TER,35.56335305738584,13.844999999999999,21.718353057385837,Scenario a distance egale; aucun report modal ni emission evitee observe

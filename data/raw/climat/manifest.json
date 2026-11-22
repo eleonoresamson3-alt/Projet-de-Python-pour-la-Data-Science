@@ -1,0 +1,172 @@
+{
+  "catalogue_sdes.json": {
+    "url": "https://www.data.gouv.fr/api/1/datasets/parc-de-vehicules-routiers/",
+    "retrieved_at_utc": "2026-10-26T15:17:51.876410+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "application/json",
+    "source_bytes": 9613,
+    "sha256_source": "c7099d60e93cbf691280d7185bf8986f1e21f36b7d86fae560bf98b46eb55365",
+    "sha256_file": "c7099d60e93cbf691280d7185bf8986f1e21f36b7d86fae560bf98b46eb55365"
+  },
+  "sdes_metadata.json": {
+    "url": "https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/datafiles/1582861b-e042-4490-9161-6429d8229703?millesime=2026-06",
+    "retrieved_at_utc": "2026-10-26T15:17:52.294611+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "application/json; charset=utf-8",
+    "source_bytes": 13965,
+    "sha256_source": "9819cd16391e48c041d4fc7c3d32353fee6c30e777a286df9bcaf094d1c08255",
+    "sha256_file": "9819cd16391e48c041d4fc7c3d32353fee6c30e777a286df9bcaf094d1c08255"
+  },
+  "sdes_vp_count.json": {
+    "url": "https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/datafiles/1582861b-e042-4490-9161-6429d8229703/count?millesime=2026-06&GROUPE=eq%3AVP",
+    "retrieved_at_utc": "2026-10-26T15:17:53.845330+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "application/json; charset=utf-8",
+    "source_bytes": 21,
+    "sha256_source": "eb2d48753d16f548ae59cc09e8c47b7020ec4836654ee295cba1636192c67ce2",
+    "sha256_file": "eb2d48753d16f548ae59cc09e8c47b7020ec4836654ee295cba1636192c67ce2"
+  },
+  "sdes_vp_communes_2026-06.csv.gz": {
+    "url": "https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/datafiles/1582861b-e042-4490-9161-6429d8229703/csv?millesime=2026-06&GROUPE=eq%3AVP&columns=COMMUNE_CODE%2CCOMMUNE_NOM%2CCARBURANT%2CCRIT_AIR%2CSTATUT_UTILISATEUR%2CGROUPE%2CCATEGORIE%2CPARC_2016%2CPARC_2019%2CPARC_2022%2CPARC_2023%2CPARC_2024&withColumnName=true&withColumnDescription=false&withColumnUnit=false",
+    "retrieved_at_utc": "2026-10-26T15:18:13.030856+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "text/csv; charset=utf-8",
+    "source_bytes": 65366495,
+    "sha256_source": "a3153d9cfb875af028667c5801faec896e81c0cffb2486cf177464b3296e88c8",
+    "sha256_file": "332b578d90e7bf9204ec961c26a5930ba8d8dd02fbcf4f59d3e38637b81c4d2b"
+  },
+  "sdes_methodologie.pdf": {
+    "url": "https://data.statistiques.developpement-durable.gouv.fr/dido/api/files/6e8c4d0d-95df-4cc0-9559-54562d4ae48f",
+    "retrieved_at_utc": "2026-10-26T15:18:14.067897+00:00",
+    "http_status": 200,
+    "last_modified": "Mon, 28 Jul 2025 15:46:20 GMT",
+    "content_type": "application/pdf",
+    "source_bytes": 2323225,
+    "sha256_source": "f53d0890fe3255158a6af4e178fd655294cc0d88d0d157c530e963c60e4ed161",
+    "sha256_file": "f53d0890fe3255158a6af4e178fd655294cc0d88d0d157c530e963c60e4ed161"
+  },
+  "ademe_impactco2_transport_1km.json": {
+    "url": "https://impactco2.fr/api/v1/transport?km=1&transports=2%2C3%2C4%2C5%2C14%2C15&displayAll=1&includeConstruction=1&occupencyRate=1",
+    "retrieved_at_utc": "2026-10-26T15:18:14.407593+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "application/json",
+    "source_bytes": 524,
+    "sha256_source": "87a1ef994456e3975cb437bc33768cfda7d284c9aee4d7411a3c7186ca8cddd0",
+    "sha256_file": "87a1ef994456e3975cb437bc33768cfda7d284c9aee4d7411a3c7186ca8cddd0"
+  },
+  "impactco2_route.ts": {
+    "url": "https://raw.githubusercontent.com/datagir/impactco2/3106130d308c2cf5605d409779b7b22b32221258/app/api/v1/transport/route.ts",
+    "retrieved_at_utc": "2026-10-26T15:18:15.120524+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "text/plain; charset=utf-8",
+    "source_bytes": 16225,
+    "sha256_source": "63a06f0d0fdb60f55a91accd6c8026713ba7286c37a6e7c1352e4e0c4fe533db",
+    "sha256_file": "63a06f0d0fdb60f55a91accd6c8026713ba7286c37a6e7c1352e4e0c4fe533db"
+  },
+  "impactco2_deplacement.ts": {
+    "url": "https://raw.githubusercontent.com/datagir/impactco2/3106130d308c2cf5605d409779b7b22b32221258/src/data/categories/deplacement.ts",
+    "retrieved_at_utc": "2026-10-26T15:18:15.612081+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "text/plain; charset=utf-8",
+    "source_bytes": 22033,
+    "sha256_source": "67ae6e165cc51a7fb9ba9816762e5bc859e3edb847ec7874a4d2babc7d7ff2f1",
+    "sha256_file": "67ae6e165cc51a7fb9ba9816762e5bc859e3edb847ec7874a4d2babc7d7ff2f1"
+  },
+  "sncf_comparateur_2025-10.pdf": {
+    "url": "https://www.sncf-voyageurs.com/medias-publics/2025-10/sncf-voyageurs-rse-transitions-comparateur-co2.pdf",
+    "retrieved_at_utc": "2026-10-26T15:18:16.961321+00:00",
+    "http_status": 200,
+    "last_modified": "Mon, 13 Oct 2025 14:15:32 GMT",
+    "content_type": "application/pdf",
+    "source_bytes": 408353,
+    "sha256_source": "1c50906f9c19dfc871ef073a9c1145e3b73b71d2c352ed2a4c6c69263affbb6f",
+    "sha256_file": "1c50906f9c19dfc871ef073a9c1145e3b73b71d2c352ed2a4c6c69263affbb6f"
+  },
+  "insee_omphale_central.xlsx": {
+    "url": "https://www.insee.fr/fr/statistiques/fichier/6652134/projections_scenario_central.xlsx",
+    "retrieved_at_utc": "2026-10-26T15:19:00.084908+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "source_bytes": 81269,
+    "sha256_source": "894211f9c2ea3d627ae678d64e0bbd34d02ffa8aea4dd1a2fc5e2f222ca75031",
+    "sha256_file": "894211f9c2ea3d627ae678d64e0bbd34d02ffa8aea4dd1a2fc5e2f222ca75031"
+  },
+  "insee_omphale_population_basse.xlsx": {
+    "url": "https://www.insee.fr/fr/statistiques/fichier/6652134/projections_scenario_population_basse.xlsx",
+    "retrieved_at_utc": "2026-10-26T15:19:00.543698+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "source_bytes": 83081,
+    "sha256_source": "e6d9fa5657e89e6744a032195b960448151a7cdd7035f291d50483c0157a553e",
+    "sha256_file": "e6d9fa5657e89e6744a032195b960448151a7cdd7035f291d50483c0157a553e"
+  },
+  "insee_omphale_population_haute.xlsx": {
+    "url": "https://www.insee.fr/fr/statistiques/fichier/6652134/projections_scenario_population_haute.xlsx",
+    "retrieved_at_utc": "2026-10-26T15:19:01.022287+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "source_bytes": 81779,
+    "sha256_source": "3175268ddfb9b668e85d88d92db101327d321e873f67869cf692d6daf95cd3c4",
+    "sha256_file": "3175268ddfb9b668e85d88d92db101327d321e873f67869cf692d6daf95cd3c4"
+  },
+  "insee_omphale_page.html": {
+    "url": "https://www.insee.fr/fr/statistiques/6652134",
+    "retrieved_at_utc": "2026-10-26T15:19:01.517602+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "text/html;charset=UTF-8",
+    "source_bytes": 71842,
+    "sha256_source": "465205e7dbd3e8d006eefa3f23a923a09195b455ae213e5fd25f688c14b1c8d3",
+    "sha256_file": "465205e7dbd3e8d006eefa3f23a923a09195b455ae213e5fd25f688c14b1c8d3"
+  },
+  "insee_omphale_detail_Central.xlsx": {
+    "url": "https://www.insee.fr/fr/statistiques/fichier/7747107/donnees_det_Central.xlsx",
+    "retrieved_at_utc": "2026-10-26T15:19:43.021277+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "source_bytes": 1127366,
+    "sha256_source": "80f3670bd766807d44a886c9edaf1ae47cb2ee652771c7686520f00221fdcc8a",
+    "sha256_file": "80f3670bd766807d44a886c9edaf1ae47cb2ee652771c7686520f00221fdcc8a"
+  },
+  "insee_omphale_detail_Pop_basse.xlsx": {
+    "url": "https://www.insee.fr/fr/statistiques/fichier/7747107/donnees_det_Pop_basse.xlsx",
+    "retrieved_at_utc": "2026-10-26T15:19:44.583718+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "source_bytes": 1131031,
+    "sha256_source": "d67443fa2d6a4430c791fadddecf15595d2f4d7b4b68af7fd2ce9bb756b51c29",
+    "sha256_file": "d67443fa2d6a4430c791fadddecf15595d2f4d7b4b68af7fd2ce9bb756b51c29"
+  },
+  "insee_omphale_detail_Pop_haute.xlsx": {
+    "url": "https://www.insee.fr/fr/statistiques/fichier/7747107/donnees_det_Pop_haute.xlsx",
+    "retrieved_at_utc": "2026-10-26T15:19:46.269322+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "source_bytes": 1132384,
+    "sha256_source": "60a60a0f0c8613df43ff72db89505b883eccb45aaaeeb226a8394470fafe9011",
+    "sha256_file": "60a60a0f0c8613df43ff72db89505b883eccb45aaaeeb226a8394470fafe9011"
+  },
+  "insee_omphale_detail_page.html": {
+    "url": "https://www.insee.fr/fr/statistiques/7747107",
+    "retrieved_at_utc": "2026-10-26T15:19:46.750253+00:00",
+    "http_status": 200,
+    "last_modified": null,
+    "content_type": "text/html;charset=UTF-8",
+    "source_bytes": 70057,
+    "sha256_source": "f060aaa6103ada4e48c40c79731d7a86497be6073776ea9ec289bf6395e096d5",
+    "sha256_file": "f060aaa6103ada4e48c40c79731d7a86497be6073776ea9ec289bf6395e096d5"
+  }
+}

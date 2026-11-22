@@ -1,0 +1,10 @@
+{
+  "url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/frequentation-gares/records?limit=100&offset=400",
+  "resolved_url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/frequentation-gares/records?limit=100&offset=400",
+  "retrieved_at_utc": "2026-10-26T15:17:17.790658+00:00",
+  "client_reference_date": "2026-10-26",
+  "bytes": 97932,
+  "sha256": "1abdb0f9cd0850c7df26ced1de9b950d4e3b6cf5a23559e616c55e2af35f37ae",
+  "last_modified": null,
+  "content_type": "application/json; charset=utf-8"
+}

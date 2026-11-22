@@ -1,0 +1,10 @@
+{
+  "url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/liste-des-gares/records?limit=100&offset=100",
+  "resolved_url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/liste-des-gares/records?limit=100&offset=100",
+  "retrieved_at_utc": "2026-10-26T15:17:55.568910+00:00",
+  "client_reference_date": "2026-10-26",
+  "bytes": 65489,
+  "sha256": "05cca9092446d839b58d0a2f8050bbaee30e41442eb359f0a7c05f10f77b2036",
+  "last_modified": null,
+  "content_type": "application/json; charset=utf-8"
+}

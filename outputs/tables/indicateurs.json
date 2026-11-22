@@ -1,0 +1,54 @@
+{
+  "gares_2024": 3021,
+  "somme_comptages_2024": 3068305604,
+  "gini_gares_2024": 0.8937447690817972,
+  "part_top10pct_gares_pct": 84.57665568308886,
+  "top10pct_n": 303,
+  "indice_2020_base100_2019": 52.2829765109984,
+  "indice_2024_base100_2019": 112.27337471983947,
+  "communes_metropole": 34746,
+  "population_metropole_2022": 65846255.0,
+  "n_communes_principal": 2618,
+  "correlation_population_rail": {
+    "n_communes": 2618,
+    "pearson": 0.11111566841528939,
+    "spearman": 0.11434858838397406
+  },
+  "population_champ_principal_2022": 30790164.0,
+  "part_population_principal_pct": 46.760691249639024,
+  "correlation_rail_evolution_voiture": {
+    "n_communes": 2618,
+    "pearson": -0.03509868653306592,
+    "spearman": -0.03441842538976963
+  },
+  "population_croissance_rail_baisse": 484,
+  "accessibilite_proxy": [
+    {
+      "seuil_km": 5,
+      "nb_communes": 24268,
+      "population_communes_concernees_2022": 19596023.0,
+      "population_champ_2022": 65494979.0,
+      "part_population_proxy_pct": 29.91988591980463,
+      "croissance_positive_concernee": 668653.0,
+      "part_croissance_positive_proxy_pct": 30.867499090575034
+    },
+    {
+      "seuil_km": 10,
+      "nb_communes": 13670,
+      "population_communes_concernees_2022": 9036258.0,
+      "population_champ_2022": 65494979.0,
+      "part_population_proxy_pct": 13.796871360169456,
+      "croissance_positive_concernee": 252467.0,
+      "part_croissance_positive_proxy_pct": 11.654811827510244
+    },
+    {
+      "seuil_km": 15,
+      "nb_communes": 7282,
+      "population_communes_concernees_2022": 4409202.0,
+      "population_champ_2022": 65494979.0,
+      "part_population_proxy_pct": 6.732122167716093,
+      "croissance_positive_concernee": 107143.0,
+      "part_croissance_positive_proxy_pct": 4.946117724831087
+    }
+  ]
+}

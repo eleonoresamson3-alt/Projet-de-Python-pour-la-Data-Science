@@ -1,0 +1,156 @@
+{
+  "syntaxe_python": "OK",
+  "liens_locaux_manquants": [],
+  "METHODOLOGIE_word_integrite": true,
+  "METHODOLOGIE_images_word": 0,
+  "METHODOLOGIE_html_images_autonomes": true,
+  "RAPPORT_ANALYSE_word_integrite": true,
+  "RAPPORT_ANALYSE_images_word": 16,
+  "RAPPORT_ANALYSE_html_images_autonomes": true,
+  "notebook_code_cells": 10,
+  "notebook_all_executed": true,
+  "notebook_errors": 0,
+  "statut_donnees": "CONFORME",
+  "controles_donnees": 72,
+  "echecs_donnees": 0,
+  "dictionnaire": {
+    "tables": 22,
+    "colonnes_documentees": 498,
+    "variables_a_verifier": [],
+    "tableaux": [
+      {
+        "table": "dataset_final_communes",
+        "lignes": 34858,
+        "colonnes": 132,
+        "grain": "Une commune entière du RP 2022 en COG 2025; France hors Mayotte; rail/population principal en métropole."
+      },
+      {
+        "table": "gares_annees",
+        "lignes": 30210,
+        "colonnes": 21,
+        "grain": "Un code UIC SNCF × année 2015–2024; comptages de gare, sans flux origine-destination."
+      },
+      {
+        "table": "aviation_aeroports_referentiel",
+        "lignes": 86286,
+        "colonnes": 7,
+        "grain": "Un identifiant OurAirports, renommé icao pour la jointure; référentiel mondial, pas seulement France."
+      },
+      {
+        "table": "aviation_emissions_annuelles",
+        "lignes": 250,
+        "colonnes": 4,
+        "grain": "Un faisceau DGAC × année × unité: émission nette totale ou intensité; unités à ne jamais additionner."
+      },
+      {
+        "table": "aviation_pap_annuel_observe",
+        "lignes": 2505,
+        "colonnes": 8,
+        "grain": "Une année × paire PAP publiée; somme des seuls mois disponibles, pas trafic exhaustif."
+      },
+      {
+        "table": "aviation_pap_mensuel_observe",
+        "lignes": 15767,
+        "colonnes": 33,
+        "grain": "Un mois × paire d'aéroports PAP publiée; deux sens réunis, couverture soumise au seuil et secret."
+      },
+      {
+        "table": "aviation_trafic_annuel",
+        "lignes": 30,
+        "colonnes": 7,
+        "grain": "Une année 2015–2024 × faisceau LSN; MET_INTERIEUR est la somme des deux autres faisceaux."
+      },
+      {
+        "table": "aviation_trafic_mensuel",
+        "lignes": 240,
+        "colonnes": 16,
+        "grain": "Un mois × segment × faisceau × paire de zones LSN; faisceaux MET_RAD/MET_TRA,2015–2024."
+      },
+      {
+        "table": "climat_facteurs_ademe",
+        "lignes": 6,
+        "colonnes": 6,
+        "grain": "Un mode de transport ADEME; facteurs moyens de référence à1 km, construction incluse, voiture1 occupant."
+      },
+      {
+        "table": "climat_parc_codes_fictifs",
+        "lignes": 101,
+        "colonnes": 19,
+        "grain": "Un code SDES fictif ou invalide, exclu des jointures communales et conservé pour réconciliation."
+      },
+      {
+        "table": "climat_parc_communes",
+        "lignes": 34916,
+        "colonnes": 19,
+        "grain": "Un code de forme communale SDES, avant regroupement COG; arrondissements distincts."
+      },
+      {
+        "table": "climat_parc_communes_cog2025",
+        "lignes": 34854,
+        "colonnes": 24,
+        "grain": "Une commune de l'univers RP 2022 avec stock SDES; arrondissements agrégés au parent, Mayotte hors univers."
+      },
+      {
+        "table": "climat_projections_departements",
+        "lignes": 303,
+        "colonnes": 59,
+        "grain": "Un département × scénario INSEE central/bas/haut; projections2018–2070, pas observations."
+      },
+      {
+        "table": "communes_annees_rail",
+        "lignes": 26530,
+        "colonnes": 5,
+        "grain": "Une commune COG 2025 × année; gares UIC rattachées et présentes dans la source."
+      },
+      {
+        "table": "contexte_lgv",
+        "lignes": 3,
+        "colonnes": 11,
+        "grain": "Une ligne LGV lue sur une page Wikipédia; contexte documentaire uniquement, pas traitement causal."
+      },
+      {
+        "table": "demographie_codes_exclus",
+        "lignes": 45,
+        "colonnes": 1,
+        "grain": "Un code de la source historique exclu de l'univers des communes entières (arrondissements)."
+      },
+      {
+        "table": "demographie_communes",
+        "lignes": 34858,
+        "colonnes": 87,
+        "grain": "Une commune entière du RP 2022 en COG 2025; France hors Mayotte; arrondissements exclus."
+      },
+      {
+        "table": "demographie_densite2025",
+        "lignes": 34875,
+        "colonnes": 7,
+        "grain": "Un code communal dans le classeur officiel de densité2025."
+      },
+      {
+        "table": "demographie_ecarts_inter_sources",
+        "lignes": 28,
+        "colonnes": 4,
+        "grain": "Une commune × année dont la population diffère de plus de0,5entre deux bases RP 2022."
+      },
+      {
+        "table": "demographie_passage_cog2025",
+        "lignes": 2074,
+        "colonnes": 4,
+        "grain": "Un code non-COM du COG 2025 disposant d'un parent; identités COM prioritaires et exclues du passage."
+      },
+      {
+        "table": "demographie_population_long",
+        "lignes": 313722,
+        "colonnes": 9,
+        "grain": "Une commune entière COG 2025 × année de recensement disponible (9 dates de 1968 à2022)."
+      },
+      {
+        "table": "gares_referentiel",
+        "lignes": 3021,
+        "colonnes": 15,
+        "grain": "Un code UIC publié dans la fréquentation SNCF; rattachement territorial et coordonnées contrôlés."
+      }
+    ]
+  },
+  "requirements_lock_utf8": true
+}

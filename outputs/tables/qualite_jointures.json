@@ -1,0 +1,31 @@
+{
+  "gares_frequentation": 3021,
+  "annees": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "gare_avec_commune": 3019,
+  "gare_avec_coordonnees": 3019,
+  "taux_jointure_commune_pct": 99.93379675604105,
+  "methodes_jointure": {
+    "code INSEE / parent COG2025": 2782,
+    "point dans polygone COG2025 simplifié 100 m": 237,
+    "non résolu": 2
+  },
+  "voyageurs_2024_couverts_commune_pct": 99.69887644216551,
+  "communes_insee": 34858,
+  "communes_analyse_cohorte": 2623,
+  "gares_cohorte": 2961,
+  "gares_2024_positives_coordonnees": 2923,
+  "valeurs_manquantes_frequentation": 0,
+  "valeurs_nulles_frequentation": 749,
+  "doublons_uic_referentiel": 0
+}

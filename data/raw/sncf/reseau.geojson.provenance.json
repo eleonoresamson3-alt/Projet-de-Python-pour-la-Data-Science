@@ -1,0 +1,10 @@
+{
+  "url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/formes-des-lignes-du-rfn/exports/geojson",
+  "resolved_url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/formes-des-lignes-du-rfn/exports/geojson",
+  "retrieved_at_utc": "2026-10-26T15:19:03.881090+00:00",
+  "client_reference_date": "2026-10-26",
+  "bytes": 9477496,
+  "sha256": "872afbb93b45de996b9515a1275a34834a58b05b516df1234d5c9f3e700a2a20",
+  "last_modified": null,
+  "content_type": "application/json; charset=utf-8"
+}

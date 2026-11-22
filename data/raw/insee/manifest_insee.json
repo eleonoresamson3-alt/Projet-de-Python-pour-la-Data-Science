@@ -1,0 +1,117 @@
+[
+  {
+    "source_id": "8582555",
+    "page_url": "https://www.insee.fr/fr/statistiques/8582555",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8582555/base-cc-serie-historique-2022_csv.zip",
+    "path": "data\\raw\\insee\\base-cc-serie-historique-2022_csv.zip",
+    "size_bytes": 6714257,
+    "sha256": "ff0187ec6bb77fd2e5da639c08159368ff152cad0682ee0908358a829830c273",
+    "downloaded_at_utc": "2026-10-26T15:18:33.559282+00:00",
+    "source_family": "historique",
+    "geography": "COG 2025",
+    "license": "Licence Ouverte / Open Licence"
+  },
+  {
+    "source_id": "8581696",
+    "page_url": "https://www.insee.fr/fr/statistiques/8581696",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8581696/base-cc-evol-struct-pop-2022_csv.zip",
+    "path": "data\\raw\\insee\\base-cc-evol-struct-pop-2022_csv.zip",
+    "size_bytes": 48961124,
+    "sha256": "cb4b918862289527232ad79fb3b712d5f4635c6de5bae762e8d22a132717ed83",
+    "downloaded_at_utc": "2026-10-26T15:15:26.693489+00:00",
+    "source_family": "population",
+    "geography": "COG 2025",
+    "license": "Licence Ouverte / Open Licence"
+  },
+  {
+    "source_id": "8581474",
+    "page_url": "https://www.insee.fr/fr/statistiques/8581474",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8581474/base-cc-logement-2022_csv.zip",
+    "path": "data\\raw\\insee\\base-cc-logement-2022_csv.zip",
+    "size_bytes": 42941446,
+    "sha256": "03a25cf3a475f44c5ba83c472de3ca64b5145d5ab4e76f2511bac159cee9fad5",
+    "downloaded_at_utc": "2026-10-26T15:16:19.894557+00:00",
+    "source_family": "logement",
+    "geography": "COG 2025",
+    "license": "Licence Ouverte / Open Licence"
+  },
+  {
+    "source_id": "8581444",
+    "page_url": "https://www.insee.fr/fr/statistiques/8581444",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8581444/base-cc-emploi-pop-active-2022_csv.zip",
+    "path": "data\\raw\\insee\\base-cc-emploi-pop-active-2022_csv.zip",
+    "size_bytes": 59970651,
+    "sha256": "6b583572c21843fe54d4e7bb442b4a249087a43f2e845f436702417f1ef3cdb6",
+    "downloaded_at_utc": "2026-10-26T15:17:28.958278+00:00",
+    "source_family": "emploi",
+    "geography": "COG 2025",
+    "license": "Licence Ouverte / Open Licence"
+  },
+  {
+    "source_id": "8581424",
+    "page_url": "https://www.insee.fr/fr/statistiques/8581424",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8581424/base-cc-caract_emp-2022_csv.zip",
+    "path": "data\\raw\\insee\\base-cc-caract_emp-2022_csv.zip",
+    "size_bytes": 28842187,
+    "sha256": "4723b25f6d017fed6607e08cb7ccf6317994200252c39328bd9d1d244885731f",
+    "downloaded_at_utc": "2026-10-26T15:19:45.361100+00:00",
+    "source_family": "mobilite",
+    "geography": "COG 2025",
+    "license": "Licence Ouverte / Open Licence"
+  },
+  {
+    "source_id": "8377162",
+    "source_family": "cog2025",
+    "page_url": "https://www.insee.fr/fr/information/8377162",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8377162/v_commune_2025.csv",
+    "path": "data\\raw\\insee\\v_commune_2025.csv",
+    "size_bytes": 3569959,
+    "sha256": "3f8d2913fb0bdee1f72f54706854dc0cd626ed4089bd5761ec9292db0cb12e7e",
+    "geography": "COG 2025",
+    "license": "Licence Ouverte / Open Licence"
+  },
+  {
+    "source_id": "8377162",
+    "source_family": "cog2025",
+    "page_url": "https://www.insee.fr/fr/information/8377162",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8377162/v_departement_2025.csv",
+    "path": "data\\raw\\insee\\v_departement_2025.csv",
+    "size_bytes": 6076,
+    "sha256": "513900ca23edc682ef9b912d7bfc317129eac3a7d71ff19bc22b40ea4838e6eb",
+    "geography": "COG 2025",
+    "license": "Licence Ouverte / Open Licence"
+  },
+  {
+    "source_id": "8377162",
+    "source_family": "cog2025",
+    "page_url": "https://www.insee.fr/fr/information/8377162",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8377162/v_region_2025.csv",
+    "path": "data\\raw\\insee\\v_region_2025.csv",
+    "size_bytes": 1245,
+    "sha256": "d903566d9c0d263389d279baea6761917b7460749a07bec8ba37dd8f2ff7d98a",
+    "geography": "COG 2025",
+    "license": "Licence Ouverte / Open Licence"
+  },
+  {
+    "source_id": "8377162",
+    "source_family": "cog2025",
+    "page_url": "https://www.insee.fr/fr/information/8377162",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8377162/v_mvt_commune_2025.csv",
+    "path": "data\\raw\\insee\\v_mvt_commune_2025.csv",
+    "size_bytes": 2053190,
+    "sha256": "731fca6b9d330b70d654c3c019f43048df376a90dcb93414641526adc21d8c84",
+    "geography": "COG 2025",
+    "license": "Licence Ouverte / Open Licence"
+  },
+  {
+    "source_id": "8571524",
+    "source_family": "grille_densite2025",
+    "page_url": "https://www.insee.fr/fr/information/8571524",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8571524/fichier_diffusion_2025.xlsx",
+    "path": "data\\raw\\insee\\fichier_diffusion_2025.xlsx",
+    "size_bytes": 2409520,
+    "sha256": "951ae15ad9055235f3ec1d8bd7c9a2281d35f98a98e01bc2bc513f70eb1b3452",
+    "geography": "COG 2025",
+    "license": "Licence Ouverte / Open Licence"
+  }
+]

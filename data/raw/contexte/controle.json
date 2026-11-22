@@ -1,0 +1,9 @@
+{
+  "pages": 3,
+  "robots_url": "https://fr.wikipedia.org/robots.txt",
+  "delay_seconds_minimum": 2,
+  "extraction": "HTMLParser, cellules de la ligne Mise en service",
+  "client_date": "2026-10-26",
+  "dates_exactes": 2,
+  "selection": "Trois LGV de l'ouest : échantillon de contexte raisonné, non exhaustif"
+}

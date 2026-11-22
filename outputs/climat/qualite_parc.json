@@ -1,0 +1,30 @@
+{
+  "source_rows": 786703,
+  "expected_rows_api_count": 786703,
+  "communes": 34916,
+  "codes_fictifs_ou_invalides": 101,
+  "carburants": [
+    "Diesel",
+    "Diesel HNR",
+    "Diesel HR",
+    "Electrique",
+    "Essence",
+    "Essence HNR",
+    "Essence HR",
+    "Gaz",
+    "Gaz HNR",
+    "Gaz HR",
+    "Hydrogène et autre ZE",
+    "Inconnu"
+  ],
+  "source_years": [
+    2016,
+    2019,
+    2022,
+    2023,
+    2024
+  ],
+  "geographie_sdes": "Notice: COG de la derniere annee disponible. Edition2026-06, annee COG exacte non explicitee; jointure par code et rejets controles.",
+  "years_definitive_vp": "2011-2023; 2024 provisoire dans edition 2026-06",
+  "no_imputation": true
+}

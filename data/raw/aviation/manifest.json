@@ -1,0 +1,99 @@
+{
+  "client_date": "2026-10-26",
+  "manifest_built_utc": "2026-10-26T15:17:46.638868+00:00",
+  "licence_dgac": "Licence Ouverte 2.0",
+  "ourairports": "public domain (OurAirports data page)",
+  "files": [
+    {
+      "file": "data/raw/aviation/dgac_metadata.json",
+      "url": "https://www.data.gouv.fr/api/1/datasets/64808a5811da153f1439914c/",
+      "bytes": 20531,
+      "sha256": "1ee2257a9dcf6ec78f0e13df528a5b249f23e180de35e0774ab65dd7e24131b9",
+      "local_file_mtime_utc": "2026-10-26T15:13:55.084256+00:00"
+    },
+    {
+      "file": "data/raw/aviation/Notice_ASP_serie_APT.pdf",
+      "url": "https://static.data.gouv.fr/resources/trafic-aerien-commercial-mensuel-francais-par-paire-daeroports-par-sens-depuis-1990/20260623-160914/notice-asp-serie-apt.pdf",
+      "bytes": 217687,
+      "sha256": "e11bab3cbfcffee182cab682cc30acdeec45a73583fa4760705df5e0bbb4467e",
+      "local_file_mtime_utc": "2026-10-26T15:13:55.888512+00:00"
+    },
+    {
+      "file": "data/raw/aviation/Notice_ASP_serie_LSN.pdf",
+      "url": "https://static.data.gouv.fr/resources/trafic-aerien-commercial-mensuel-francais-par-paire-daeroports-par-sens-depuis-1990/20260731-113353/notice-asp-serie-lsn.pdf",
+      "bytes": 631957,
+      "sha256": "daff3a1ccffda22e652595e9da785b97b3e6a05554afe3a75e8560ecd99b4f94",
+      "local_file_mtime_utc": "2026-10-26T15:13:56.644534+00:00"
+    },
+    {
+      "file": "data/raw/aviation/Notice_ASP_serie_PAP.pdf",
+      "url": "https://static.data.gouv.fr/resources/trafic-aerien-commercial-mensuel-francais-par-paire-daeroports-par-sens-depuis-1990/20260903-120427/notice-asp-serie-pap.pdf",
+      "bytes": 666405,
+      "sha256": "d329b530efe2c546116dc89b1c3fed53887f892a7be1cf820f79c4bf071f8fd6",
+      "local_file_mtime_utc": "2026-10-26T15:13:57.373162+00:00"
+    },
+    {
+      "file": "data/raw/aviation/ASP_APT_1990_2025.zip",
+      "url": "https://static.data.gouv.fr/resources/trafic-aerien-commercial-mensuel-francais-par-paire-daeroports-par-sens-depuis-1990/20260731-122942/asp-apt-1990-2025.zip",
+      "bytes": 859737,
+      "sha256": "61226d83a47a85dd76300b02165b0dcfeccf583ed24ea4e296eada8d871f0458",
+      "local_file_mtime_utc": "2026-10-26T15:13:58.178438+00:00"
+    },
+    {
+      "file": "data/raw/aviation/ASP_LSN_1990_2025.zip",
+      "url": "https://static.data.gouv.fr/resources/trafic-aerien-commercial-mensuel-francais-par-paire-daeroports-par-sens-depuis-1990/20260731-113311/asp-lsn-1990-2025.zip",
+      "bytes": 1285599,
+      "sha256": "ecbbe474e9cd22b064e7471ac3dd829c6695ae6319669d84e2028ab14da048cc",
+      "local_file_mtime_utc": "2026-10-26T15:14:00.433579+00:00"
+    },
+    {
+      "file": "data/raw/aviation/ASP_PAP_1990_2025.zip",
+      "url": "https://static.data.gouv.fr/resources/trafic-aerien-commercial-mensuel-francais-par-paire-daeroports-par-sens-depuis-1990/20260903-120658/asp-pap-1990-2025.zip",
+      "bytes": 1066085,
+      "sha256": "2df52cbda17f5fa8bc88f10a6224ad8e3e01d175528d715b0ccce0b72e37b9fb",
+      "local_file_mtime_utc": "2026-10-26T15:14:01.334308+00:00"
+    },
+    {
+      "file": "data/raw/aviation/co2_metadata.json",
+      "url": "https://www.data.gouv.fr/api/1/datasets/691dcc1b4a50a5b0a65889c8/",
+      "bytes": 8918,
+      "sha256": "bfe9e949e837cda077bc5a526abf7b748ce6c44baaf59628a20f2b17f0f2e505",
+      "local_file_mtime_utc": "2026-10-26T15:14:29.504639+00:00"
+    },
+    {
+      "file": "data/raw/aviation/Notice_ASP_EMI.pdf",
+      "url": "https://static.data.gouv.fr/resources/emissions-nettes-annuelles-de-co2-du-trafic-aerien-commercial-en-france/20251119-135435/notice-asp-emi.pdf",
+      "bytes": 506442,
+      "sha256": "3fba95c6fe473dd2ecf71496648953b6d864988fc0846dd5289fac56c5d66cd6",
+      "local_file_mtime_utc": "2026-10-26T15:14:30.186625+00:00"
+    },
+    {
+      "file": "data/raw/aviation/EMI_TOT_2000_2024.csv",
+      "url": "https://static.data.gouv.fr/resources/emissions-nettes-annuelles-de-co2-du-trafic-aerien-commercial-en-france/20251119-135435/emi-tot-2000-2024.csv",
+      "bytes": 716,
+      "sha256": "63599729a82facc379ab43026a3a085650ffab1d811cebe5be2756be7cd69c79",
+      "local_file_mtime_utc": "2026-10-26T15:14:30.475079+00:00"
+    },
+    {
+      "file": "data/raw/aviation/EMI_UNI_2000_2024.csv",
+      "url": "https://static.data.gouv.fr/resources/emissions-nettes-annuelles-de-co2-du-trafic-aerien-commercial-en-france/20251119-135435/emi-uni-2000-2024.csv",
+      "bytes": 843,
+      "sha256": "9dca5baa43af484a88b20fb688212b82c8bc4b0f13a3f1969c49615c8b4abe56",
+      "local_file_mtime_utc": "2026-10-26T15:14:30.730063+00:00"
+    },
+    {
+      "file": "data/raw/aviation/ourairports.csv",
+      "url": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+      "bytes": 12752219,
+      "sha256": "27c6500d0a742edece15c5aaf960e08c01df0d4356c5c86255897b5d3749ad3b",
+      "local_file_mtime_utc": "2026-10-26T15:14:04.602529+00:00"
+    },
+    {
+      "file": "data/raw/aviation/Bulletin_Statistiques_transport_aerien_2025.pdf",
+      "url": "https://www.ecologie.gouv.fr/sites/default/files/documents/Bulletin_Statistiques_transport_aerien_2025.pdf",
+      "bytes": 3443450,
+      "sha256": "0378d3d3d8cb14e245daef185f716cb07dbed617df092cfe48edda8125c20837",
+      "local_file_mtime_utc": "2026-10-26T15:14:31.882655+00:00"
+    }
+  ]
+}

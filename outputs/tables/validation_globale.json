@@ -1,0 +1,507 @@
+{
+  "date_client_reference": "2026-10-26",
+  "executed_at_utc": "2026-11-22T16:45:35.607352+00:00",
+  "statut": "CONFORME",
+  "nombre_controles": 72,
+  "nombre_echecs": 0,
+  "controles": [
+    {
+      "controle": "empreintes_sources",
+      "conforme": true,
+      "details": {
+        "fichiers_controles": 176,
+        "manifestes": 4,
+        "empreintes_differentes": [],
+        "fichiers_absents": [],
+        "empreintes_contradictoires": []
+      }
+    },
+    {
+      "controle": "grain_demographie_communes",
+      "conforme": true,
+      "details": {
+        "lignes": 34858,
+        "cles": [
+          "code_commune"
+        ]
+      }
+    },
+    {
+      "controle": "format_demographie_communes_code_commune",
+      "conforme": true,
+      "details": {
+        "valeurs_non_nulles": 34858
+      }
+    },
+    {
+      "controle": "absence_infini_demographie_communes",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_demographie_population_long",
+      "conforme": true,
+      "details": {
+        "lignes": 313722,
+        "cles": [
+          "code_commune",
+          "annee"
+        ]
+      }
+    },
+    {
+      "controle": "format_demographie_population_long_code_commune",
+      "conforme": true,
+      "details": {
+        "valeurs_non_nulles": 313722
+      }
+    },
+    {
+      "controle": "absence_infini_demographie_population_long",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_gares_referentiel",
+      "conforme": true,
+      "details": {
+        "lignes": 3021,
+        "cles": [
+          "code_uic"
+        ]
+      }
+    },
+    {
+      "controle": "format_gares_referentiel_code_commune",
+      "conforme": true,
+      "details": {
+        "valeurs_non_nulles": 3019
+      }
+    },
+    {
+      "controle": "format_gares_referentiel_code_uic",
+      "conforme": true,
+      "details": {
+        "valeurs_non_nulles": 3021
+      }
+    },
+    {
+      "controle": "absence_infini_gares_referentiel",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_gares_annees",
+      "conforme": true,
+      "details": {
+        "lignes": 30210,
+        "cles": [
+          "code_uic",
+          "annee"
+        ]
+      }
+    },
+    {
+      "controle": "format_gares_annees_code_commune",
+      "conforme": true,
+      "details": {
+        "valeurs_non_nulles": 30190
+      }
+    },
+    {
+      "controle": "format_gares_annees_code_uic",
+      "conforme": true,
+      "details": {
+        "valeurs_non_nulles": 30210
+      }
+    },
+    {
+      "controle": "absence_infini_gares_annees",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_communes_annees_rail",
+      "conforme": true,
+      "details": {
+        "lignes": 26530,
+        "cles": [
+          "code_commune",
+          "annee"
+        ]
+      }
+    },
+    {
+      "controle": "format_communes_annees_rail_code_commune",
+      "conforme": true,
+      "details": {
+        "valeurs_non_nulles": 26530
+      }
+    },
+    {
+      "controle": "absence_infini_communes_annees_rail",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_dataset_final_communes",
+      "conforme": true,
+      "details": {
+        "lignes": 34858,
+        "cles": [
+          "code_commune"
+        ]
+      }
+    },
+    {
+      "controle": "format_dataset_final_communes_code_commune",
+      "conforme": true,
+      "details": {
+        "valeurs_non_nulles": 34858
+      }
+    },
+    {
+      "controle": "absence_infini_dataset_final_communes",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_climat_parc_communes",
+      "conforme": true,
+      "details": {
+        "lignes": 34916,
+        "cles": [
+          "code_commune"
+        ]
+      }
+    },
+    {
+      "controle": "format_climat_parc_communes_code_commune",
+      "conforme": true,
+      "details": {
+        "valeurs_non_nulles": 34916
+      }
+    },
+    {
+      "controle": "absence_infini_climat_parc_communes",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_climat_parc_communes_cog2025",
+      "conforme": true,
+      "details": {
+        "lignes": 34854,
+        "cles": [
+          "code_commune"
+        ]
+      }
+    },
+    {
+      "controle": "format_climat_parc_communes_cog2025_code_commune",
+      "conforme": true,
+      "details": {
+        "valeurs_non_nulles": 34854
+      }
+    },
+    {
+      "controle": "absence_infini_climat_parc_communes_cog2025",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_climat_projections_departements",
+      "conforme": true,
+      "details": {
+        "lignes": 303,
+        "cles": [
+          "code_departement",
+          "scenario_insee"
+        ]
+      }
+    },
+    {
+      "controle": "absence_infini_climat_projections_departements",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_aviation_trafic_annuel",
+      "conforme": true,
+      "details": {
+        "lignes": 30,
+        "cles": [
+          "annee",
+          "LSN_FSC"
+        ]
+      }
+    },
+    {
+      "controle": "absence_infini_aviation_trafic_annuel",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_aviation_trafic_mensuel",
+      "conforme": true,
+      "details": {
+        "lignes": 240,
+        "cles": [
+          "ANMOIS",
+          "LSN_SEG",
+          "LSN_FSC",
+          "LSN_1",
+          "LSN_2"
+        ]
+      }
+    },
+    {
+      "controle": "absence_infini_aviation_trafic_mensuel",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_aviation_pap_mensuel_observe",
+      "conforme": true,
+      "details": {
+        "lignes": 15767,
+        "cles": [
+          "ANMOIS",
+          "PAP"
+        ]
+      }
+    },
+    {
+      "controle": "absence_infini_aviation_pap_mensuel_observe",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_aviation_pap_annuel_observe",
+      "conforme": true,
+      "details": {
+        "lignes": 2505,
+        "cles": [
+          "annee",
+          "PAP"
+        ]
+      }
+    },
+    {
+      "controle": "absence_infini_aviation_pap_annuel_observe",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_aviation_emissions_annuelles",
+      "conforme": true,
+      "details": {
+        "lignes": 250,
+        "cles": [
+          "annee",
+          "faisceau",
+          "unite"
+        ]
+      }
+    },
+    {
+      "controle": "absence_infini_aviation_emissions_annuelles",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "grain_aviation_aeroports_referentiel",
+      "conforme": true,
+      "details": {
+        "lignes": 86286,
+        "cles": [
+          "icao"
+        ]
+      }
+    },
+    {
+      "controle": "absence_infini_aviation_aeroports_referentiel",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "conservation_communes_apres_jointures",
+      "conforme": true,
+      "details": {
+        "insee": 34858,
+        "final": 34858
+      }
+    },
+    {
+      "controle": "conservation_populations_apres_jointures",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "population_nonnegative",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "couverture_distance_5km",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "couverture_distance_10km",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "couverture_distance_15km",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "distances_nonnegatives",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "champ_distance_france_continentale_explicitement_defini",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "distance_finie_nonnegative_dans_champ_continental",
+      "conforme": true,
+      "details": {
+        "communes_dans_champ": 34386
+      }
+    },
+    {
+      "controle": "distance_non_mesuree_hors_champ_continental",
+      "conforme": true,
+      "details": {
+        "communes_hors_champ": 472,
+        "motif": "Corse : réseau CFC absent de la source SNCF ; Outre-mer hors champ."
+      }
+    },
+    {
+      "controle": "frequentation_nonnegative",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "conservation_gares_source",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "frequentation_identique_a_la_source_par_gare_annee",
+      "conforme": true,
+      "details": []
+    },
+    {
+      "controle": "conservation_comptages_agregation_communale",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "totaux_rattaches_plus_non_rattaches",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "cohorte_2016_nonnegative",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "cohorte_2022_nonnegative",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "cohorte_denominateur_strictement_positif",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "cohorte_croissance_arithmetiquement_exacte",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "cohorte_somme_sans_multiplication_par_jointure",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "effectifs_rapport_qualite_conformes_aux_tables",
+      "conforme": true,
+      "details": {}
+    },
+    {
+      "controle": "aucune_coordonnee_reseau_ambigue_utilisee",
+      "conforme": true,
+      "details": {
+        "uic_ambigus_utilises": []
+      }
+    },
+    {
+      "controle": "parc_cog2025_codes_valides",
+      "conforme": true,
+      "details": {
+        "communes_parc": 34854,
+        "communes_insee": 34858
+      }
+    },
+    {
+      "controle": "parc_effectifs_apres_jointure",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "parc_totaux_apres_jointure",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "parc_codes_communes_et_fictifs_conservent_total",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "avion_lsn_conservation_mensuel_annuel",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "avion_lsn_douze_mois",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "pap_censure_et_couverture_explicites",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "scraping_contexte_trois_pages_uniques",
+      "conforme": true,
+      "details": null
+    },
+    {
+      "controle": "scraping_contexte_empreintes_html",
+      "conforme": true,
+      "details": null
+    }
+  ],
+  "controles_reportes": [],
+  "avertissements_methodologiques": [
+    "Accessibilité : distance du centroïde communal à une gare SNCF comptée en 2024, en France continentale ; Corse et Outre-mer non mesurés. Ce n'est ni une distance individuelle ni un horaire de desserte.",
+    "Cohorte 2016–2022 : exclut les gares sans fréquentation strictement positive en 2016 ; n'évalue pas les effets des nouvelles gares.",
+    "PAP : secret statistique et seuil mensuel ; une absence n'est jamais un zéro.",
+    "PAP : deux sens réunis, contrairement à l'ancien intitulé de l'URL.",
+    "Bulletin mai2026 vs ZIP juillet2026 : total intérieur2025 diffère de 6085 passagers (+0,031%), écart conservé.",
+    "Une baisse du trafic aérien et une hausse des entrées/sorties en gares ne mesurent pas un report modal.",
+    "Émissions CO2 CSV : 22,2 Mt en 2024 ; page ministère : 22,1 Mt. Écart de source conservé et signalé."
+  ],
+  "portee": "Audit d'intégrité, cohérence et conservation ; ne prouve pas l'exactitude de toutes les observations des producteurs."
+}

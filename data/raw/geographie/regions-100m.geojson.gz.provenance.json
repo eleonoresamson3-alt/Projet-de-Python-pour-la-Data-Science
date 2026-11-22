@@ -1,0 +1,10 @@
+{
+  "url": "https://etalab-datasets.geo.data.gouv.fr/contours-administratifs/2025/geojson/regions-100m.geojson.gz",
+  "resolved_url": "https://contours-administratifs.s3.rbx.io.cloud.ovh.net:443/2025/geojson/regions-100m.geojson.gz",
+  "retrieved_at_utc": "2026-10-26T15:19:01.498161+00:00",
+  "client_reference_date": "2026-10-26",
+  "bytes": 450300,
+  "sha256": "396b35422d1f10332b85bb07f7747baf7e86e79b7175070fc03431e34114924c",
+  "last_modified": "Mon, 04 May 2026 10:08:59 GMT",
+  "content_type": "Content-Type: application/gzip"
+}

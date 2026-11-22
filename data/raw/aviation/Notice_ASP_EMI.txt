@@ -1,0 +1,18 @@
+Fichier ASP_EMI_TOT_AAAA_AAAA.csv 
+champ descriptif 
+AN Emissions nettes annuelles de CO2 en millions de tonnes (carburant d’aviation durable ou SAF inclus) 
+MET_INTERIEUR Trafic commercial intérieur à la Métropole 
+MET-OM_et_OM-OM Trafic commercial entre la Métropole et les Outre-Mer et  Trafic commercial entre Outre-Mer 
+INTL_MC Trafic commercial international moyen-courrier 
+INTL_LC Trafic commercial international long-courrier 
+FRANCE_TOT Total trafic commercial France 
+ 
+Fichier ASP_EMI_TOT_AAAA_AAAA.csv 
+champ descriptif 
+AN Emissions nettes annuelles de CO2 en grammes par passager équivalent kilomètre transporté (carburant d’aviation durable ou SAF inclus) 
+MET_INTERIEUR Trafic commercial intérieur à la Métropole 
+MET-OM_et_OM-OM Trafic commercial entre la Métropole et les Outre-Mer et  Trafic commercial entre Outre-Mer 
+INTL_MC Trafic commercial international moyen-courrier 
+INTL_LC Trafic commercial international long-courrier 
+FRANCE_TOT Total trafic commercial France 
+ 

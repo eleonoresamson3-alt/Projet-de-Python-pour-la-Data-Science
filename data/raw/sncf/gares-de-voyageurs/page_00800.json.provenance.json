@@ -1,0 +1,10 @@
+{
+  "url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/gares-de-voyageurs/records?limit=100&offset=800",
+  "resolved_url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/gares-de-voyageurs/records?limit=100&offset=800",
+  "retrieved_at_utc": "2026-10-26T15:17:41.994193+00:00",
+  "client_reference_date": "2026-10-26",
+  "bytes": 22738,
+  "sha256": "99009a5b6905cefd19c305e3580e7e860fb0202589ba0f20e591090fd28fba81",
+  "last_modified": null,
+  "content_type": "application/json; charset=utf-8"
+}

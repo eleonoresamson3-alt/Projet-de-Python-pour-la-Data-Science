@@ -1,0 +1,55 @@
+ 
+Trafic aérien commercial mensuel en France, liaison point à point depuis 1990 (série PAP)  
+Par arrêté ministériel (DEVA1203103A ), la direction générale de l’aviation civile (DGAC) reçoit des exploitants 
+d’aérodromes et des transporteurs aériens, les relevés de vols réalisés dans le cadre du transport public aérien. 
+Présentation des fichiers 
+La série ASP_PAP_AAAA (format csv) présente le trafic aérien commercial mensuel réalisé en France par liaison entre 
+aéroports depuis 1990. 
+Les résultats mensuels sont détaillés pour les liaisons ayant réalisé un trafic supérieur ou égal à 10 000 passagers 
+équivalents (Peq), où un passager est équivalent à cent kilogrammes de fret ou de poste. 
+Cette série vient en complément de la série LSN. Conformément à la législation française en matière de publication de 
+données, elle ne comprend que les seules liaisons sur lesquelles sont observés sur la période de référence (mois) au 
+moins trois opérateurs dont aucun ne représente plus de 85% du total de l’activité (part de marché appréciée en 
+passagers équivalents). 
+Mise à jour  
+Les fichiers font l’objet d’une mise à jour annuelle. L’ouverture des données est soumise à l’observation d’un délai de 
+trois mois révolus au terme du dernier mois de l’année concernée. 
+Contact dta-stat-bf@aviation-civile.gouv.fr 
+Description des champs 
+Fichiers ASP_PAP_AAAA.csv 
+champ descriptif 
+ANMOIS Période (format AAAAMM , soit 201601 pour janvier 2016) 
+PAP 
+Désignation de la liaison par paire de codes OACI des aéroports (format AAAA_BBBB) 
+ 
+Mode de classement des aéroports dans la combinaison : 
+- Trafic international : l’aéroport français figure toujours en première position ; 
+- Trafic national : le classement des aéroports observe les règles de priorité suivantes : 
+ 1/ aéroports parisiens (Paris-CDG ; Paris-Orly) ; 
+ 2/ aéroports de Métropole (sauf Bâle-Mulhouse) ; 
+ 3/ aéroport de Bâle-Mulhouse ; 
+ 4/ aéroports des DOM ; 
+ 5/ aéroport COM périmètre UE (Saint Martin-Grand Case); 
+ 6/ aéroports des autres COM. 
+ 
+En cas de liaison entre aéroports d’une même catégorie, le classement s’effectue selon l’ordre alphabétique du nom de 
+la ville desservie 
+ 
+PAP1_LABEL  Appellation du premier aéroport identifié de la combinaison PAP (4 premiers caractères)  
+PAP2_LABEL Appellation du second aéroport identifié de la combinaison PAP (4 derniers caractères) 
+PAP_DIST Distance entre les deux aéroports (mesure orthodromique) 
+PAP_PEQ_LOC Passagers locaux équivalents de la liaison [1 Peq = 1 pax ou 0,1 tonne de fret ou poste], départs et arrivées confondus 
+PAP_PAX_LOC Passagers locaux sur la liaison, départs et arrivées confondus 
+PAP_FRP_LOC Fret & poste locaux sur la liaison (en tonnes), départs et arrivées confondus 
+PAP_DRT Nombre de dessertes commerciales (avec ou sans escale intermédiaire), départs et arrivées confondus 
+PAP_MVT Mouvements commerciaux directs (sans escales intermédiaires), départs et arrivées confondus 
+PAP_PEQ_FS Passagers équivalents à bord (FS) sur liaisons directes [1 Peq = 1 pax ou 0,1 tonne de fret ou poste], départs et arrivées confondus 
+PAP_PAX_FS Passagers à bord en direct (FS) sur liaisons directes, départs et arrivées confondus 
+PAP_FRP_FS Fret & poste à bord) en direct (FS) (en tonnes) sur liaisons directes, départs et arrivées confondus 
+ 
+Les définitions et leur interprétation (dimensions et métriques) sont disponibles : 
+ dans le manuel de référence Eurostat (en anglais), 
+ dans le Glossaire des statistiques de transports édité par Eurostat 
+ dans la circulaire du 26 décembre 2018 relative à la communication de données par les transporteurs aériens et les 
+exploitants d’aérodromes (NOR : TRAA1900960C), en son annexe 6 
+Leur interprétation est précisée en introduction de chaque édition du Bulletin statistique annuel édité par la DGAC. 

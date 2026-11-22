@@ -1,0 +1,2811 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Méthodologie pour l'estimation 
+des parcs de véhicules et  
+des distances parcourues 
+ 
+ 
+Mars 2024 
+ 
+DOCUMENT DE TRAVAIL 
+ 
+ 2 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+ 
+ 
+Résumé 
+Ce document de travail présente les traitements statistiques mis en œuvre pour 
+déterminer chaque année les véhicules en circulation, leurs caractéristiques et leur 
+utilisation à partir des données du répertoire statistique des véhicules routiers 
+(RSVERO), issu de l’appariement des données du système d’immatriculation des 
+véhicules (SIV) et des données de contrôles techniques. Ces traitements sont mis 
+en œuvre sur le champ des véhicules dans l’obligation de passer un contrôle 
+technique périodique : camions, tracteurs routiers, bus, cars, remorques, véhicules 
+utilitaires légers et voitures. 
+ 
+Mots clés : véhicule ; crit'air ; circulation ; automobile ; transport ; RSVERO 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Auteurs 
+Corentin TREVIEN, SDES* 
+Jérémy L’HOUR, Insee* 
+Guillaume WEMELBEKE, SDES* 
+ 
+*En poste au moment de la rédaction de ce document de travail. 
+ 
+ 
+ 
+ 
+  
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 3  
+ 
+1. Synthèse et précautions d’utilisation ............................................................................ 4 
+ABSTRACT IN ENGLISH Summary and usage guidelines .................................................... 7 
+2. Caractéristiques des véhicules ..................................................................................... 10 
+3. Parc ..................................................................................................................................... 18 
+4. Distances annuelles ........................................................................................................ 30 
+5. Tests de sensibilité et choix méthodologiques alternatifs ..................................... 41 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Sommaire  
+ 
+ -4 Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues  
+1.  Synthèse et précautions d’utilisation 
+Les fichiers annuels du répertoire statistique des véhicules routiers (RSVERO) 
+contiennent des données détaillant chaque année les véhicules en circulation, leurs 
+caractéristiques et leur utilisation.  
+Le RSVERO résulte du rapprochement de deux sources administratives :  
+• le Système d’immatriculation des véhicules (SIV), géré par l’Agence 
+nationale des titres sécurisés (ANTS),  contient les caract éristiques 
+techniques du v éhicule, des informations sur son utilisateur et p ermet de 
+suivre les diff érents événements en cours d ’utilisation (immatriculation, 
+changements de main, d’adresse, destruction, etc.) ;  
+• les résultats des contrôles techniques, collectés par l’Union technique de 
+l'automobile, du motocycle et du cycle (Utac), contiennent notamment les 
+relevés kilométriques effectués à chaque visite. La comparaison des relevés 
+de deux visites successives permet de déterminer l’utilisation des véhicules 
+pendant la période qui les sépare. Ces données permettent également de 
+s’assurer que les véhicules sont toujours en circulation, le passage régulier 
+d’une visite constituant un « signe de vie ».  
+Ces deux sources principales sont complétées par le répertoire Sirene de l’Insee, 
+permettant d’identifier les entreprises possédant ou louant les véhicules.  
+Les fichiers annuels portent sur le champ des véhicules dans l’obligation de passer 
+un contrôle technique périodique  : camions, tracteurs routiers, bus, cars, 
+remorques, véhicules utilitaires légers (camionnettes et véhicules automo teurs 
+spécialisés) et voitures. Ce champ couvre la très grande majorité du transport 
+routier, les deux-roues et autres véhicules non soumis au contrôle technique ayant 
+un poids très limité dans l’activité du secteur. Ce  document de travail  décrit les 
+traitements statistiques appliqués aux données brutes du RSVERO, pour 
+déterminer chaque année les véhicules en circulation, leurs caractéristiques et leur 
+utilisation.  
+Pour chaque véhicule, les fichiers annuels contiennent notamment les informations 
+suivantes :  
+• les caractéristiques du véhicule, dont la date de mise en circulation ;  
+• la présence du véhicule dans le parc au 1 er janvier, chaque année depuis 
+20111 , ainsi que la part de l’année durant laquelle le véhicule a circulé, 
+information à partir de laquelle on peut calculer un « parc moyen ») ;  
+• les caractéristiques annuelles de l’utilisateur au 1 er janvier (notamment 
+commune de résidence, statut professionnel ou particulier, secteur 
+d’activité le cas échéant) ; 
+• la distance annuelle parcourue.  
+ 
+Des fichiers annuels distincts sont établis pour chaque catégorie de véhicule. Une 
+première table ‘véhicule’ contient l’ensemble des caractéristiques du véhicule 
+constantes dans le temps et une seconde table ‘annee’ contient celles qui varient 
+d’une année sur l’autre (appartenance au parc, distance, etc.). 
+ 
+ 
+1 Il s’agit de la première année à partir de laquelle les données du SIV, mis en place en 2009, peuvent être combinées 
+de manière fiable aux données des contrôles techniques.  
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 5  
+Il est important de prendre certaines précautions pour utiliser les fichiers annuels, 
+en raison de la manière dont ils sont produits, notamment sur les points suivants :  
+• Retard maximal acceptable pour les contrôles techniques : une part 
+significative des véhicules est présentée au contrôle technique avec retard. 
+Pour déterminer si un véhicule est toujours en circulation, il n’est donc pas 
+possible d’appliquer strictement le délai réglementaire prévu entre deux 
+visites. Cela conduirait à exclure certains vé hicules du parc pour quelques 
+jours, semaines ou mois, alors qu’ils sont vraisemblablement toujours 
+utilisés. Pour chaque visite, le délai réglementaire est donc prolongé d’une 
+certaine durée de retard considérée comme acceptable. Ce retard doit 
+cependant rester limité, pour éviter de maintenir dans le parc des véhicules 
+qui ne circulent plus. Des durées de « retard maximal acceptable  », 
+spécifiques à chaque catégorie de véhicule et variant dans une fourchette 
+de 6 à 18 mois, sont ainsi déterminées selon des choix méthodologiques en 
+partie conventionnels . Il en résulte une source d’incertitude de quelques 
+pourcents sur le nombre de véhicules en circulation à une date donnée , 
+l’évolution de ce nombre d’une année à l’autre étant en revanche moins 
+sensible à la durée de retard retenue.  
+• Fin de vie des véhicules : quand la sortie du parc d’un véhicule est déduite 
+de l’arrêt du passage de contrôles techniques réguliers, il n’est pas possible 
+de connaître avec précision la date exacte de fin de circulation. Les règ les 
+utilisées pour déterminer cette date impactent elles aussi le calcul du 
+nombre de véhicules dans le parc. L’utilisation des véhicules après le dernier 
+contrôle technique est également inconnue, aucun relevé n’étant, par 
+définition, disponible. Elle est  donc totalement imputée, à partir de 
+régressions linéaires prenant en compte les caractéristiques des véhicules 
+et de leurs utilisateurs. 
+• Véhicules temporairement immobilisés  : certains véhicules sont 
+temporairement immobilisés, pour de courtes périodes ( moins de trois 
+mois) quand, par exemple, ils sont achetés par un professionnel de 
+l’automobile en vue d’être revendus. Ces véhicules sont comptabilisés dans 
+le parc au 1 er janvier, en plus des véhicules en circulation. Ils ne sont en 
+revanche pas comptabilisés dans le calcul du parc moyen pendant leur 
+immobilisation temporaire, considérant que la distance parcourue est nulle 
+pendant cette période. 
+• Véhicules de fonction  : le certificat d'immatriculation indique le 
+propriétaire ou, le cas échéant, le  locataire à long terme du véhicule. Les 
+véhicules de fonction sont donc attribués à l’entreprise propriétaire ou 
+locataire du certificat, contrairement aux enquêtes « mobilité » ou au 
+recensement, qui rattachent ces véhicules au ménage qui en dispose.  
+• Variations annuelles des distances parcourues par un véhicule : la distance 
+parcourue en une année est le plus souvent déterminée à partir des relevés 
+de visites distantes de deux années ou plus , avec une hypothèse 
+d’utilisation constante du véhicule entre de ux visites . Les variations 
+d’utilisation des véhicules d’une année à l’autre sont donc lissées, ce qui 
+réduit l’ampleur des évolutions annuelles. Les données ne peuvent donc 
+être utilisées pour analyser des variations à court terme des distances 
+parcourues.   
+• Distribution des distances annuelles pour les années récentes : une part 
+importante des distances annuelles est imputée pour les années récentes  
+du fait de l'absence de relevé kilométrique durant les premières années de 
+vie du véhicule (jusqu’au premier contrôle technique) ou depuis la dernière 
+visite de contrôle connue . Ces imputations, effectuées à l’aide de 
+régressions linéaires, correspondent à l’utilisation moyenne du véhicule, 
+ 
+ 6 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+compte tenu de ses caractéristiques, et sont nécessairement beaucoup 
+moins dispersées que les valeurs observées. Il est donc fortement 
+déconseillé d’utiliser les données des années les plus récentes pour étudier 
+la dispersion des distances parcourues. 
+• Défaut de contrôle technique : un certain nombre d’utilisateurs 
+maintiennent leur véhicule en circulation sans avoir satisfait aux obligations 
+de contrôle technique périodique. Faute de données disponibles, cette 
+infraction au code de la route ne peut pas être détectée et son ampleur est 
+inconnue. Cela conduit mécaniquement à sou s-estimer la taille du parc, 
+puisque les véhicules en défaut de contrôle technique sont 
+systématiquement sortis du parc alors qu’ils continuent à circuler.   
+• Crise sanitaire  : les méthodes d ’estimation du parc  de véhicules  et des 
+distances parcourues ont dû être adaptées sur la période 2020- 2021 (avec 
+un effet rétroactif sur 2019 et 2022) pour tenir compte de la prorogation 
+des délais réglementaires intervisites et des restrictions de circulation. Pour 
+l’estimation des distances, il a ainsi été nécessaire d'abandonner 
+l'hypothèse d'utilisation constante du véhicule entre deux visites  en 
+s’appuyant sur l'information pouvant être extraite des relevés 
+kilométriques pendant la crise, tout en veillant à rester cohérent avec la 
+méthodologie usuelle. 
+• Véhicules de collection  : ces véhicules ne sont pas comptabilisés dans les 
+fichiers annuels de parc compte tenu d’une part des règles de contrôle 
+technique spécifiques qui leur sont applicables et d’autre part de leur très 
+faible contribution à la circulation routière.  
+Chaque début d'année, une nouvelle version des fichiers annuels est produite. Les 
+fichiers millésimés n (i.e. produits l’année n) comportent le parc des véhicules 
+jusqu’au 1er janvier de l'année n, ainsi que les distances années pa rcourues jusqu'à 
+l'année n-1. Compte-tenu des différentes hypothèses mentionnées ci -dessus pour 
+estimer le parc et les distances parcourues, les fichiers annuels font l’objet de 
+révisions, parfois importantes, pendant plusieurs années. En particulier, lorsque les 
+fichiers annuels du millésime n  sont calculés, le dernier contrôle technique 
+enregistré remonte souvent à l’année n -1, n-2, voire encore avant. Il n’est alors pas 
+possible de connaître la distance parcourue après cette date ou d’être certain que 
+le véhicule passera une nouvelle visite dans le futur. Une part importante des 
+distances est de ce fait imputée. Au fur et à mesure que les résultats des contrôles 
+techniques permettent d’observer la circulation réelle des véhicules, les données 
+annuelles sont progressivement mises à jour et consolidées.  
+Il importe donc de considérer les années les plus récentes comme une première 
+estimation : les données des millésimes les plus récents ont un statut provisoire  
+puis semi-définitif ; il ne devient définitif qu’après deux millésimes pour les parcs 
+et sept millésimes pour les distances2. 
+Ce document de travail présente les traitements statistiques appliqués au RSVERO 
+pour élaborer les fichiers annuels sur les véhicules routiers. Elle s’org anise comme 
+il suit  : la deuxième partie décrit la détermination des caractéristiques des 
+véhicules ; la troisième expose la méthode  de comptage des véhicules en 
+circulation ; la quatrième explique le calcul des distances annuelles parcourues et 
+la cinquième, réservée aux utilisateurs avertis, présente des tests de robustesse de 
+certains traitements statistiques. 
+  
+ 
+2  Le délai est plus important pour les distances que pour les parcs car dans le 1 er cas, on exploite les relevés 
+kilométriques (avec un délai pouvant aller jusqu'à 6 ans) alors que dans le 2nd cas, le retard acceptable pour maintenir 
+un véhicule dans le parc n’excède pas 18 mois par rapport aux délais réglementaires des contrôles techniques. 
+ 
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 7  
+ABSTRACT IN ENGLISH 
+Summary and usage guidelines 
+The annual database of the statistical register of road vehicles (RSVERO) details the 
+characteristics, usage patterns, and number of vehicles in circulation each year in 
+France.  
+The RSVERO combines two administrative sources:  
+• The Vehicle Registration System (“Système d’immatriculation des 
+véhicules” or SIV), managed by the “Agence nationale des titres sécurisés” 
+(ANTS), contains the technical characteristics of the vehicle, information 
+about its user and enables the various events during its use to be tracked 
+(registration, change of hand, change of address, destruction, etc.);  
+• The results of vehicule inspection, collected by the “Union Technique de 
+l'Automobile, du Motocycle et du Cycle” (Utac), include the mileage 
+recorded at each inspection. By comparing the records from two successive 
+inspections, it is allows determination of vehicle usage patterns between 
+inspections. Additionally, this data allows for the identification of vehicles 
+that remain in operation, as regular inspections serve as an indicator of 
+continued use. 
+• These two main sources are supplemented by INSEE's Sirene register, which 
+identifies companies that own or lease vehicles.  
+The annual files cover the range of vehicles required to undergo periodic 
+inspections: lorries, road tractors, buses, coaches, trailers, light commercial 
+vehicles (vans and specialise d self-propelled vehicles) and cars. This scope covers 
+the vast majority of road transport, as vehicles exempt from periodic inspections 
+represent a small fraction of overall traffic. This note describes the statistical 
+processing applied to the raw RSVERO data to compute the annual database. 
+For each vehicle, the annual database contain the following information:  
+• Vehicle characteristics: This includes the date of first registration. 
+• Fleet presence and utilization: The database indicates whether the vehicle  
+was present in the fleet on January 1 st of each year since 2011 3, along with 
+the proportion of the year it was in circulation (the "average fleet.") 
+• User characteristics (as of January 1 st): This includes the user's municipality 
+of residence, private or professional status, and, if applicable, their sector 
+of activity. 
+• Annual distance travelled: This information allows for analysis of vehicle 
+usage patterns. 
+Separate annual database are created for each vehicle category. A first table, 
+"vehicle," contains all of the vehicle's characteristics that are constant over time. 
+A second table, "year," contains those characteristics that vary from year to year 
+(fleet presence, distance, etc.). 
+  
+ 
+3This is the first year in which data from the SIV, introduced in 2009, can be reliably combined with data from technical 
+inspection. 
+ 
+ 8 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+It is important to take certain precautions when using annual database, due to the 
+way they are produced, particularly on the following points:  
+• Delays in Technical Inspections:  A significant proportion of vehicles are 
+presented for technical inspection with a delay. To determine whether a 
+vehicle is still in circulation, it is therefore not possible to strictly apply the 
+regulatory deadline between two inspections. This would lead to the 
+exclusion of certain vehicles from the fleet for a few days, weeks or months, 
+even though they are likely still being used. For each inspection, the 
+regulatory deadline is therefore extended by a certain period of delay 
+considered acceptable. However, this delay must remain limited, in order 
+to avoid keeping vehicles in the fleet that are no longer in circulation. 
+"Maximum acceptable delay" periods, specific to each category of vehicle 
+and varying between 6 and 18 months, are thus determined according to 
+methodological choices that are partly conventional. This introduces a 
+source of uncertainty of a few percent in the estimated number of vehicles 
+in circulation at any given date. However, changes in the number of 
+vehicles are less sensitive to the chosen delay.  
+• End of Life of Vehicles : When a vehicle's exit from the fleet is inferred solely 
+from the cessation of regular technical inspections, the exact exit date is 
+inherently uncertain. This uncertainty impacts the accuracy of fleet size 
+calculations. Additionally, the distance travelled by a vehicle after its last 
+inspection is unknown due to the absence of records, requiring its 
+estimation using linear regressions based on vehicle and user 
+characteristics.  
+• Temporarily immobilised vehicles : Certain vehicles are temporarily 
+immobilised for short periods (less than 3 months) when, for example, they 
+are purchased by a car professional for resale. These vehicles are counted 
+in the fleet at January  1st, in addition to vehicles in circulation. However, 
+they are not included in the calculation of the average fleet during their 
+temporary immobilisation, on the assumption that the distance travelled 
+during the immobilisation period is zero. 
+• Company vehicles: Unlike mobility surveys and the census, which assign 
+company vehicles to the household using them, vehicle registration 
+certificates identify the legal owner or long -term lessee. Consequ ently, 
+company vehicles are attributed to the company that owns or leases them, 
+not the household.  
+• Annual variations in distances travelled by a vehicle: Annual travel 
+distances are often estimated using  records from technical inspections 
+spaced two or mo re years apart, assuming continuous use  in the interim. 
+This approach averages out variations in vehicle usage across years, limiting 
+its ability to capture  short-term, micro-level changes. Therefore, the data 
+is not suitable for analysing short-term distance variations.  
+• Distribution of annual distances for recent years:  In recent years, annual 
+distances are estimated for a significant proportion of vehicles, due to the 
+absence of mileage data during the first years of the vehicle's life (until the 
+first technical inspection) or since the last recorded technical inspection. 
+These estimates, based on linear regressions and representing average use 
+based on vehicle characteristics, exhibit significantly less variation  
+compared to actual observed values. Conse quently, we strongly advise 
+against using data from recent years to analyse the dispersion of distances 
+travelled.  
+• Vehicles without up -to-date technical inspection : Some vehicle owners 
+continue to operate their vehicles despite neglecting the mandatory 
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 9  
+periodic technical inspections. Due to a lack of adequate data, this 
+violation cannot be effectively detected, making its true prevalence 
+unknown. This inadvertently leads to an underestimation of the actual fleet 
+size, as vehicles lacking up-to-date inspections are systematically removed 
+from the data.  
+• Covid-19 Health crisis: the methods for estimating the vehicle fleet and the 
+distances travelled had to be adapted for the period 2020- 2021 (with 
+retroactive effect for 2019 and 2022) to take account of the e xtension of 
+technical inspection validity and the traffic restrictions. For the estimation 
+of distances, it was therefore necessary to abandon the assumption of 
+constant use of the vehicle between two technical inspections and by 
+relying on the information  that could be extracted from the mileage 
+readings during the crisis, while ensuring that it remained consistent with 
+the usual methodology.  
+• Covid-19 Health Crisis: The methodology for estimating vehicle fleet size 
+and distances travelled required adaptation for the period 2020- 2021 
+(retroactively applying to 2019 and 2022) , while maintaining consistency 
+with the standard methodology . This adaptation was necessary to 
+accommodate extended technical inspection validity periods and traffic 
+restrictions. During the crisis, the assumption of constant vehicle use 
+between inspections was abandoned, and the estimations were informed 
+by the available mileage readings captured during this period.  
+• Collector vehicles: These vehicles are not counted in the annua l fleet files 
+due to the specific technical inspection rules and their very low 
+contribution to road traffic. 
+An annual database is released each year. The year n database (i.e. produced in 
+year n) includes the vehicles fleet up to 1er January of year n, as well as the distances 
+travelled up to year n-1. However, due to the previously mentioned assumptions 
+used in estimating the fleet size and distances travelled, the year n database is 
+subject to revisions, sometimes significant, compared to the previous year's data. 
+This is primarily because the last recorded technical inspection for many vehicles 
+often dates back to year n-1, n-2, or even earlier. This lack of recent inspection data 
+hinders the ability to accurately determine the distance travelled after the last 
+inspection or guarantee the vehicle will pass its next inspection. Consequently, a 
+large portion of the distance data relies on estimations, not direct observations. 
+The annual database is gradually updated and consolidated, as new technical 
+inspections are recorded in the RSVERO. 
+It is therefore important to consider the most recent years as an preliminary 
+estimates: the data for the most recent vintages have a provisional then semi -
+definitive status. Fleet counts become defin itive after two years, while distance 
+data becomes definitive after seven years4. 
+The full note (in French) presents the statistical processing applied to the RSVERO 
+to compile the annual database on road vehicles. It is organised as follows: the 
+second part describes how vehicle characteristics are determined; the third 
+describes the method used to count vehicle fleet; the fourth explains how annual 
+distances are calculated; and the  fifth, reserved for more experienced users, 
+presents robustness and sensitivity tests.   
+ 
+4 The delay is longer for distances than for fleets because in the former case, we use mileage records (with a delay  of 
+up to 6 years) while in the latter case, the acceptable delay for keeping a vehicle in the fleet does not exceed 18 months 
+compared to the regulatory deadlines for technical inspections. 
+ 
+ 
+ 10 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+ 
+2. Caractéristiques des véhicules  
+2.1. Catégories de véhicules 
+Les véhicules sont répartis en cinq groupes et douze catégories statistiques, 
+constitués en utilisant les variables genre, poids total autorisé en charge (PTAC) et 
+carrosserie du RSVERO. Le tableau 1  détaille le mode de détermination de ces 
+catégories en fonction des variables de genre, PTAC (poids total autorisé en 
+charge) et carrosserie.   
+Tableau 1 : détermination du groupe et de la catégorie statistique des véhicules  
+Groupe statistique Spécification Catégorie statistique Spécification 
+Poids lourds (PL) 
+Genre ‘CAM’, 
+‘CAMTTE’ et ‘VASP’ 
+avec PTAC > 3,5t ainsi 
+que l’ensemble du 
+genre ‘TTR’ 
+Camion  Genre ‘CAM’ 
+Tracteur routier Genre ‘TTR’ 
+VASP* lourd Genre ‘CAMTTE’ et ‘VASP’ 
+Transport en 
+commun de 
+personnes (TCP) 
+Genre ‘TCP’ 
+Bus Carrosserie ‘BUS’ 
+Car Carrosserie autre que ‘BUS’ 
+Remorque (REM) 
+Genres 
+‘SREM’,’SRSP’,’SRTC’ et 
+’SRAT’ ou genres 
+‘REM’,’RESP’ et ’RETC’ 
+et PTAC > 3,5t 
+Semi-remorque 
+Genres 
+‘SREM’,’SRSP’,’SRTC’,’
+SRAT’ et PTAC > 3,5 t 
+Remorque lourde Genres ‘REM’,’RESP’,’RETC 
+Voiture (VP) Genre ‘VP’ Voiture Genre ‘VP’ 
+Véhicule utilitaire 
+léger (VUL) 
+Genre ‘CAM’, 
+‘CAMTTE’ et ‘VASP’ 
+avec PTAC ≤ 3,5t 
+Camionnette 
+Genre ‘CAM’ et 
+‘CAMTTE’ et 
+carrosserie autre que 
+‘DERIV_VP’ et 
+‘CARAVANE’ 
+Camping-car Carrosserie ‘CARAVANE’ 
+Dérivé VP  Carrosserie ‘DERIV_VP’ 
+VASP* léger 
+Genre ‘VASP’ et 
+carrosserie autre que 
+‘DERIV_VP’ et 
+‘CARAVANE’ 
+* VASP= véhicule automoteur spécialisé (ambulance, camping-car, caravane, dépanneuse, bennes à 
+ordures, food-truck, les tracteurs et autres remorques agricoles…). 
+Source : SDES 
+  
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 11  
+2.2. Caractéristiques techniques du véhicule 
+Les fichiers annuels sur les véhicules routiers contiennent les caractéristiques 
+techniques issues du SIV, notamment :  
+• le carburant (ou motorisation par simplification), la carrosserie, les genres 
+national et européen selon les nomenclatures définies par l’arrêté du 
+9 février 2009 relatif aux modalités d'immatriculation des véhicules 5 ;  
+• la cylindrée, le nombre de places assises et debout, les puissances fiscale et 
+nominale, la marque et le modèle bruts ; 
+• les émissions unitaires (par km parcouru) de CO 2 et le nombre de décibels 
+à l’homologation.  
+Le tableau 2 détaille le mode de détermination des caractéristiques techniques qui 
+ne proviennent pas directement du SIV. 
+Tableau 2 : mode de détermination des caractéristiques techniques du véhicule  
+Variable Contenu 
+Marque corrigée 
+(‘marque_corr’) 
+Apurement de la marque contenue dans le SIV selon une liste de 
+marques prédéfinies et correction des valeurs manquantes à l’aide des 
+trois premiers caractères du VIN (numéro de série du véhicule).  
+Modèle corrigé 
+(‘modele_corr’) 
+Apurement du modèle contenu dans le SIV selon une liste de modèles 
+prédéfinis et correction des valeurs manquantes à l’aide des neuf 
+premiers caractères du VIN (numéro de série du véhicule), du type-
+variante-version et du code CNIT (code national d'identification du type). 
+Ces corrections sont appliquées avec prudence pour éviter de corriger à 
+tort l’information contenue dans le SIV. 
+Norme Euro 
+(‘nome_euro’) 
+Correction des valeurs manquantes, les modalités « zéro » et « non 
+concerné » sont recalculées à partir de la date de mise en circulation, les 
+véhicules « NCC » sont réintégrés à la norme euro 5. 
+PTAC (‘ptac’)  Utilisation du PTAC national en priorité, les valeurs supérieures à 38 t ou 
+celles inférieures à 5 kg sont supprimées, les valeurs manquantes sont 
+remplacées par le PTAC européen, sans modifier la classification des 
+groupes et catégories statistiques.  
+Poids à vide 
+(‘poids_vide’) 
+Utilisation du poids à vide européen en priorité, les valeurs supérieures à 
+38 t ou celles inférieures à 5 kg sont supprimées, les valeurs manquantes 
+sont remplacées par la valeur poids à vide national + 75 kg 
+(correspondant au poids moyen du chauffeur) 
+Charge utile 
+(‘charge_utile’) 
+Valeurs manquantes sont remplacées par la formule : PTAC - (poids à 
+vide + 75 kg) 
+Date de mise en 
+circulation 
+(‘date_mise_en_cir’)  
+Deux dates, parfois décalées de quelques jours, peuvent être utilisées 
+pour déterminer la date de mise en circulation du véhicule : la date de 
+l’opération d'immatriculation enregistrée par le SIV et la date de mise en 
+circulation figurant sur le certificat d’immatriculation. De manière 
+générale, on conserve la date de la première opération enregistrée par le 
+SIV, sauf si elle est postérieure de plus de 30 jours à la date de mise en 
+circulation figurant sur le certificat d’immatriculation. Dans ce dernier 
+cas, on retient cette seconde variable.  
+Crit’Air (‘crit_air’) Vignette Crit'Air d'éligibilité en fonction des variables de carburant et 
+norme euro, selon l’arrêté du 21 juin 20166. 
+Sources : SDES ; ministère de l’Intérieur 
+ 
+5 Arrêté du 9 février 2009 relatif aux modalités d'immatriculation des véhicules. 
+6 Version au 17 avril 2022.  
+ 
+ 12 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+2.3. Utilisateur du véhicule 
+L’utilisateur désigne le propriétaire du véhicule ou, le cas échéant, le locataire 
+longue durée, tel que renseigné sur le certificat d’immatriculation. Les véhicules de 
+fonction sont donc rattachés à l’entr eprise titulaire du certificat et pas aux 
+personnes qui en ont la jouissance.  
+Les fichiers annuels contiennent les caractéristiques suivantes des utilisateurs :  
+• la commune de résidence (‘uti_codgeo’), selon le code officiel géographique 
+de la dernière année disponible, correspondant à l’adresse déclarée par 
+l’utilisateur sur le certificat d’immatriculation et prenant en compte 
+l’ensemble des modifications d’adresse déclarées ; 
+• la nature de l’utilisateur  (‘uti_statut’), issue de la distinction e ffectuée par 
+l’ANTS (formulaire Cerfa 13750) entre personne physique et personne 
+morale ; ces deux catégories sont renommées « particulier » et 
+« professionnel » afin d’intégrer dans la modalité « professionnel » les 
+entreprises individuelles ayant déclaré  leur Siren sur leur certificat 
+d’immatriculation  ; 
+• le rang de l’utilisateur (‘uti_rang’), incrémenté à chaque nouvel utilisateur (y 
+compris professionnel de l’automobile, propriétaire temporaire du véhicule 
+jusqu’à sa revente) à partir de la mise en place du SIV en 2009 ; 
+• le rang de l’immatriculation (‘immat_rang’), hors professionnel de 
+l’automobile propriétaire temporaire du véhicule ; il permet d’identifier les 
+véhicules ayant changé de main au cours d’une année mais ne doit pas être 
+utilisé pour compt er le nombre total d ’utilisateurs des véhicules 
+immatriculés avant 2010, les changements antérieurs à la mise en place du 
+SIV n’étant pas enregistrés dans le RSVERO ; 
+• le numéro SIREN, l’APE et la catégorie juridique de l’entreprise (resp. 
+‘uti_siren’, ‘uti_apen’, ‘uti_cj’) obtenus via l’API Sirene de l’Insee, à partir des 
+informations fournies lors de l’enregistrement de l’utilisateur auprès de 
+l’ANTS (uniquement à partir de 2020) ;  
+• le type de locataire longue durée (‘type_locat’) (uniquement à partir de 
+l’année 2022). 
+Les variables portant sur l’utilisateur sont mises à jour quotidiennement. Les fichiers 
+annuels sont une image simplifiée de ces changements et présentent les 
+informations sur l’utilisateur au 1er janvier, si le véhicule est actif à cette date ; ou la 
+première valeur de l’année si le véhicule est inactif ou n’a pas encore été mis en 
+circulation au 1er janvier. 
+2.4. Émissions de GES et consommation des voitures 
+2.4.1. Les émissions du réservoir à la roue 
+Le répertoire RSVERO contient une variable relative aux émissions unitaires de CO2 
+des véhicules, telles que mesurées lors de leur homologation. Cependant, les 
+valeurs manquantes sont nombreuses et les émissions homologuées sont 
+systématiquement sous-évaluées par rapport aux émissions réelles des  véhicules, 
+comme mis en évidence par l’ International Council on Clean Transportation 7  à 
+ 
+7 From Laboratory to road a 2018 update of official and « real-word » fuel consumption and CO2 values for passenger cars 
+in Europe, International Council on Clean Transportation,  
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 13  
+partir de multiples sources (enquête auprès des ménages, presse automobile, 
+abonnements stations -services, site collaboratif d’automobiles, tests 
+indépendants). L’écart entre émissions réelles et homologuées s’est accru jusqu’au 
+milieu des années 2010 (figure 2)  et a conduit à un changement de procédure, la 
+norme WLTP remplaçant la norme NEDC au 1er mars 2020. Cette nouvelle norme a 
+conduit à une nette réévaluation à l a hausse des émissions de GES mais n’est pas 
+disponible pour les véhicules immatriculés avant 2020. 
+Les fichiers annuels proposent, pour les voitures 8, une estimation des émissions 
+unitaires réelles de GES, c’est -à-dire la quantité produite par kilomètre parcouru 
+dans des conditions normales d’utilisation, représentatives des comportements et 
+environnements de conduite « moyens » observés à l’échelle du parc en circulation. 
+Cette estimation vise à corriger les valeurs homologuées pour approcher autant 
+que possible les émissions réelles du parc en circulation, à l’aide d’une  
+méthodologie à la fois transparente et constante dans le temps. On utilise pour 
+cela les données du site collaboratif allemand spritmonitor.de , qui recueille les 
+consommations de carburant des voitures de plus de 700 000 automobilistes dans 
+différents pays européens. Ces données permettent d’identifier de manière 
+précise les différents types de voitures, définis par le recoupement des principales 
+caractéristiques techniques (marque, modèl e, année de mise en circulation, 
+puissance en kW, carburant), puis d’estimer pour chaque type la consommation 
+unitaire réelle de carburant, et enfin d’en déduire les émissions unitaires réelles de 
+GES en appliquant le facteur d’émissions correspondant au c arburant consommé 
+(voir 2.4.2.). 
+Dans les fichiers annuels, toutes les émissions de gaz à effet de serre (CO 2, CH4, 
+N2O) sont comptabilisées et mesurées en gramme de CO2 équivalent par kilomètre. 
+En revanche, seules les émissions dues à la combustion du ca rburant lors de 
+l’utilisation du véhicule, dites « du réservoir à la roue » sont prises en compte. 
+Contrairement à une approche globale en « cycle de vie », ni les émissions amont 
+de l’énergie consommée (raffinage du carburant, production d’électricité…) n i les 
+autres émissions indirectes imputables à la construction, l’entretien et la fin de vie 
+des véhicules ne sont intégrées dans les calculs. Il en résulte en particulier que les 
+véhicules électriques sont considérés comme non -émetteurs. Enfin, les émissions 
+des agro-carburants sont exclues du total des émissions des GES, conformément 
+aux recommandations du Citepa9.  
+Pour chaque type de voiture, les fichiers annuels contiennent une valeur unique 
+pour les émissions unitaires réelles :  
+• cette valeur reflète les principales caractéristiques techniques du véhicule 
+et son utilisation « moyenne » ;  
+• elle ne tient donc pas compte du comportement individuel de conduite du 
+conducteur, ni des caractéristiques du trajet effectué - chargement, part 
+du trajet à froid, type de parcours (urbain, routier, autoroutier, montagne) 
+- qui influencent également le niveau de consommation du véhicule ;   
+• l’effet d’usure lié au vieillissement du véhicule 10 , qui peut conduire à 
+augmenter le niveau de consommation et donc des émissions, n’est pas 
+explicitement modélisé : les consommations issues du site spritmonitor.de  
+ne sont pas corrigées pour prendre en compte l’âge moyen des voitures 
+enregistrées ;  
+ 
+ 
+8 Il n’a pas été possible de calculer les émissions de GES des VUL en utilisant la méthode présentée dans cette partie.  
+9 Rapport Ominea 20e édition, 2023, page 87. 
+10 EMEP/EEA air pollutant emission inventory guidebook 2019 – Update Oct. 2020, page 48. 
+ 
+ 14 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+• l’évolution du taux d'incorporation des agro -carburants aux carburants 
+routiers depuis 2011 n’est pas prise en compte, afin d’attribuer une émission 
+unitaire constante à un véhicule donné. C e taux augmente légèrement sur 
+la période considérée, passant d’un peu moins de 6 % en 2011 à une plus de 
+plus de 7 %11 en 2021.  
+2.4.2. Appariement RSVERO et spritmonitor.de 
+Les consommations du site spritmonitor.de  sont converties en émissions de GES à 
+l’aide des facteurs d’émission issus de la Base Empreinte ® de l’Ademe (tableau 3).  
+Tableau 3 : émissions de CO2e en combustion par type de carburant routier, pour le 
+périmètre France 
+Carburant Émissions 
+Essence (95, 95-E10, 98) 2250 gCO2e/litre 
+Diesel (B7) 2490 gCO2e/litre 
+GNV 2406 gCO2e/kg 
+GPL 1599 gCO2e/litre 
+Source : Ademe, Base Empreinte® 
+Les données issues du site spritmonitor.de contiennent, pour un type de voiture 
+donné, le nombre de véhicules enregistrés sur le site, la distance et la 
+consommation totales relevées par les utilisateurs de ces voitures. Pour déterminer 
+la consommation de carburant (variable ‘conso_reelle’) et les  émissions de GES 
+associées (variable ‘CO2_reel’) à chaque type de voiture dans les fichiers annuels, 
+les données spritmonitor.de  sont appariées avec le RSVERO selon trois méthodes 
+distinctes (repérées par la variable ‘ method_CO2’), en fonction des données  
+disponibles : 
+• appariement exact :  si l’on parvient à identifier au moins 16 véhicules du 
+même type (puissance en kW, année de mise en circulation, marque, 
+modèle, carburant) dans la base de données spritmonitor.de , on retient 
+directement la consommation m oyenne de ces véhicules ; les valeurs 
+calculées à partir de 15 véhicules ou moins ne sont pas retenues car l’effet 
+« conducteur », c’est -à-dire l’impact de comportements de conduite 
+particuliers, s’avère trop important et peut biaiser fortement l’estimatio n 
+de la consommation ( voir section 5.1 concernant le choix du seuil de 
+16 véhicules) ; 
+• appariement approché : si l’on ne parvient pas à identifier suffisamment de 
+véhicules du même type, on relâche les conditions portant sur la puissance 
+et l’année de mise en circulation, en élargissant en deux étapes (la seconde 
+étape ne s’appliquant qu’en cas de nombre insuffisant de véhicules lors de 
+la première étape) l’estimation de la consommation moyenne à des 
+véhicules de type proche : 
+o restreint : ± 1 an pour la mise en circulation, ± 3 kW pour la puissance 
+du véhicule ; 
+o large : ± 3 ans pour la mise en circulation, ±  5 kW pour la puissance 
+du véhicule ; 
+• estimation : à défaut, si l’on ne parvient pas à identifier suffisamment de 
+véhicules de type proche, on utilise la valeur prédite par une régression 
+ 
+11 Rapport Secten 2022, page 441. 
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 15  
+linéaire 12 , estimée avec les variables explicatives suivantes : puissanc e, 
+année de mise en circulation, émissions de CO 2 à l’homologation ; par 
+rapport à l’appariement approché, l’erreur quadratique moyenne de cette 
+estimation est comprise entre 4 et 8 % selon le carburant et l’année de mise 
+en circulation. La section 5.1 détaille en quoi l’appariement approché 
+fournit une meilleure estimation des émissions de GES des voitures et doit 
+être privilégié quand il est possible.  
+Le tableau 4  indique la répartition des voitures selon la méthode d’appariement 
+appliquée. On constate que les meilleures qualités d’appariement sont obtenues 
+avec les deux motorisations les plus répandues (essence et diesel exclusivement 
+thermiques), pour les véhicul es immatriculés après 2000. Pour les motorisations 
+plus rares, l’appariement est souvent de moins bonne qualité. Les consommations 
+et les émissions sont donc estimées de manière moins précise. C’est notamment 
+pour les consommations des voitures électriques, pour lesquelles les régressions ne 
+peuvent pas s’appuyer sur les émissions déterminées à l’homologation, toujours 
+nulles dans ce cas.  
+Tableau 4 : type d’appariement entre le RSVERO et les consommations spritmonitor.de  
+selon les caractéristiques des voitures 
+Motorisation 
+ 
+Année de 
+mise en 
+circulation 
+Détermination des consommations  
+et émissions 
+(en %) 
+Émissions de 
+GES  
+(en gCO2e/km) 
+Exacte Approchée Estimée 
+Diesel 1990 6,4 54,8 38,7 163 
+Diesel 2000 43,9 49,1 7,0 161 
+Diesel 2005 57,7 36,7 5,6 160 
+Diesel 2010 54,0 41,2 4,8 152 
+Diesel 2015 48,3 42,2 9,4 152 
+Diesel 2020 19,4 56,8 23,8 148 
+Essence 1990 15,3 65,8 18,8 182 
+Essence 2000 58,2 35,2 6,6 176 
+Essence 2005 65,7 29,3 5,0 172 
+Essence 2010 61,4 33,7 4,9 160 
+Essence 2015 61,7 33,0 5,3 159 
+Essence 2020 34,3 55,8 10,0 154 
+Électrique 10,2 24,1 65,8 0 
+GNV 28,8 29,1 42,2 111 
+GPL 22,6 40,8 36,6 140 
+HNR Essence 10,7 47,9 41,4 135 
+HR Diesel 0,0 7,8 92,2 109 
+HR Essence 2,2 14,8 83,0 93 
+Note de lecture : 22,6 % des émissions des voitures GPL sont déterminées grâce à un appariement direct 
+avec la base de données spritmonitor.de. Le niveau moyen estimé des émissions unitaires s’élève à 
+140 gCO2e/km pour ces véhicules.  
+Source : SDES, fichiers annuels RSVERO 2022 
+ 
+12 Un modèle linéaire différent est estimé pour chaque carburant. Pour les modèles essence et diesel hors hybride, on 
+estime également des modèles spécifiques selon la période de mise en circulation (avant 2000, 2000-2004, 2005-2009, 
+2010-2014, 2015- 2019, après 2020). Pour les modèles hybrides rechargeables, rares dans le parc comme dans les 
+données spritmonitor.de, on applique un coefficient de correction unique à l’émission à l’homologation. Pour les 
+véhicules électriques, les émissions « du réservoir à la roue  » étant nulles, les consommations estimées ne peuvent 
+s’appuyer sur les émissions à l’homologation, et les résultats obtenus sont donc moins fiables.  
+ 
+ 16 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+2.4.3. Calage RSVERO et Secten/Citepa 
+La dernière étape de l’estimation consiste à caler les émissions totales du parc de 
+voitures obtenues à partir des fichiers annuels (en appliquant les émissions 
+unitaires réelles aux distances annuelles parcourues provenant des contrôles 
+techniques) sur celles des inventaires officiels (Secten -Citepa) utilisés pour le 
+rapportage des émissions de la France et notamment établies à partir des livraisons 
+de carburants. Sur la période 2011 -2019, l’utilisation des données spritmonitor.de  
+conduit à appliquer une première correction à la hausse, de grande ampleur, aux 
+consommations de carburant et donc aux émissions de GES des voitures, par 
+rapport à celles calculées à l’homologation : + 13,2 % pour le diesel et + 12,6 % pour 
+l’essence. Celles-ci restent néanmoins inférieures au niveau des ’inventaires Secten-
+Citepa (respectivement -  3,8 % et -  4,7 %). Cet écart vis -à-vis des inventaires peut 
+s’expliquer notamment par :  
+• un comportement de conduite plus écologique : les utilisateurs du site 
+spritmonitor.de pourraient être plus attentifs à la consommation de 
+carburant de leur voiture et donc adopter un comportement de conduite 
+plus souple ;  
+• une différence de périmètre : les inventaires portent sur les émissions des 
+voitures en France, qu’elles soient dues à des voitures étrangères ou 
+françaises, tandis que les fichiers annuels enregistrent l’ensemble des 
+déplacements des voitures immatriculées en France, y compris à l’étranger.  
+Les distances parcourues en France par les étrangers s'équilibrant à peu près avec 
+celles parcourues à l’étranger par les voitures françaises, on en déduit qu’une large 
+part de l’écart vis -à-vis des inventaires résulte  vraisemblablement d’une sous -
+estimation systématique des consommations unitaires réelles dans les fichiers 
+annuels. Par conséquent, une seconde correction à la hausse, de moindre ampleur, 
+est appliquée à ces consommations afin de garantir la cohérence entre les fichiers 
+annuels et les inventaires officiels. Le coefficient de correction sur les 
+consommations unitaires réelles, défini de façon à égaliser les émissions du parc de 
+voitures dans les deux sources, est calculé sur la moyenne des émissions sur la 
+période 2011-2019, l’écart observé entre les inventaires et les émissions estimées à 
+l’aide de la base spritmonitor.de  variant d’une année à l’autre. La période de crise 
+sanitaire est exclue, l’écart entre les deux sources étant plus important, 
+possiblement à cause des difficultés d'estimation des distances parcourues à partir 
+des contrôles techniques (voir partie 4). Les consommations (et donc les émissions) 
+unitaires réelles des voitures diesel sont finalement multipliées par 1,0396 et celles 
+des voitures essence par 1,0493. Enfin, en ce qui concerne le GPL et le GNV, les 
+émissions ne sont pas calées car les résultats sont très divergents entre les deux 
+sources. Dans le premier cas, cela pourrait être dû à la prise en compte de la 
+bicarburation, les véhicu les GPL consommant aussi de l’essence, et dans le 
+deuxième cas, à la rareté des véhicules concernés.  
+La figure 1 présente les émissions annuelles totales du parc de voitures provenant 
+des inventaires Secten -Citepa et celles calculées dans les fichiers ann uels du 
+RSVERO. Après correction, ces dernières sont nettement plus élevées que les 
+émissions brutes basées sur les valeurs unitaires à l’homologation, et très proches 
+des inventaires, aussi bien pour les motorisations essence que diesel.  
+La figure 2 illustre l’importance des corrections appliquées aux émissions unitaires 
+homologuées selon le type de motorisation et l’année de mise en circulation. Elles 
+sont assez similaires à celles fournies par le rapport de l’ICCT précédemment cité. 
+L’écart entre émissi ons homologuées et réelles augmente au cours du temps, 
+jusqu’en 2019, avant de diminuer nettement, mais sans disparaître, avec la mise en 
+place de la norme WLTP au 1 er mars 2020. Les corrections sont nettement plus 
+importantes pour les véhicules hybrides, probablement à cause d’une utilisation 
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 17  
+plus rare du moteur électrique en conditions réelles, due à des recharges trop 
+espacées.  
+Figure 1 : comparaisons entre les émissions de GES brutes et corrigées calculées dans 
+les fichiers annuels et les inventaires Citepa (en million de tonnes de CO2e) 
+ 
+Note de lecture : en 2012, les émissions de GES des voitures, toutes motorisations confondues, s’élèvent 
+à 75 Mt de CO2e dans les inventaires Citepa, et à 68 et 74 Mt dans les fichiers annuels RSVERO 
+respectivement bruts (c’est-à-dire basés sur les émissions unitaires à l’homologation) et corrigés (c’est-à-
+dire basés sur les consommations unitaires réelles et calés sur les inventaires).  
+Source : SDES, fichiers annuels RSVERO 2022 
+ 
+Figure 2 : ratio entre émissions unitaires de GES corrigées et brutes selon l’année de 
+mise en circulation et la motorisation du véhicule 
+ 
+Note de lecture : les émissions unitaires corrigées des voitures essence et diesel mises en circulation en 
+2016 sont respectivement 1,37 et 1,39 fois plus élevées que les émissions unitaires brutes (c’est-à-dire 
+calculées à l’homologation). Les ratios sont calculés en rapportant la somme des consommation corrigées 
+(c’est-à-dire basés sur les consommations unitaires réelles et calés sur les inventaires) à la somme des 
+consommations brutes (c’est-à-dire basés sur les émissions unitaires à l’homologation).  
+Source : SDES, fichiers annuels RSVERO 2022 
+  
+40
+50
+60
+70
+80
+2011 2013 2015 2017 2019 2021
+Ensemble
+Citepa
+10
+12
+14
+16
+18
+20
+22
+24
+2011 2013 2015 2017 2019 2021
+Essence
+RVERO brut
+30
+35
+40
+45
+50
+55
+60
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+Diesel
+RVERO corrigé
+0,9
+1,0
+1,1
+1,2
+1,3
+1,4
+1,5
+2000
+2002
+2004
+2006
+2008
+2010
+2012
+2014
+2016
+2018
+2020
+Diesel Essence
+0,5
+1,0
+1,5
+2,0
+2,5
+3,0
+3,5
+GNV GPL HNR essence
+HR essence HR diesel
+ 
+ 18 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+3. Parc 
+Pour appartenir au parc en circulation à une date donnée, un véhicule doit réunir 
+simultanément quatre critères :  
+• l’utilisateur réside en France et n’est pas un professionnel de l’automobile 
+ayant acquis le véhicule temporairement dans le but de le revendre  ;  
+• la dernière opération enregistrée dans le SIV n’est pas considérée comme 
+une sortie administrative de parc ; 
+• le véhicule n’est pas un véhicule de collection 13 ;  
+• le véhicule est en règle vis -à-vis du contrôle technique, dans la limite d’un 
+retard maximal acceptable.  
+En outre, un véhicule peut changer de catégorie statistique au cours du temps, et 
+peut donc cesser d’appartenir au parc d’une catégorie donnée tout en  étant 
+toujours en circulation, en relevant d’une autre catégorie. Cette deuxième partie 
+décrit en détail les différents critères d’appartenance au parc et précise le mode 
+de calcul du nombre de véhicules en circulation à partir de ces critères.  
+3.1. Appartenance au parc : SIV 
+Les informations enregistrées par le système d’immatriculation des véhicules (SIV) 
+permettent de vérifier plusieurs critères d’appartenance au parc.  
+3.1.1. Type d’utilisateur 
+Les véhicules sont considérés comme étant en circulation si leur util isateur réunit 
+deux conditions :  
+• l’adresse renseignée sur le certificat d’immatriculation n’est pas située à 
+l’étranger ;  
+• il ne s’agit pas d’un professionnel de l’automobile ayant acquis le véhicule 
+temporairement en vue de le revendre. Ce type d’utilisa teur est repéré 
+grâce aux opérations ANTS de type « déclaration d’achat », alors que les 
+utilisateurs normaux sont repérés par les autres opérations 
+d’immatriculation et de changement de titulaire.  
+3.1.2. Sortie administrative du parc 
+Les véhicules commencent à circuler à la date de mise en circulation.  
+Les véhicules sortent de la circulation après les opérations de type suivant : 
+« déclaration de destruction » ; « réimmatriculation à l’étranger » ; « déclaration de 
+véhicule endommag é » ; « premier rapport de v éhicule endommagé14 » ; « retrait 
+volontaire » ; « sortie de territoire  » ; « déclaration de cession  ». Le véhicule est de 
+nouveau en circulation dès qu’une opération d’un autre type est enregistrée 
+(exemple 1).  
+ 
+13  On estime à environ 137  000 le nombre de véhicules de collection en circulation au 1 er janvier 2022, dont 
+99 500 voitures. 
+14 Le second rapport de véhicule endommagé permet à l’inverse le retour du véhicule en circulation,  www.securite-
+routiere.gouv.fr/reglementation-liee-aux-modes-de-deplacements/en-voiture/experts-automobiles/reparation-
+vehicules 
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 19  
+ 
+ 
+Exemple 1 : appartenance au parc selon les critères SIV 
+Le SIV a enregistré les événements suivants pour la camionnette A :  
+• mise en circulation le 01/03/2011 (opération SIV «immatriculation normale ») ; 
+• revente à un professionnel de l’automobile le 05/06/2014 (opération SIV « déclaration 
+achat ») ;  
+• achat par un particulier le 09/12/2014 (opération SIV « changement normal de 
+titulaire ») ;  
+• changement d’adresse du titulaire du certificat d’immatriculation le 01/06/2018 ; 
+• destruction le 04/09/2022 (opération SIV « déclaration de destruction »). 
+Selon les critères du SIV, on considère que le véhicule A est en circulation au cours des deux 
+périodes suivantes :  
+• du 01/03/2011 au 05/06/2014 ;  
+• puis du 09/12/2014 au 04/09/2022. 
+3.1.3. Changement de catégorie statistique  
+Certaines modifications techniques entraînent un changement de catégorie 
+statistique du véhicule. Par exemple, une voiture peut devenir un dérivé VP à la 
+suite du retrait des sièges arrière. La catégorie statistique du véhicule est 
+recalculée, selon les critères détaillés dans le tableau 1, à chaque modification des 
+caractéristiques techniques du véhicule. Les périodes de rattachement à une 
+catégorie statistique donnée sont déterminées à partir des dates de ces 
+modifications.  
+3.2. Appartenance au parc : contrôles techniques  
+Les informations issues du SIV ne sont pas suffisantes pour déterminer précisément 
+si un véhicule est en circulation. Si les entrées dans le parc sont toujours bien 
+enregistrées, l’obtention d’un numéro d’immatriculation étant une démarche 
+incontournable, les sorties le sont moins. Comme dans beaucoup de sources 
+administratives, une part non négligeable des utilisateurs n’effectue pas les 
+démarches de radiation. Il en découle qu’un calcul du parc fondé uniquement sur 
+les données du SIV condui rait à une forte surestimation ( voir section 5.4 ), en 
+intégrant à tort des véhicules qui ne circulent plus.  
+3.2.1. Règles de passage et retard acceptable 
+Dans la perspective du calcul du parc, le passage régulier d’un contrôle technique 
+constitue un « signe de vie » qui permet de s’assurer que le véhicule est toujours en 
+circulation. 
+La périodicité réglementaire des visites varie selon le type de véhicule15 (tableau 5). 
+Par exemple, pour les voitures, le premier contrôle intervient quatre ans après la 
+mise en circulation puis tous les deux ans. La durée entre deux visites est le plus 
+souvent homogène au sein d’une même catégorie statistique sauf exceptions :  
+ 
+15 Pour plus d’information sur les règles applicables, se référer au site internet de l’Utac-OTC, concernant les véhicules 
+légers et lourds.  
+ 
+ 20 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+• les véhicules sanitaires doivent passer une visite de contrôle tous les ans, 
+dès leur mise en circulation ; ils sont donc isolés des autres VASP légers dans 
+une catégorie spécifique ; 
+• parmi les autres VASP légers, si la périodicité des visites varie 
+théoriquement selon la fonction du véhicule (dépannage, funéraire, etc.), il 
+n’a pas été possible en pratique de constituer des sous -catégories 
+homogènes à partir des informations du certificat d’immatriculation ( voir 
+section 5.7 ) ; pour ces véhicules, on choisi t de retenir la règle la moins 
+stricte, ce qui signifie que l’on préfère maintenir des véhicules à tort dans 
+le parc plutôt que l’inverse ; 
+• contrairement aux autres VASP lourds, les camping -cars lourds sont des 
+véhicules affectés au transport de personnes et doivent à ce titre se 
+conformer aux mêmes règles que les voitures, bien qu’une part importante 
+d’entre eux effectuent des visites plus régulières ( voir section 5.7) ; ils sont 
+isolés dans une catégorie spécifique ; 
+• les camionnettes et dérivés VP doivent , à partir de leur 4 e anniversaire, 
+passer une visite complémentaire « antipollution » entre deux visites 
+principales, quant à elles espacées de deux ans ; suivant la logique de 
+« signes de vie » visant à s’assurer que les véhicules sont toujours en 
+circulation, on considère que ces véhicules sont tenus de passer une visite 
+annuelle ; 
+• les camionnettes et dérivés VP électriques sont exemptés de cette visite 
+complémentaire et sont isolés dans une catégorie spécifique.  
+Tableau 5 : délais réglementaires entre visites de contrôle et durées de retard 
+acceptable  
+En mois 
+Catégorie 
+statistique 
+Catégorie 
+contrôle 
+technique 
+1re visite Visites suivantes 
+Délai après la 
+mise en 
+circulation 
+Retard 
+maximal 
+acceptable 
+Délai entre 
+deux visites 
+Retard 
+maximal 
+acceptable 
+Bus et Car 6 6 6 6 
+Camion, tracteur routier et 
+remorque 12 12 12 12 
+VASP lourd 
+Camping-car 
+lourd 48 12 24 12 
+Autre  12 12 12 12 
+Voiture 48 18 24 12 
+Camionnette, 
+dérivé VP 
+Visite 
+antipollution 48 18 12 18 
+Sans visite 
+antipollution 48 18 24 18 
+Camping-car léger 48 18 24 18 
+VASP léger 
+VASP 
+sanitaire 12 18 12 18 
+Autre  48 18 12 18 
+Sources : SDES ; Utac 
+Une part significative des véhicules est présentée au contrôle technique avec 
+retard (figures 3a et 3b). Pour déterminer si un véhicule est toujours en circulation, 
+il n ’est donc pas possible d ’appliquer strictement le d élai r églementaire pr évu 
+entre deux visites, car cela conduirait à exclure certains véhicules du parc pour 
+quelques jours, semaines ou mois, alors qu’ils sont vraisemblablement toujours 
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 21  
+utilisés. Si un certain délai de retard doit donc être accepté, celui-ci doit cependant 
+rester limité, pour éviter, à l’inverse, de maintenir dans le parc des véhicules qui ne 
+circulent plus.  
+On définit donc, à la fin de la période de validité du contrôle technique, une 
+période de «  retard maximal acceptable  » au cours de laquelle le v éhicule est 
+susceptible de continuer à circuler. Ce retard maximal est adapté à chaque 
+catégorie statistique, en fonction du comportemen t des utilisateurs des véhicules 
+considérés, et varie de 6 à 18 mois ( tableau 5 ). Plus les retards observés sont 
+importants, plus le retard maximal acceptable sera élevé. De manière générale, les 
+retards sont considérés comme excessifs à partir du trimestre où moins de 2 % des 
+véhicules passent la visite attendue ( figures 3a et 3b)16. Ce principe est néanmoins 
+appliqué de manière souple pour éviter la multiplication des cas de figure.  
+Le choix d’une durée de «  retard maximal acceptable » a un impact important sur 
+le nombre de v éhicules comptés dans le parc au 1 er janvier, notamment pour les 
+VUL. L’effet est en revanche faible sur l’évolution de la taille du parc, sauf pour les 
+VUL pour lesquels il s’avère un peu plus important ( voir la section 5.2 pour plus de 
+détails).  
+Figure 3a : part des véhicules en retard pour le passage de la première visite de 
+contrôle 
+ 
+Note de lecture : 78 % des tracteurs routiers passent leur première visite de contrôle dans les temps, 
+c’est-à-dire moins d’un an après la mise en circulation.  
+Source : SDES, fichiers annuels RSVERO 2022 
+ 
+  
+ 
+16 Par exemple, 29,1 % des camions passent un contrôle technique avec un retard de moins de 6 mois, 2  % avec un 
+retard compris entre 6 et 12 mois et enfin 1 % avec un retard compris entre 12 et 18 mois. On considère donc que les 
+retards sont excessifs à partir de 12 mois, quand la proportion de camions passant une visite devient inférieure à 2 %.  
+0% 20% 40% 60% 80% 100%
+Camion
+Tracteur rou�er
+Camping car lourd
+Autre VASP lourd
+Camionne�e (thermique)
+Véhicule sanitaire
+Autre VASP léger
+Dérivé VP (thermique)
+Camping car léger
+Voiture Dans les temps
+0 à 6 mois
+7 à 12 mois
+13 à 24 mois
+25 à 36 mois
+37 mois et plus
+(ou jamais)
+ 
+ 22 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+Figure 3b : part des véhicules en retard pour le contrôle technique (hors première 
+visite) 
+ 
+ 
+Note de lecture : 61 % des tracteurs routiers sont présentés au contrôle technique dans les temps (hors 
+première visite), c’est-à-dire moins d’un an après la visite précédente.  
+Source : SDES, fichiers annuels RSVERO 2022 
+3.2.2. Règles d’appartenance au parc  
+Lorsqu’un véhicule passe un contrôle technique, cela signifie qu'il est en circulation 
+à la date de la visite. À l’inverse, si un véhicule n’est plus présenté au contrôle 
+technique de manière régulière, alors on considère qu’il a cessé de circuler, mais 
+en l’absence de sortie de parc de type SIV, on n’observe pas la date de sortie du 
+véhicule, et une règle ad hoc doit donc être définie. Cette date est déterminée en 
+fonction du type de véhicule considéré (tableau 5), du résultat de la dernière visite 
+(conforme, défaillances majeures ou critiques) ainsi que du délai jusqu’à la visite 
+suivante (exemple 2).  
+Ainsi, après une visite réussie (ou après la mise en circulation, assimilée à une visite 
+« zéro »), on distingue quatre situations, selon que la visite suivante est passée :  
+• dans les temps : le véhicule appartient au parc pendant toute la durée entre 
+les deux visites ; 
+• avec un retard acceptable : le véhicule appartient au parc pendant toute la 
+durée entre les deux visites ; 
+• avec un retard excessif  : le véhicule est considéré comme en circulation 
+jusqu’à la fin de la période de validité du contrôle technique, puis, passé ce 
+délai, il est sorti du parc  ; cette règle implique notamment qu’après le 
+dernier contrôle technique précédant le retrait définitif de la circulation, 
+un véhicule continue de circu ler pendant toute la durée de validité de ce 
+dernier contrôle ( voir section 5.6  pour plus de détail sur la fin de vie des 
+véhicules) ;  
+• avec un retard de durée incertaine, ce cas de figure se présente quand, dans 
+le cadre de l’élaboration des fichiers annu els de l’année n, un véhicule est 
+en retard vis -à-vis du contrôle technique sans que l’on dispose de 
+suffisamment de recul temporel pour savoir si ce retard restera inférieur au 
+retard maximal acceptable ; le véhicule est alors comptabilisé dans le parc 
+avec une pondération comprise entre 0 et 1, qui correspond à la probabilité 
+qu’il soit présenté à une visite de contrôle avant la date limite de retard 
+maximal acceptable ; le mode de calcul de cette pondération est détaillé 
+dans la section 3.5.  
+ 
+0% 20% 40% 60% 80% 100%
+Camion
+Tracteur rou�er
+Camping car lourd
+Autre VASP lourd
+Camionne�e (thermique)
+Véhicule sanitaire
+Autre VASP léger
+Dérivé VP (thermique)
+Camping car léger
+Voiture Dans les temps
+0 à 6 mois
+7 à 12 mois
+13 à 24 mois
+25 à 36 mois
+37 mois et plus
+(ou jamais)
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 23  
+Si une défaillance majeure ou critique est détectée lors d’une visite, le résultat du 
+contrôle technique est défavorable et l’utilisateur du véhicule est tenu de 
+présenter le véhicule à une contre- visite dans les deux mois, après avoir effectué 
+les réparat ions nécessaires. La durée de maintien dans le parc est donc 
+nécessairement plus courte :  
+• en cas de défaillance majeure, l’utilisateur peut continuer à utiliser son 
+véhicule, jusqu’à la contre-visite :  
+o si une contre-visite (réussie ou non) est passée dans le délai de deux 
+mois,  augmenté d’un retard d’un mois, le véhicule est maintenu 
+dans le parc ;  
+o dans le cas contraire, le véhicule est retiré du parc deux mois après 
+la date du contrôle défavorable à l’origine de la contre-visite ; 
+• en cas de défaillance critique, le véhicule ne peut circuler que le jour du 
+contrôle défavorable : 
+o si une visite (réussie ou non) est passée dans le délai de deux mois, 
+augmenté d’un retard d’un mois, le véhicule est maintenu dans le 
+parc ;  
+o dans le cas contraire, le véhicule est retiré du parc à la date du 
+contrôle défavorable à l’origine de la contre-visite. 
+ 
+Exemple 2 : appartenance au parc selon le critère « contrôle technique » 
+  
+Une voiture B est mise en circulation le 02/02/2003 et passe ensuite des visites de contrôle 
+aux dates suivantes (les critères SIV ne sont pas pris en compte dans cet exemple par souci 
+de simplification) :  
+ le 15/01/2007 (visite réussie) ;  
+ le 19/03/2009 (visite réussie) ;  
+ le 19/05/2012 (visite réussie) .  
+ 
+La première période de circulation s’étend du 02/02/2003, date de mise en circulation, au 
+19/03/2011 :  
+• la visite 1, qui doit intervenir dans un délai de quatre  ans après la mise en circulation, 
+soit avant le 02/02/2007, est passée dans les temps ;  
+• la visite 2, qui doit intervenir dans un délai de deux  ans, soit avant le 15/01/2009, est 
+passée avec un retard de deux mois et quatre  jours, inférieur au retard maxi mal 
+acceptable de 12 mois ; le véhicule reste donc dans le parc ;  
+• la visite 3, qui doit intervenir avant le 19/03/2011, est passée avec un retard d’un an et 
+deux mois, supérieur au retard maximal acceptable ; le véhicule sort donc du parc à la 
+date théorique de passage de cette visite, soit le 19/03/2011 ; 
+ 
+La seconde période de circulation s’étend du 19/05/2012 au 19/05/2014. La voiture B 
+réintègre le parc le jour du passage de la visite 3. Celle-ci s’avère être la dernière enregistrée. 
+Elle sort donc de nouveau du parc le 19/05/2014, date de fin de la validité de cette dernière 
+visite. 
+Précision importante, les infractions pour défaut de contrôle technique entraînent 
+une sous -estimation du nombre de véhicules en circulation. Les véhicules 
+concernés sont e n circulation sans être présentés régulièrement à une visite de 
+contrôle. L’application des règles présentées dans cette section conduit pourtant 
+à considérer qu’ils ne sont plus utilisés. Aucun traitement particulier n’est mis en 
+œuvre pour traiter ce pro blème, dont l’ampleur est inconnue, faute de données 
+disponibles.  
+ 
+ 24 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+3.3. Véhicules de collection 
+Sont éligibles en tant que véhicules de collection, les véhicules de plus de 30 ans, 
+qui ne sont plus produits et ont été maintenus dans leur état d’origine. 
+L’enregistrement sous ce statut n’est pas automatique et doit faire l’objet d’une 
+demande spécifique auprès de l’ANTS, accompagnée d’une attestation de 
+datation et de caractéristiques du véhicule établie par la Fédération française des 
+véhicules d'époque (FFVE). Ces véhicules ne sont soumis à un contrôle technique 
+que tous les cinq ans et en sont même exemptés s'ils ont été mis en circulation 
+avant 1960. 
+Dans les fichiers annuels, les véhicules de collection ne sont pas comptabilisés. 
+D’une part, les contrôles techniques plus espacés, voire inexistants, rendent 
+l’utilisation des méthodes détaillées ci -dessous bien moins fiables. D’autre part, 
+leur contribution à la circulation routière est négligeable du fait d’une utilisation 
+bien plus faible (avec une distance annuelle moyenne de 1 071 km par véhicule 
+selon la FFVE 17). Afin d’exclure ces véhicules du parc, la délivrance d’un certificat 
+d’immatriculation p ortant la mention « véhicule de collection  » est considérée 
+comme un événement ANTS de sortie de parc et les contrôles techniques de 
+catégorie « collection » ne sont pas pris en compte. 
+Un chiffrage du parc des véhicules de collection mis en circulation ap rès 1960 est 
+envisageable, en tenant compte de la durée de validité spécifique de leurs 
+contrôles techniques. En revanche, pour les véhicules plus anciens, il est 
+uniquement possible de compter le nombre de certificats d’immatriculation 
+délivrés à des véhi cules de collection 18 , sans certitude que ces derniers soient 
+toujours en circulation. 
+3.4. État statistique du véhicule 
+Pour éviter les entrées et sorties trop fréquentes, liées notamment aux sorties 
+administratives de quelques jours ou semaines, trois états s tatistiques sont 
+distingués :  
+• véhicule en circulation : le véhicule remplit les quatre critères détaillés dans 
+les trois sections précédentes (contrôle technique, type d’utilisateur, 
+véhicule de collection, opération de sortie de parc)- (au 1er janvier, véhicules 
+repérés par ‘roulant_01_01 = 1’) ; 
+• véhicule temporairement immobilisé :  le véhicule est détenu par un 
+professionnel de l’automobile (hors véhicule neuf de démonstration) ou 
+connaît une sortie administrative pour une durée de moins de trois mois ; il 
+reste dans le parc mais n’est plus considéré comme en circulation ( au 
+1er janvier, véhicules repérés par ‘roulant_01_01 = 0’ et ‘parc_01_01 = 1’) ; 
+• véhicule hors parc  : le véhicule est détenu par un professionnel de 
+l’automobile (hors véhicule neuf de d émonstration), connaît une sortie 
+administrative pour une durée de plus de trois mois ou présente un retard 
+important au contrôle technique. Seule la durée d’immobilisation distingue 
+ce cas de figure d’un précédent (au 1 er janvier, véhicules repérés par  
+‘roulant_01_01 = 0’ et ‘parc_01_01 = 0’). 
+ 
+17 Enquête socio-économique sur les véhicules d’époque, FFVE.  
+18 À condition que la mention « véhicule de collection » des certificats d’immatriculation délivrés avant la mise en place 
+du SIV en 2009 soient toujours bien renseignée dans le RSVERO, ce qui n’est pas acquis.  
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 25  
+À noter que les véhicules de démonstration , véhicules neuf utilisés par les 
+concessionnaires pour des essais clients ou des expositions, sont toujours comptés 
+dans le parc 19, car ils ne font pas l’objet d’une opération SIV spécifique en début 
+de période permettant de les repérer facilement. Ils sont néanmoins identifiables 
+dans les fichiers annuels à l’aide de la variable ‘uti_serie’.  
+Le contour du parc cumule les véhicules en circulation et ceux temporairement 
+immobilisés : dans ces deux situations, on considère que le véhicule est actif. Le 
+tableau 4  indique que les véhicules en circulation représentent entre 99,5  % et 
+99,9 % du parc « élargi », selon la catégorie considérée.  
+Tableau 6 : état statistique des véhicules au 1er janvier 2022 
+ Parc total En circulation Temporairement immobilisé 
+Poids lourd 617 675 616 330 1 345 
+Remorque 352 242 351 802 440 
+TCP 94 349 94 249 100 
+Voiture 38 741 497 38 528 241 213 256 
+VUL 6 365 781 6 339 632 26 149 
+Note de lecture : au 1er janvier 2022, on dénombre 6 365 781 véhicules appartenant au parc des VUL, 
+dont 6 339 632 en circulation et 26 149 temporairement immobilisés.  
+Source : SDES, fichiers annuels RSVERO 2022 au 10e 
+ 
+Exemple 3 : état statistique des véhicules  
+ 
+Le SIV a enregistré les événements suivants pour le camping-car C, par ailleurs toujours à jour 
+de contrôle technique :  
+• mise en circulation le 01/10/2016 (opération SIV « immatriculation normale ») ; 
+• revente à un professionnel de l’automobile le 05/06/2017 (opération SIV « déclaration 
+d’achat ») ;  
+• achat par un particulier le 09/07/2017 (opération SIV « changement normal de 
+titulaire ») ;  
+• revente à un professionnel de l’automobile le 05/06/2019 (opération SIV « déclaration 
+d’achat ») ;  
+• achat par un particulier le 23/12/2019 (opération SIV «  changement normal de 
+titulaire »). 
+Selon les critères du SIV, le véhicule C est :  
+• en circulation du 01/10/2016 au 05/06/2017 puis du 09/07/2017 au 05/06/2019 et enfin 
+à partir du 23/12/2019 ;  
+• en immobilisation temporaire du 05/06/2017 au 09/07/2017 (détenu temporairement 
+par un professionnel de l’automobile), cette période durant moins de trois mois ; 
+• hors du parc du 05/06/2019 au 23/12/2019, la période de détention par le 
+professionnel de l’automobile dépassant trois mois.  
+  
+ 
+19  On estime à 127  000, dont 93 000 voitures, le nombre de véhicules de démonstration en circulation au 
+1er janvier 2022. 
+ 
+ 26 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+3.5. Entrées et sorties de parc 
+En complément de l’état statistique du véhicule, défini à la section 2.4, on construit 
+un indicateur caractérisant les entrées ou sorties de parc survenant au cours d’une 
+année (variable ‘ parc_flux’). On distingue sept types de transitions pour les 
+véhicules ayant circulé au moins un jour de l’année n :  
+• présent : le véhicule est en circulation tous les jours du 01/01/n au 01/01/n+1 ; 
+• présence discontinue : le véhicule est en circulation au 01/01/n et au 
+01/01/n+1 mais est temporairement immobilisé ou hors parc au moins un 
+jour de l’année n ; 
+• immatriculation : le véhicule est mis en circulation ( pour la pr emière fois) 
+pendant l’année n et appartient au parc au 01/01/n+1 ;  
+• autre entrée  : le véhicule n’est pas dans le parc au 01/01/n mais l’est au 
+01/01/n+1 sans être immatriculé en n, il s’agit donc d’un retour dans le parc 
+;  
+• sortie définitive  : le véhicule  est dans le parc au 01/01/n et ne l’est plus 
+jamais à partir du 01/01/n+1 ;  
+• sortie temporaire  (y compris immobilisation temporaire) : le véhicule est 
+dans le parc au 01/01/n, ne l’est plus au 01/01/n+1 mais réintègre 
+ultérieurement le parc (on notera que, plus on remonte dans le temps, plus 
+on enregistre de retours dans le parc, plus la part des so rties temporaires 
+augmente par rapport aux sorties définitives) ;  
+• contrôle technique en retard : le véhicule est dans le parc au 01/01/n et son 
+statut est incertain au 01/01/n+1, on constate un retard vis-à-vis du contrôle 
+technique, sans savoir s’il s’avérera excessif.  
+La figure 4 indique qu’au cours de l’année 2018, une part significative des véhicules 
+du parc change de statut. Parmi l’ensemble des véhicules ayant circulé au moins un 
+jour de l’année, trois quarts à quatre cinquièmes ont été présents en continu, selon 
+le type de véhicule considéré. Les véhicules présents de manière discontinue sont 
+bien plus fréquents parmi les VUL et les voitures que les véhicules lourds. La 
+section 5.3 détaille les motifs pour lesquels les véhicules changent d’état statistique 
+et les durées des périodes pendant lesquelles ils ne sont pas en circulation.  
+Figure 4 : changement de statut de véhicule au cours de l’année 2018 
+Note de lecture : parmi les voitures ayant circulé au moins un jour en 2021, 5 % sont sorties 
+définitivement du parc (par construction, toutes les sorties observées en 2021 sont définitives au 
+1er janvier 2022, puisqu’aucun retour n’a pu être encore observé).  
+Source : SDES, fichiers annuels RSVERO au 10e, 2022 
+
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 27  
+3.6. Retards de durée incertaine 
+Comme indiqué dans la section 3.2, à la date à laquelle sont produits les fichiers 
+annuels pour un millésime n  donné, (appelée date de clôture dans ce document), 
+certains véhicules sont en retard vis -à-vis du contrôle technique, sans pour autant 
+dépasser la date de reta rd maximal acceptable. Il existe donc une incertitude sur 
+la situation de ces véhicules au 01/01/ n. Ces derniers ne peuvent être  intégrés en 
+totalité au parc, au risque de surestimer à court terme le nombre de véhicules en 
+circulation au 01/01/ n, ni totalement exclus, au risque de le sous- estimer. Ces 
+véhicules en situation incertaine sont donc comptabilisés partiellement, à hauteur 
+de la probabilité qu’ils passent un contrôle technique dans le futur, dans un délai 
+inférieur au retard maximal acceptable. On notera que plus la durée du retard 
+maximal acceptable est importante, plus la part des véhicules en situation 
+incertaine est élevée.  
+Figure 5 : véhicules en situation de retard de durée incertaine à la date de clôture c  
+ 
+ 
+Note de lecture : V la variable aléatoire correspondant à la durée jusqu’au prochain contrôle technique, 
+en prenant pour référence la date du dernier contrôle technique ; S, la durée jusqu’à la première sortie 
+de parc de type SIV ; c, la durée écoulée entre le dernier contrôle technique et la date de clôture ; m, la 
+durée du retard maximal acceptable.  
+Source : SDES 
+ 
+On cherche donc à déterminer, parmi les véhicules en situation incertaine, la 
+probabilité de passer une visite de contrôle avant le délai maximal admis (figure 5) :  
+ 𝑃𝑃(𝑐𝑐 < 𝑉𝑉 ≤  𝑚𝑚 |𝑆𝑆 > 𝑐𝑐 ∩ 𝑉𝑉 > 𝑐𝑐) =
+𝑃𝑃(𝑐𝑐<𝑉𝑉≤ 𝑚𝑚∩𝑆𝑆>𝑐𝑐)
+𝑃𝑃(𝑆𝑆>𝑐𝑐∩𝑉𝑉>𝑐𝑐)  
+Pour simplifier l’estimation de cette probabilité, on considère que si la visite de 
+contrôle a lieu entre c (la date de clôture) et m (la date de retard maximal 
+acceptable), la date de la dernière sortie de parc de type SIV ne peut pas avoir lieu 
+avant la date de clôture c. Plus simplement, un véhicule déjà sorti du parc pour un 
+motif SIV ne peut pas passer de contrôle technique ultérieur (bien qu’on note en 
+pratique quelques exceptions).  
+
+ 
+ 28 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+Il en découle que :  
+ 𝑃𝑃(𝑐𝑐 < 𝑉𝑉 ≤  𝑚𝑚 |𝑆𝑆 > 𝑐𝑐 ∩ 𝑉𝑉 > 𝑐𝑐) =
+𝑃𝑃(𝑐𝑐<𝑉𝑉≤ 𝑚𝑚)
+𝑃𝑃(𝑆𝑆>𝑐𝑐|𝑉𝑉>𝑐𝑐)𝑃𝑃(𝑉𝑉>𝑐𝑐) 
+Autre simplification, on considère que 𝑃𝑃 (𝑆𝑆 > 𝑐𝑐|𝑉𝑉 > 𝑐𝑐) = 𝑃𝑃(𝑆𝑆 > 𝑐𝑐), ce qui signifie que 
+le passage de la visite suivante avant ou après la date de clôture n’a pas d’effet sur 
+la durée entre le contrôle technique considéré et la survenue d’une sortie de parc 
+pour motif SIV. On obtient donc :  
+ 𝑃𝑃(𝑐𝑐 < 𝑉𝑉 ≤  𝑚𝑚 |𝑆𝑆 > 𝑐𝑐 ∩ 𝑉𝑉 > 𝑐𝑐) =
+𝑃𝑃(𝑐𝑐<𝑉𝑉≤ 𝑚𝑚)
+𝑃𝑃(𝑆𝑆>𝑐𝑐)𝑃𝑃(𝑉𝑉>𝑐𝑐) 
+Cette probabilité peut être calculée à partir des fonctions de survie Sc et Ss 
+correspondant respectivement à la durée entre deux visites de  contrôle et à la 
+durée entre une visite de contrôle et l’opération SIV de sortie de parc suivante, 
+selon la formule suivante :  
+𝑃𝑃(𝑐𝑐 < 𝑉𝑉 ≤  𝑚𝑚 |𝑆𝑆 > 𝑐𝑐 ∩ 𝑉𝑉 > 𝑐𝑐) =
+𝑆𝑆𝑣𝑣(𝑐𝑐)−𝑆𝑆𝑣𝑣(𝑚𝑚)
+𝑆𝑆𝑣𝑣(𝑐𝑐)×𝑆𝑆𝑠𝑠(𝑐𝑐)    
+Les fonctions S sont estimées à l’aide d’un simple estimateur d e Kaplan-Meier et 
+présentées dans la section 5.7. Des méthodes plus sophistiquées, prenant 
+notamment en compte les caractéristiques des véhicules, ont été testées dans le 
+cadre d’une expérimentation menée avec le SSPLab de l’Insee mais n’ont pas 
+permis d’améliorer la qualité des estimations20.  
+ 
+Exemple 4 : retard indéterminé à la date de clôture 
+Le camion D a passé son dernier contrôle technique le 01/12/2021. À la date de clôture des 
+données le 31/03/2023 dans le cadre de la production du millésime 2023 des fichiers annuels, 
+on constate un retard de 4 mois, la visite suivante devant intervenir avant le 01/12/2022. Ce 
+retard reste inférieur au retard maximal acceptable, fixé à un an pour les véhicules lourds 
+transportant des marchandises.  
+Deux possibilités sont envisageables pour le véhicule D, après la date de clôture :  
+• un contrôle technique est passé entre le 01/04/2023 et le 01/12/2023, le retard sera 
+donc resté inférieur au maximum acceptable, le véhicule reste dans le parc tout au 
+long de la période et sera compté dans le parc au 1 er janvier 2023 définitif, calculé à 
+l’occasion du millésime 2024 (fin mars 2024) ; 
+• aucune visite n’est enregistrée entre le 01/04/2023 et le 01/12/2023, le retard sera donc 
+excessif, le véhicule sort du parc à la date de fin de validité du contrôle technique le 
+01/12/2022 et ne comptera pas dans le parc au 1er janvier 2023 définitif. 
+Pour le calcul du nombre de camions en circulation, millésime 2023, l’issue étant encore 
+incertaine pour le véhicule D, on attribue une probabilité à la première possibilité. Il sera 
+donc compté dans le calcul du parc au 1er janvier 2023 mais seulement partiellement. 
+  
+ 
+20 Ces travaux ont été présentés dans le cadre des journées de méthodologie statistique de l’Insee, 2022, Modélisation 
+de l’appartenance au parc des véhicules routiers et de son utilisation. 
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 29  
+3.7. Révisions annuelles 
+La prise en compte des véhicules dont la durée du retard est incertaine, présentée 
+dans la section 3.6, entraîne une incertitude concernant le décompte du nombre 
+total de véhicules dans le parc. Celui -ci est donc révisé au fur et à mesure de 
+l’intégration des données sur les retards effectifs, à chaque millésime. Les résultats 
+sont définitifs une fois écoulée la durée du retard maximal acceptable, quand plus 
+aucun véhicule n’est en situation incertaine, c’est-à-dire après un millésime pour les 
+véhicules lourds et deux millésimes pour les véhicules légers.  
+La figure 6 présente la magnitude des révisions du nombre de véhicules dans le parc 
+au 01/01/n, entre les millésimes n  et n+1 des fichiers annuels. Ces révisions sont 
+marginales (inférieures à 0,2 % hors crise sanitaire) sauf pour les VUL où elles sont 
+plus fréquentes. Les révisions entre n+1 et n+2, qui ne concernent que les véhicules 
+légers, sont négligeables.  
+Les données du millésime n des fichiers annuels sont donc :  
+• provisoires concernant le parc au 01/01/n pour tous les véhicules ; 
+• semi-définitives pour le 01/01/n-1 concernant les véhicules légers (y compris 
+VASP lourds) ; 
+• définitives jusqu’au 01/01/n-1 pour les véhicules lourds (hors VASP lourds) et 
+au 01/01/n-2 pour les véhicules légers (y compris VASP lourds).  
+Figure 6 : révision du nombre de véhicules dans le parc au 01/01/n entre les millésimes n 
+et n+1 
+ 
+Note de lecture : le nombre de VUL en circulation au 01/01/2018, estimé à partir du millésime 2018 des 
+fichiers annuels a été révisé à la baisse de 0,41 % dans le millésime 2019. 
+Source : SDES, fichiers annuels RSVERO au 10e, 2022 
+3.8. Crise sanitaire 
+Le premier confinement du printemps 2020 a entraîné la fermeture d’une partie 
+des centres de contrôle technique. La durée réglementaire entre deux visites a 
+donc été temporairement augmentée quand un contrôle était prévu entre le 
+12 mars 2020 et le 23 juin 2020. Cette extension est d’environ trois mois pour les 
+véhicules légers et de 15 jours pour les véhicules lourds. Les durées présentées dans 
+le tableau 3  ont donc été augmentées d’autant. Des corrections alternatives, 
+testées et non retenues, sont présentées dans la section 5.9.   
+
+ 
+ 30 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+4. Distances annuelles 
+4.1. Relevés kilométriques et distances annuelles  
+La distance parcourue par un véhicule en une année est déterminée à partir des 
+relevés kilométriques du compteur de véhicule, effectués à chaque visite de 
+contrôle :  
+• la distance parcourue entre deux visites est la différence entre les deux 
+relevés ; 
+• la distance parcourue entre la date mise en circulation et la première visite 
+est égale au premier relevé. 
+Pour les remorques, aucun calcul de distance n’est effectué, les relevés 
+kilométriques étant très parcellaires.  
+Cette distance parcourue entre deux visites est répartie de manière uniforme entre 
+les différentes années couvertes par la période les séparant (variable ‘km’ ). Cette 
+affectation uniforme des distances s’appuie sur l’hypothèse que le véhicule roule 
+de manière constante dans le temps , hypothèse forte sans doute mais difficile à 
+affiner avec les données disponibles (exemple 5). Il faut bien en tenir compte dans 
+l’interprétation des résultats : les variations de l’utilisation du véhicule dans le 
+temps sont lissées et ne permettent pas de suivre de ma nière précise l’effet de 
+chocs temporaires, par exemple l’augmentation des prix du carburant, sur 
+l’utilisation des véhicules. C’est également pour cette raison qu’il a été nécessaire 
+d’adapter la méthode générale d’estimation pendant la crise sanitaire ( voir 
+section 4.5).  
+Ce problème est particulièrement prégnant pour les véhicules légers de moins de 
+quatre ans. L'absence de relevé kilométrique durant les premières années de vie du 
+véhicule implique qu'aucune information n'est disponible pour évaluer les 
+variations d’utilisation avant le passage de la première visite de contrôle. Il n’est 
+donc pas possible de mesurer le lien statistique entre âge du véhicule et distance 
+annuelle moyenne pour les véhicules légers de moins de cinq ans.  
+ 
+Exemple 5 : répartition des distances entre deux visites de contrôle  
+Le VASP E a passé :  
+• une visite le 13/07/2015, le relevé kilométrique du compteur indique 33 405 km ; 
+• la visite suivante le 18/06/2017, avec relevé kilométrique à 60 233 km.  
+Le véhicule a parcouru 26 828 km en 706 jours, soit 38 km par jour en moyenne. Cette 
+distance est répartie uniformément entre les années 2015, 2016 et 2017 :  
+• 6 536 km en 2015 (172 jours) ;  
+• 13 908 km en 2016 (366 jours) ;  
+• 6 384 km en 2017 (168 jours).  
+Pour déterminer la distance totale parcourue en 2017 par le véhicule E, les relevés des visites 
+des 13/07/2015 et 18/06/2017 ne sont pas suffisants, l’année n’étant que partiellement 
+couverte. Il est nécessaire d’utiliser le relevé kilométrique de la visite suivante :  
+• lors de la visite du 23/05/2019, le compteur indique 86 697 km ;  
+• soit une distance parcourue s’élevant à 6 304 km entre le 18/06/2017 et le 01/01/2018 ;  
+• et donc 6 384 + 6 304 = 12 688 km pour l’ensemble de l’année 2017. 
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 31  
+ 
+Certains véhicules ne circulent parfois qu’une partie d’une année : lors de la mise 
+en circulation, du retrait définitif du véhicule  ou d’une période d’immobilisation. 
+La répartition annuelle des distances entre deux contrôles techniques ne prend en 
+compte que les périodes où le véhicule est « en circulation » (voir la section 3.4 pour 
+la définition des différents états statistiques des véhicules, et la section 5.5  qui 
+présente des éléments justifiant le fait de considérer que le véhicule ne parcourt 
+aucune distance quand il est « temporairement immobilisé »).  
+L’utilisation partielle d’un véhicule sur une année est mesurée grâce au 
+« parc moyen » (variable ‘parcm’), c’est-à-dire la part de l’année où le véhicule a été 
+circulation (hors p ériodes d ’immobilisation temporaires). Cette variable s’avère 
+notamment indispensable pour calculer une distance moyenne par véhicule sur 
+une année donnée, tous les véhicules ayant r oulé n’étant pas nécessairement 
+présents au 1er janvier (exemple 6).  
+ 
+Exemple 6 : répartition des distances en cas d’inactivité du véhicule 
+On considère une voiture F :  
+• immatriculée le 15/02/2016 ;  
+• temporairement immobilisée chez un concessionnaire du 10/01/2017 au 23/03/2017 ; 
+• passant la première visite de contrôle le 27/02/2020 avec relevé kilométrique à 
+60 243 km.  
+La voiture F est comptabilisée dans le parc à hauteur de :  
+• 0,877 (= 321/366) en 2016, le véhicule ne circulant pas pendant les 45 premiers jours 
+de l’année ;  
+• 0,803 (= 293/365), en 2017, le véhicule étant immobilisé pendant 72 jours ;  
+• 1 en 2018 et 2019.  
+Sur les 1 473 jours qui séparent la mise en circulation de la première visite, le véhicule est 
+immobilisé pendant 72 jours. On estime donc la distance quotidienne moyenne à 43 km, sur 
+la base de 1 401 jours de circulation. Les distances annuelles de la voiture F sont donc 
+estimées à :  
+• 13 803 km en 2016 (= 321 × 43) ;  
+• 12 599 km en 2017 (= 293 × 43) ;  
+• 15 695 km en 2018 et 2019 (= 365 × 43). 
+ 
+Anomalie notable, certains véhicules sont « hors parc  » ou « temporairement 
+immobilisés » pendant toute la durée qui sépare les deux visites de contrôle. 
+L'application des règles décrites dans cette section implique que les distances 
+parcourues, telles qu'elles ressortent des relevés kilométriques effectués lors des 
+deux visites, sont écartées des fichiers annuels. La section 5.5 détaille l’ampleur de 
+ce facteur de sous -estimation des distances parcourues par les véhicules routiers, 
+comprise entre 0,6 % et 1,9 %, selon l’année et la catégorie du véhicule.  
+  
+ 
+ 32 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+4.2. Distance inconnue 
+Il n’est pas toujours possible d’utiliser les relevés kilométriques pour déterminer la 
+distance parcourue au cours d’une année.  
+Premier cas de figure, le relevé est considéré comme aberrant ou inexploitable si :  
+• l’écart avec le relevé précédent dépasse un certain seuil (100 000 km/an par 
+pour les voitures, 150 000 km/an pour les VUL et 250 000 km/an par pour les 
+véhicules lourds, le choix de ces seuils est discuté dans la section 5.8) ;  
+• le kilométrage relevé lors d’une visite a diminué par rapport au précédent 
+relevé, il s’agit d’une erreur de mesure ou d’une fraude  ;  
+• le relevé kilométrique est manquant pour l’une des deux visites ;  
+• la durée écoulée entre les deux visites dépasse six années. Cette durée 
+maximale est fixée pour deux raisons, d’une part, quand un relevé 
+kilométrique est enregistré six années après le précédent, il entraîne une 
+actualisation des distances parcourues pour l’ensemble des années 
+écoulées. Prendre en compte des relevés plus espacés impliquerait donc 
+une mise à jour d’années anciennes, retardant  le moment où les fichiers 
+annuels diffusés peuvent être considérés comme définitifs. D’autre part, 
+des relevés effectués à plus de six ans d'intervalle indiquent un retard d’au 
+moins deux ans pour la deuxième visite, l’hypothèse d’une utilisation 
+uniforme du véhicule pendant cette durée devient donc moins crédible.  
+ 
+Deuxième cas de figure , il n’est pas possible de déterminer la distance parcourue 
+au cours d’une année donnée à partir des relevés kilométriques quand la dernière 
+visite connue a eu lieu avant  ou pendant ou l’année en question ( exemple 7). Ce 
+cas de figure concerne les années récentes ainsi que les véhicules en fin de vie. Par 
+définition, on n’observe jamais la distance parcourue par un véhicule après la 
+dernière visite de contrôle de son exist ence. Pour mémoire, on considère qu’un 
+véhicule continue d’être utilisé pendant toute la durée de validité de ce dernier 
+contrôle (voir section 3.2 ), sauf enregistrement d’un événement de sortie de parc 
+par le SIV. Les distances parcourues pendant cette période ne sont , par 
+construction, jamais observées et sont donc toujours estimées. La pertinence de 
+cette hypothèse et son impact sur le volume total des distances parcourues sont 
+discutés dans la section 5.6.  
+Dans ces deux cas, les distances annuelles inconnues sont estimées en fonction des 
+caractéristiques du véhicule. La figure 7 représente la part respective des distances 
+observées et imputées année par année pour le millésime 2022 des fichiers annuels. 
+Logiquement, pour les années les plus récentes, une part plus importante des 
+distances n’est pas observée, la visite de contrôle  la plus récente étant 
+fréquemment antérieure à l’année considérée. Pour les véhicules légers, environ 
+deux tiers des distances sont estimées pour l’année la plus récente et un tiers pour 
+l’avant-dernière année disponible. La part des distances imputées es t stable, 
+autour des 8 à 9 %, pour les années les plus éloignées, quand la quasi  totalité des 
+contrôles techniques nécessaires aux calculs a été passée. La part des distances 
+jugées aberrantes se situe un peu au -dessus de 2 %, le reste étant constitué par la 
+circulation des véhicules en fin de vie, postérieurement à la dernière visite de 
+contrôle.  
+  
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 33  
+Figure 7 : part des distances observées, aberrantes ou postérieures après la dernière 
+visite 
+ 
+Note de lecture : dans les fichiers annuels millésime 2022, les distances parcourues en 2021 par les 
+voitures sont estimées à hauteur de 72 %.  
+Source : SDES, fichiers annuels RSVERO au 10e, millésime 2018 
+ 
+ 
+Exemple 7 : distances manquantes après le dernier contrôle technique 
+La voiture G a passé :  
+• une visite le 23/05/2014 avec un relevé kilométrique à 86 697 km ;  
+• une visite le 19/11/2016 avec un relevé kilométrique à 107 650 km. 
+Entre ces deux visites, la distance quotidienne moyenne parcourue par le véhicule G s’élève à 
+23 km. La distance parcourue sur les 322 premiers jours de 2016 est donc estimée à 7 406 km. 
+On ne connaît ni la distance parcourue sur les 43 derniers jours de 2016, ni celle de 2017, 
+postérieurs à la distance. Elle est donc imputée pour ces deux années, en partie (pour l’année 
+2016) ou en totalité (pour l’année 2017), dans le fichier annuel millésimé 2018. Supposons que 
+la distance estimée s’élève à 20 km par jour, à partir du 20/11/2016 :  
+• la distance parcourue en 2016 est estimée à 23×322+20×43=8 266 km ; 
+• la distance parcourue en 2017 est estimée à 20×365=7 300 km.  
+Ces distances seront révisées lors de l’enregistrement du relevé kilométrique d’une nouvelle 
+visite. 
+4.3. Méthode d’imputation des distances inconnues 
+Les distances inconnues sont imputées en s’appuyant sur celles observées pour des 
+véhicules similaires. Le choix de la méthode est le résultat d’un travai l conjoint du 
+SDES et du SSPLab de l’Insee21.  
+Ces imputations sont menées de la manière suivante :  
+• les modèles sont estimés à partir des relevés kilométriques observés, la 
+variable expliquée est la distance quotidienne moyenne parcourue entre 
+deux contrôles techniques, les variables explicatives portent sur le véhicule 
+et son utilisateur ;  
+ 
+21 Ces travaux ont été présentés dans le cadre des journées de méthodologie statistique de l’Insee, 2022, Modélisation 
+de l’appartenance au parc des véhicules routiers et de son utilisation. 
+0%
+20%
+40%
+60%
+80%
+100%
+Poids lourds
+Observée
+0%
+20%
+40%
+60%
+80%
+100%
+Voiture
+Es�mée (après dernier CT)
+0%
+20%
+40%
+60%
+80%
+100%
+VUL
+Es�mée (aberrant)
+ 
+ 34 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+• les coefficients estimés sont utilisés pour prédire la distance quotidienne 
+moyenne entre deux contrôles techniques quand les relevés sont aberrants 
+ou indisponibles ; 
+• la distance calculée est ensuite multipliée par le nombre de jours de 
+circulation pour chaque année concernée par l’imputation 22.  
+ 
+Pour ces estimations, le modèle choisi est une régression log -linéaire, dont les 
+variables explicatives sont sélectionnées à l’aide d’un LASSO, parmi :  
+• les caractéristiques du véhicule : carburant, âge, puissance, vignette 
+Crit’Air, carrosserie, nombre de places assises, poids à vide, PTAC et PTR ; 
+• les caractéristiques de l’utilisateur : statut (professionnel ou particulier), 
+changement de main (depuis l’avant -dernière visite), degré de densité et 
+zonage en aire d’attraction de la commune de résidence ;  
+• le contrôle technique : catégorie et réussite de la visite ; 
+• l’utilisation passée du véhicule : distance journalière moyenne entre l’avant-
+dernier et le dernier contrôle technique, qui s’avère être l’une des variables 
+les plus explicatives du modèle.  
+Toutes les variables numériques sont découpées en tranches pour capter les liens 
+statistiques non linéaires et limiter l’effet des valeurs extrêmes sur les imputations, 
+par souci de robustesse.  
+Des régressions séparées sont estimées au sein de strates définies  par la catégorie 
+statistique et l’année de passage de la deuxième des deux visites 23 . En effet, 
+l’impact de certaines variables n’est pas le même d’une catégorie de véhicule à 
+l’autre ou varie dans le temps pour une même catégorie. Par exemple, la distanc e 
+quotidienne parcourue décroît plus vite avec l’âge pour les camionnettes que pour 
+les camping -cars. De même, la dé -diésélisation progressive du parc cantonne 
+progressivement les voitures roulant au gasoil aux gros rouleurs, accroissant 
+progressivement l’écart avec les voitures essence.  
+En outre, pour les catégories contenant suffisamment de véhicules (les voitures, les 
+camionnettes et les dérivés VP), les strates annuelles sont subdivisées en deux :  
+• première visite : pour estimer la distance quotidienne moyenne parcourue 
+par le véhicule entre sa mise en circulation et la première visite, on ne peut 
+pas s’appuyer sur son utilisation passée, le poids des caractéristiques du 
+véhicule et de son utilisateur est donc un peu plus fort dans les estimations, 
+justifiant une estimation séparée ;  
+• visites suivantes : à partir de la deuxième visite, l’utilisation passée du 
+véhicule, bon prédicteur de l’utilisation future, est la plupart du temps 
+disponible, en conséquence, le poids des caractéristiques du véhicule et de 
+son utilisateur dans les estimations diminue.  
+ 
+22 On effectue une imputation par visite de contrôle manquante et pas par année manquante, pour plusieurs raisons : 
+tout d’abord, des imputations par années manquantes conduiraient à introduire une hétérogénéité dans l’utilisation 
+annuelle des véhicules entre deux visites, alors que les valeurs observées ne permettent pas d’observer une telle 
+hétérogénéité. Par exemple, pour les voitures, on pourrait aboutir à une illusion de précision, où des distances 
+annuelles décroissantes seraient imputées pour les quatre premières années d’utilisation, puis remplacées par une 
+distance annuelle observée uniforme une fois la première visite passée. En outre, lors de l’estimation des modèles, 
+certaines variables explicatives, comme l’âge, sont fixées au moment où le véhicule passe une visite de contrôle. Or, 
+les visites sont très rares à certains âges et concernent des véhicules tout à fait particuliers. Par exemple, les voitures 
+passant une visite un an après la mise en circulation ont des caractéristiques très particulières (ce sont par exemple 
+souvent des taxis) et ne sont pas du tout représentatives de l’ensemble des véhicules de cet âge.  
+23 Pour l’imputation d’une distance visant à estimer l’utilisation du véhicule après la dernière visite observée, on 
+n’observe, par définition , pas d’année de passage d’une deuxième visite. On choisit donc les coefficients de la 
+régression correspondant à l’année de sortie de parc du véhicule ou, si le véhicule est toujours actif à la date de clôture, 
+ceux de la dernière année disponible. 
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 35  
+Pour une strate donnée, on limite le nombre de visites utilisées pour les estimations 
+à 100 000, s électionnées al éatoirement, l ’utilisation d ’échantillons plus grands 
+augmentant fortement les temps de traitement et sans améliorer 
+substantiellement la précision des imputations. Il arrive fréquemment que cette 
+taille d’échantillon ne soit pas atteinte pour les véhicules lourds.  
+Le tableau 7 présente le nombre d’observations utilisées pour les estimations au 
+sein de chaque catégorie statistique de véhicule ainsi que l'incertitude des 
+estimations, normalisée par la moyenne. La valeur absolue de l’écart entre la valeur 
+prédite et la valeur observée ( « Mean absolute error » ) varie de 24 à 47  % selon la 
+catégorie du v éhicule consid éré. Il existe donc une forte incertitude, facilement 
+explicable. Par exemple, deux voitures de mêmes caractéristiques, dont l’utilisateur 
+réside dans le m ême type de commune, peuvent avoir des utilisations annuelles 
+très variables, dépendant de facteurs qui ne sont pas observés dans le RSVERO : 
+distance domicile-travail, nombre de véhicules du ménage, niveau de vie, utilisation 
+des trajets longue distance, etc. Les VASP et les camping-cars sont les véhicules 
+pour lesquels l’incertitude de l’estimation est la plus forte, indiquant une utilisation 
+hétérogène, à caractéristiques données, tandis que les bus et les tracteurs routiers 
+sont les catégories où la distance parcourue est la mieux expliquée.  
+Tableau 7 : statistiques descriptives sur l’estimation des distances  
+entre 2011 et 2021  
+Catégorie 
+statistique du 
+véhicule 
+Nombre 
+de strates 
+Nombre d'obs. 
+utilisées 
+Distance 
+quotidienne 
+moyenne 
+(en km) 
+RMSE 
+(en %) 
+MAE 
+(en %) 
+VASP lourd 11 865 262 33,2 106 43 
+Camion 11 1 100 000 77,7 43 34 
+Camping car 11 1 100 000 16,6 64 46 
+Camionnette 22 2 200 000 56,0 93 40 
+Dérivé VP 22 1 899 152 62,1 59 35 
+Tracteur routier 11 1 100 000 230,2 58 23 
+Autre VASP léger 11 1 065 958 43,4 48 45 
+Voiture 22 2 200 000 41,9 35 35 
+VASP lourd 11 865 262 33,2 106 43 
+Camion 11 1 100 000 77,7 43 34 
+Note : 1 100 000 visites de contrôle, réparties en 11 strates (une par année entre 2011 et 2021), ont été 
+utilisées pour estimer les distances quotidiennes moyennes parcourues par les camions pour le millésime 
+2022 du parc. La distance moyenne observée dans cet échantillon d’estimation s’élève à 77,7 km/jour. 
+L’écart absolu moyen (normalisé par la moyenne, MAE) atteint 34 % et l’écart quadratique moyen (RMSE) 
+43 %.  
+Source : SDES, fichiers annuels RSVERO, millésime 2022 
+ 
+  
+ 
+ 36 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+4.4. Révisions annuelles 
+Comme indiqué par la figure 7 , une proportion importante des distances est 
+estimée pour les années récentes. Ces résultats sont donc amenés à être 
+progressivement révisés, au fur et à mesure que les visites de contrôles sont 
+enregistrées dans le RSVERO, révélant l’usage réel des véhicules. Ces révisions sont 
+les plus importantes pour la dernière année disponible (l’année n-1 pour les fichiers 
+annuels du millés ime n) puis leur ampleur décroît, sans devenir négligeable 
+(figure 8). Pour les véhicules légers, l’ampleur des révisions décroît moins vite d’un 
+millésime à l’autre. Cela est dû notamment au fait que l’utilisation des nouveaux 
+véhicules, en moyenne les plus utilisés, est observée avec un retard de quatre ans 
+environ, correspondant à la date habituelle de la première visite de contrôle.  
+ Les données du millésime n des fichiers annuels sont donc considérés comme :  
+• provisoires en n-1 pour tous les véhicules ainsi qu’en n-2 et n-3 pour les 
+véhicules légers (y compris VASP lourds), au moins un tiers des distances 
+étant imputées ; 
+• semi-définitifs de n-4 à n-6 pour les véhicules légers (ainsi que les VASP 
+lourds) et de n-2 à n-6 pour les véhicules lourds (hors VASP lourds), une part 
+non négligeable des véhicules n’ayant pas encore passé la première visite 
+de contrôle et certains relevés kilométriques de visites passées en retard 
+pouvant encore être intégrés aux fichiers annuels ;  
+• définitifs à partir de n-7  pour l’ensemble des véhicules . C ela signifie par 
+exemple que 2015 est la première année définitive dans le millésime 2022 
+des fichiers annuels. Ce délai peut sembler long mais s’avère nécessaire 
+pour ne pas exclure des calculs les relevés kilométriques de visites espacées 
+de moins de six années et attribuer des distances estimées à un véhicule 
+alors que les distances réellement parcourues ont été relevées. 
+On notera bien que les imputations correspondent à l’utilisation moyenne  du 
+véhicule, à caractéristiques données. Il est donc formellement déconseillé 
+d’étudier la dispersion des distances annuelles quand la part des distances 
+imputées est encore importante, quand les résultats sont provisoires ou semi -
+définitifs, au risque de la sous -estimer fortement . Par ailleurs, même avec les 
+résultats définitifs, les quatre premières années d’utilisation des VUL, et de même 
+que les distances parcourues par les voitures tout au long de leur existence, sont 
+lissées. En effet, ces véhicules ne passent pas une visite de contrôle tous les ans. 
+L’estimation des distances annuelles permet donc uniquement de connaître 
+l’utilisation moyenne du véhicule pendant la période séparant deux visites, et pas 
+les variations annuelles au sein de cette période.  
+  
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 37  
+Figure 8 :  révision des distances selon le millésime des fichiers annuels  
+Révision des distances parcourues en n dans le millésime n+2 par rapport au 
+millésime n+1 
+ 
+Révision des distances parcourues en n dans le millésime n+3 par rapport au 
+millésime n+2 
+ 
+Révision des distances parcourues en n dans le millésime n+4 par rapport au 
+millésime n+3 
+ 
+Note de lecture : les distances parcourues en 2017 par les voitures sont révisées à la baisse de 0,5 % dans 
+le millésime 2019, par rapport à la première estimation fournie lors du millésime 2018, puis à la hausse de 
+0,2 % en 2020 par rapport à l’année précédente et enfin de nouveau de + 0,2 % en 2021.  
+Source : SDES, fichiers annuels RSVERO au 10e, millésimes 2016 à 2022 
+
+ 
+ 38 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+4.5. Crise sanitaire 
+La crise sanitaire a entraîné une baisse forte et temporaire de la circulation des 
+véhicules routiers. L’hypothèse habituelle d’utilisation constante entre deux visites 
+ne peut donc pas être appliquée, au risque de lisser l’effet de la crise sanitaire en 
+sous-estimant les di stances parcourues en 2019 et 2022 et en les surestimant en 
+2020 et 2021 ( exemple 8 ). Contrairement aux périodes ordinaires, les variations 
+d’utilisation en 2020 et 2021 sont fortement corrélées d’un véhicule à l’autre  : la 
+surutilisation d’un véhicule ne sera pas compensée par la sous- utilisation d’un 
+autre.  
+ 
+Exemple 8 : crise sanitaire et hypothèse d’utilisation constante des véhicules 
+Considérons une voiture G, mise en circulation le 01/01/2019, passant sa première visite de 
+contrôle le 01/01/2023 et ayant parcouru :  
+• 11 034 km en 2019 ;  
+• 8 991 km en 2020 ;  
+• 9 845 km en 2021 ;  
+• 11 202 km en 2022.  
+Le premier relevé kilométrique s’élève donc à 41 073 km.  En appliquant l’hypothèse 
+d’utilisation constante des véhicules, on attribue une distance annuelle de 10 268 km à toutes 
+les années entre 2018 et 2021. On surestime donc les distances parcourues en 2020 et 2021 
+respectivement de 1 277 km et 423 km tandis qu’on sous-estime celles parcourues en 2019 et 
+2022 respectivement de 766 et 934 km. 
+ 
+Pour les périodes intervisites concernées par la crise sanitaire, on abandonne 
+l’hypothèse de circulation constante des véhicules. On estime pour cela des indices 
+de circulation, détaillés par catégorie statistique du véhicule, mesurant la 
+diminution de la circulation pour les six trimestres de la crise sanitaire, concernés 
+par une mesure de confinement ou de couvre- feu, du T1 2020 au  T2 2021 ( voir 
+section 5.10). Pour les véhicules légers, des coefficients spécifiques sont calculés 
+pour la première visite de contrôle. Pour les voitures et les camionnettes, plus 
+nombreuses et permettant donc des estimations plus fines, on prend égalemen t 
+en compte des variables complémentaires  : carburant, statut de l’utilisateur, 
+véhicule à usage professionnel ou particulier, véhicules spéciaux (taxis, VTC, auto 
+écoles), moteurs diesel.  
+Dans le cas habituel, pour une période inter -visites i, la distanc e parcourue Δkmi 
+correspond au produit de la distance journalière moyenne kmji et de la durée Di 
+séparant les dates des deux contrôles : 
+∆𝑘𝑘𝑚𝑚𝑖𝑖 = 𝑘𝑘𝑚𝑚𝑘𝑘𝑖𝑖 × 𝐷𝐷𝑖𝑖  
+Cette durée se répartit sur plusieurs années a , en fonction de la durée de 
+circulation annuelle Dai  : 
+∆𝑘𝑘𝑚𝑚𝑖𝑖 = 𝑘𝑘𝑚𝑚𝑘𝑘𝑖𝑖 × �
+𝑎𝑎∈𝑖𝑖
+𝐷𝐷𝑎𝑎𝑖𝑖  
+La distance parcourue sur une année a s’élève donc à 𝑘𝑘𝑚𝑚𝑎𝑎𝑖𝑖 = 𝑘𝑘𝑚𝑚𝑘𝑘𝑖𝑖 × 𝐷𝐷𝑎𝑎𝑖𝑖 
+Cette hypothèse n’étant plus applicable pendant la crise sanitaire, on estime six 
+indices αt avec 0 < 𝛼𝛼 ≤  1, correspondant à la diminution de circulation pendant les 
+huit trimestres  t des années 2020 et 2021. Les deux derniers trimestres de 
+l’année 2021 n’étant pas concernés par les mesures de restriction de la circulation, 
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 39  
+on considère que 𝛼𝛼 = 1. La répartition des distances s’effectue au prorata des 
+indices moyens de circulation αt :  
+∆𝑘𝑘𝑚𝑚𝑖𝑖 = 𝑘𝑘𝑚𝑚𝑘𝑘𝑖𝑖 × � �
+𝑡𝑡∈{2020,2021}
+𝛼𝛼𝑡𝑡 × 𝐷𝐷𝑡𝑡𝑖𝑖 + �
+𝑎𝑎∉{2020,2021}
+𝐷𝐷𝑎𝑎𝑖𝑖 � 
+ 
+L’estimation des paramètres α t est présentée dans la section 5.9. La distance 
+journalière moyenne est alors calculée comme il suit :   
+∆𝑘𝑘𝑚𝑚𝑖𝑖 = ∆𝑘𝑘𝑚𝑚𝑖𝑖
+∑𝑡𝑡∈{2020,2021} 𝛼𝛼𝑡𝑡 × 𝐷𝐷𝑡𝑡𝑖𝑖 + ∑𝑎𝑎∉{2020,2021} 𝐷𝐷𝑎𝑎𝑖𝑖
+ 
+ 
+On notera qu’αt s’applique à la distance quotidienne habituelle 𝑘𝑘𝑚𝑚𝑘𝑘𝑖𝑖 parcourue par 
+le véhicule hors crise sanitaire. Il est donc possible de calculer une distance 
+« contrefactuelle » pour les années 2020 et 2021, correspondant aux distances qui 
+auraient été parcourues au cours de ces deux années si la crise sanitaire n’avait pas 
+eu lieu.  
+La figure 9  présente, pour les trois principaux groupes de véhicules, différentes 
+variantes de 2018 à 2021:  
+• la distance brute , déterminée avec la méthode habituelle de répartition 
+uniforme des distances, hors crise sanitaire, elle surestime bien l’utilisation 
+des véhicules pendant la crise sanitaire et la sous-estime avant ; 
+• la distance corrigée est calculée en appliquant la méthode basée sur les 
+indices trimestriels de circulation, présentée dans cette section ;  
+• la distance contrefactuelle « sans Covid » prolonge les tendances des 
+années précédentes pour tous les types de véhicules, confirmant la validité 
+de méthode de correction des distances.  
+Figure 9 : estimation de la distance annuelle parcourue pendant la crise sanitaire (bas e 
+100 en 2018) 
+ 
+Note de lecture : en fixant le niveau de la circulation des voitures à 100 en 2018, il s’élève à 83 en 2020, 
+en tenant compte de la baisse temporaire de l’utilisation des véhicules pendant la crise sanitaire. Si 
+l’hypothèse habituelle d’une utilisation uniforme des véhicules entre deux contrôles techniques avait été 
+utilisée, la circulation des voitures aurait été surestimée à 90 en 2020. Si la crise sanitaire n’avait pas eu 
+lieu, le niveau « contrefactuel » de la circulation s’élèverait à 100 en 2020. 
+Source : SDES, fichiers annuels RSVERO au 10e, millésimes 2022 
+ 
+ 
+
+ 
+ 40 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+Il faut bien noter que cette méthode ne permet pas de déterminer l’utilisation 
+annuelle réelle des véhicules, les indices de circulation étant uniformes au sein 
+d’une catégorie donnée. Cela signifie que l’on considère que la crise sanitaire a 
+entraîné une diminution uniforme des distances parcourues pour une catégorie de 
+véhicule et un trimestre donné. Or, il est indubitable que certains véhicules ont 
+continué à circuler normalement pendant la crise sanitaire, par exemple ceux des 
+professionnels indispensab les à la gestion de l’épidémie, tandis que d’autres ont 
+été très peu utilisés, par exemple ceux des salariés en télétravail intégral. Cette 
+correction permet donc de rétablir la validité « macro » des distances annuelles 
+parcourues mais ne corrige qu’imparfaitement les effets de la crise sanitaire à une 
+échelle individuelle.  
+  
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 41  
+5. Tests de sensibilité et choix 
+méthodologiques alternatifs 
+5.1. Estimation des émissions de GES des voitures  
+Cette section détaille l’appariement entre les données spritmonitor.de et le 
+RSVERO, présenté dans la section 2.4. Il s’agit d’une part de détailler le nombre 
+d’observations nécessaires, pour une catégorie de véhicule donné, pour que les 
+données spritmonitor.de soient directement exploitables et, d’autre part, de 
+mesurer la précisio n des méthodes d’ estimations de GES quand il n’y a pas 
+suffisamment d’observations disponibles dans les données spritmonitor.de pour un 
+appariement direct avec le RSVERO.  
+Une des difficultés de l’appariement est liée à l’existence d’un effet « conducteur » 
+dans les données recueillies sur le site spritmonitor.de . Ces données sont 
+constituées des relevés enregistrés par les conducteurs, l’hétérogénéité des 
+consommations de carburant est donc due à la fois aux différences techniques 
+entre véhicules, ce qui nous intéresse ici, mais aussi au comportement de conduite 
+du conducteur. Pour une catégorie donnée de véhicule, la consommation 
+moyenne obtenue à partir de la base de données spritmonitor.de  sera d’autant 
+moins affectée par le comportement d’un ou plusieur s conducteurs spécifiques 
+qu’elle sera calculée avec un nombre important d’observations.  
+La base de données spritmonitor.de  ne contient pas directement les relevés des 
+différents conducteurs mais uniquement les consommations moyennes par 
+catégorie fine de  véhicule. Pour déterminer le nombre minimal de conducteurs à 
+partir duquel la consommation moyenne d’un modèle (défini par le croisement 
+marque, modèle, carburant, puissance et année de mise en circulation) est fiable, 
+on se propose de comparer l’écart en tre la valeur prédite par la régression 
+modélisant la consommation ( voir section  2.4) et la valeur moyenne 
+spritmonitor.de, pour une catégorie donnée de véhicules. On calcule ensuite 
+l’erreur quadratique moyenne, en la détaillant selon le nombre de véhicules utilisés 
+pour calculer la consommation moyenne. La figure 10  indique que l’erreur 
+quadratique moyenne diminue quand le nombre de véhicules utilisés augmente. 
+Elle se stabilise un peu au-dessous de 10 % quand le nombre de 16 est dépassé, on 
+interprète ce résultat comme l’indice que l’effet conducteur devient négligeable. 
+On ne retient donc pas les consommations moyennes calculées avec moins de 
+15 véhicules différents. 
+Comme indiqué dans la section 2.4, la consommation d’un véhicule est calculée à 
+l’aide d’un appariement dit « approché » ou d’une régression linéaire quand il n’y a 
+pas suffisamment d’enregistrements dans la base spritmonitor.de  pour une 
+catégorie de véhicule donnée. Le tableau 8 présente l’erreur quadratique moyenne 
+et le biais, en comparant ces deux estimations à la consommation moyenne 
+obtenue avec l'appariement dit « exact ». Bien qu’elles présentent un fort pouvoir 
+prédictif, les régressions linéaires fournissent des résultats un peu moins bons que 
+l’appariement approché. C’est pour cette raison que cette deuxième méthode 
+d’estimation est privilégiée quand on dispose d’au moins 16 enregistrements.  
+  
+ 
+ 42 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+Tableau 8 : biais et erreur quadratique moyenne des estimations de la consommation 
+selon le carburant et l’année de mise en circulation 
+En % 
+Carburant Année de mise 
+en circulation 
+RMSE Biais 
+Régression Appariement 
+approché 
+Régression Appariement 
+approché 
+restreint large restreint large 
+Ensemble 5,9 3,9 4,0 0,1 0,1 0,0 
+GNV 5,2 3,0 3,1 - 0,3 0,4 0,3 
+GPL 4,0 1,7 1,9 - 0,9 - 0,3 0,6 
+Hybride Essence 6,6 3,8 3,3 - 1,9 - 0,7 - 0,7 
+Diesel < 2000 6,9 4,5 4,8 - 0,3 0,4 0,4 
+Diesel 2000-2004 5,7 3,5 3,9 0,1 0,0 0,1 
+Diesel 2005-2009 5,7 3,3 3,8 0,1 - 0,1 - 0,8 
+Diesel 2010-2014 6,0 3,3 3,3 - 0,5 0,2 0,2 
+Diesel 2015-2019 6,0 3,2 3,1 - 0,8 0,2 0,3 
+Diesel > 2020 7,6 4,9 5,7 - 2,5 0,5 2,7 
+Essence < 2000 5,7 3,9 3,9 0,9 0,0 0,0 
+Essence 2000-2004 5,3 4,0 4,0 0,7 0,5 0,6 
+Essence 2005-2009 5,0 3,5 3,8 1,0 0,2 - 0,4 
+Essence 2010-2014 5,4 4,1 4,2 0,7 0,0 0,3 
+Essence 2015-2019 6,0 3,7 3,8 0,3 - 0,1 - 0,1 
+Essence > 2020 5,2 4,5 4,7 1,9 1,8 1,4 
+Note : l’appariement approché inclut, par définition, les observations de l’appariement exact. Dans ce 
+tableau, pour ne pas biaiser la comparaison en faveur de l’appariement approché, on retire des calculs 
+les observations ayant servi à calculer l’appariement exact. Elles sont bien évidemment conservées 
+autrement. 
+Note de lecture : l’erreur quadratique moyenne (normalisée par la moyenne) de la consommation 
+prédite par régression linéaire, comparée à la consommation moyenne, s’élève à 4 % pour les véhicules 
+GPL et le biais à - 0,9 %. 
+Champ : uniquement les catégories de véhicules comptant au moins 16 enregistrements. 
+Source : SDES, fichiers annuels RSVERO 2022 
+Figure 10 : erreur quadratique moyenne de consommation prédite par régression 
+linéaire selon le nombre de véhicules utilisés pour calculer la consommation moyenne  
+ 
+ 
+Note de lecture : l’erreur quadratique moyenne (normalisée par la moyenne) de la consommation 
+prédite par régression linéaire, comparée à la consommation moyenne, s’élève à 12 % quand cette 
+dernière est calculée avec un nombre de véhicules compris entre 6 et 10. 
+Source : SDES, fichiers annuels RSVERO 2022  
+0%
+5%
+10%
+15%
+20%
+25%
+30%
+1-5 6-10 11-15 16-20 21-25 26-30 31-40 41-50 51-75 76-100 Plus de 100
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 43  
+5.2. Retard maximal acceptable 
+Comme expliqué dans la section 3.2, compte tenu de la proportion importante des 
+véhicules présentés à une visite de contrôle avec un léger retard, il n’est pas 
+raisonnable de considérer que ces véhicules cessent d’être utilisés entre la fin de 
+validité du précédent contrôle technique et le contrôle suivant. Il est néanmoins 
+nécessaire de définir une limite à ce retard acceptable, variable selon les véhicules. 
+Le niveau fixé pour ce « retard maximal acceptable  » n’est pas sans effet sur le 
+calcul du parc de véhicules et, dans une moindre mesure, sur son évolution.  
+La figure 11 présente l’effet de la durée du retard maximal acceptable sur le nombre 
+de véhicules comptés dans le parc au 1 er janvier 201824. Cet effet est modéré sans 
+être négligeable, l’écart maximal entre variantes est par exemple de 2 % pour les 
+poids lourds ou de 3 % pour les voitures. Il s’avère plus important pour les VUL, ce 
+qui s’explique par le fait qu’une part non négligeable de ces véhicules n’est pas 
+présentée à la visite complémentaire anti-pollution (voir section 5.7). Ces véhicules 
+passent donc une visite tous les deux ans plutôt qu ’annuellement et accumulent 
+ainsi des retards importants qui conduisent à considérer qu’ils ont cessé de circuler 
+avec un retard maximal acceptable faible25. C’est pour cette raison que cette durée 
+a été fixée à un niveau plus élevé pour les VUL que pour les voitures.  
+La figure 12 présente quant à elle l’effet du choix du retard maximal acceptable sur 
+l’évolution du nombre de véhicules dans le parc. Elle indique que les écarts en 
+niveau sont à peu près constants dans le temps, sauf pour les VUL et pendant la 
+crise sanitaire. Malgré les corrections appliquées, détaillées dans la section 3.7, la 
+crise sanitaire a fortement pertu rbé la distribution des retards au contrôle 
+technique, rendant notre méthodologie temporairement moins fiable. Concernant 
+les VUL, on remarque que l’évolution du nombre de véhicules est très différente 
+pour les durées de retard maximal fixées à 6 ou 12 mois, probablement à cause des 
+véhicules qui ne sont pas pré sentés à la visite complémentaire anti -pollution, par 
+rapport à celles obtenues avec des durées plus longues.  
+  
+ 
+24 On choisit l’année 2018 plutôt que l’année 2022 pour que ces tests de robustesse ne soient pas perturbés par la crise 
+sanitaire. 
+25 Prenons l’exemple d’une camionnette qui passe une visite le 21/02/2016 puis une deuxième le 22/02/2018 sans 
+effectuer le contrôle complémentaire entre les deux. La deuxième visite est donc passée avec un retard d’une année 
+et un jour. Le véhicule sortira du parc entre le 22/02/2017 et le 21/02/2018 si la durée du retard maximale est fixée à 6 
+ou 12 mois ; il y sera au contraire maintenu avec des durées de retard acceptables plus importantes.  
+ 
+ 44 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+Figure 11 : nombre de véhicules dans le parc au 1er  janvier 2018 selon la durée du retard 
+maximal acceptable (base 100 pour le retard maximal acceptable de référence)  
+ 
+Note de lecture : par rapport au retard maximal acceptable de 18 mois indiqué dans le tableau 3, le 
+nombre de VUL comptés dans le parc est inférieur de 4,6 % en abaissant cette durée à 6 mois. 
+Source : SDES, fichiers annuels RSVERO au 10e, 2022 
+ 
+Figure 12 : évolution du nombre de véhicules dans le parc selon la durée du retard 
+maximal acceptable (base 100 en 2011) 
+ 
+Note de lecture : le nombre de voitures dans le parc au 1er janvier 2022 est supérieur de 9,5 % à son 
+niveau de 2011 en appliquant un retard maximal acceptable de 6 mois et de 10,7 % en portant ce 
+paramètre à 48 mois.  
+Source : SDES, fichiers annuels RSVERO au 10e, 2022. 
+5.3. Changement d’état statistique des véhicules 
+Cette section détaille les motifs pour lesquels les véhicules changent d’état 
+statistique, et complète la section 3.5.  
+La figure 13 présente la répartition de motifs pour lesquels les véhicules cessent 
+d’être « en circulation » et la durée de la période « hors parc » ou « temporairement 
+immobilisé » subséquente. Première observation, le taux annuel de sorties de parc, 
+rapporté au nombre de véhicules ayant été actifs au moins un jour dans l’année, 
+s’élève à 15 % pour les voitures, 14 % pour les VUL, un peu moins pour les véhicules 
+lourds. Pour les véhicules légers, les sorties de parc pour motif « SIV » sont les plus 
+fréquentes, mais elles sont souvent courtes. Les sorties pour absence de contrôle 
+95
+100
+105
+110
+115
+120
+125
+1 2 3 4 5 6 7 8 9 101112
+VUL
+36 mois 48 mois
+95
+100
+105
+110
+115
+120
+125
+1 2 3 4 5 6 7 8 9 101112
+Voiture
+18 mois 24 mois
+95
+100
+105
+110
+115
+120
+125
+1 2 3 4 5 6 7 8 9 101112
+Poids lourds
+6 mois 12 mois
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 45  
+technique débouchent sur des durées d’inactivité plus longues , ce qui dérive 
+directement de la règle de « retard maximal acceptable » qui conduit à maintenir 
+dans le parc les véhicules présentés à une visite de contrôle avec un léger retard. 
+Seuls les retards importants, c’est- à-dire supérieurs à ce retard maximal 
+acceptable, conduisent à ce que le véhicule cesse d’être considéré en circulation. 
+Enfin, très peu de véhicules, environ 1 % du parc chaque année, sortent après une 
+dernière visite de contrôle ratée.  
+Figure 13 : taux de sortie (fin de période de circulation) selon la durée de la période 
+postérieure et le motif de changement d’état en 2018 
+ 
+Note : les changements d’état sont rapportés au nombre de véhicules ayant été actifs au moins un jour 
+en 2018. 
+Note de lecture : en 2018, 1,7 % des VUL cessent d’être en circulation à cause d’un motif « SIV » et pour 
+une durée de 3 à 12 mois.  
+Source : SDES, fichiers annuels RSVERO au 10e, millésime 2018 
+ 
+La figure 14, symétrique de la précédente, détaille les moti fs pour lesquels les 
+véhicules sont mis (ou remis) en circulation, ainsi que la durée de la période « hors 
+parc » ou « temporairement immobilisé » qui précède ce changement d’état. Les 
+remises en circulation, suite au passage d’un contrôle technique, corre spondent 
+aux véhicules présentés à une visite de contrôle, après un retard important, c’est -
+à-dire dépassant la durée du « retard maximal acceptable  ». Ces changements 
+d’état sont rares, autour de 2 % du parc, ce qui confirme que les règles définissant 
+l’appartenance au parc des véhicules, définies dans la section 3.2, permettent bien 
+de limiter les allers et retours. Les entrées pour motif « SIV », suite à une courte 
+période d’inactivité, sont très fréquentes, notamment pour les véhicules légers. 
+Enfin, le  taux de renouvellement du parc, c’est -à-dire les premières mises en 
+circulation, représentent entre 6 à 8  % du parc selon la catégorie de véhicule 
+considérée.  
+  
+
+ 
+ 46 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+Figure 14 : répartition des entrées de parc selon le type et la durée de la période hors 
+parc antérieure en 2018 
+ 
+Note de lecture : en 2018, 1,6 % des VUL sont remis en circulation à cause d’un motif « SIV », après une 
+durée hors parc ou d’immobilisation temporaire de 3 à 12 mois. 
+Source : SDES, fichiers annuels RSVERO au 10e, 2018 
+ 
+5.4. Comparaison des critères SIV et contrôle technique 
+d’appartenance au parc 
+Cette section détaille la complémentarité des sources de données utilisées pour 
+déterminer l’appartenance d’un véhicule au parc, le SIV et les relevés de contrôle 
+technique (voir partie 3).  
+Le tableau 9 présente le calcul de parcs « fictifs » au 1er janvier 2018, déterminés en 
+appliquant uniquement les critères SIV, décrits dans la section 3.1, ou uniquement 
+les critères de contrôle technique (CT), décrits dans la section 3.2. Le par c au 
+1er janvier 2018 étant constitué des véhicules vérifiant simultanément ces deux 
+séries de critères, il est donc par construction inférieur aux deux parcs fictifs. Les 
+deux dernières lignes présentent l’écart entre ces deux parcs fictifs et le parc 
+intégrant tous les critères de sélection. L’avant dernière ligne présente par exemple 
+le nombre de véhicules qui respectent les critères SIV mais pas les critères de 
+contrôle technique. Ces véhicules sont donc considérés comme n’appartenant pas 
+au parc mais auraient été comptabilisés si les critères de contrôle technique 
+n’avaient pas été pris en compte. 
+Le tableau 9 indique qu’un nombre tr ès important de voitures (de l ’ordre de 20 à  
+30 %) serait consid éré dans le parc sans l ’utilisation des donn ées de contr ôle 
+technique. Il souligne le caractère indispensable de la source « contrôle technique 
+» et confirme donc que le SIV enregistre imparfaitement l’arrêt de l’utilisation des 
+véhicules. Cette dernière source est néanmoins loin d’être inutile, environ deux 
+millions de voitures vérifiant le critère « contrôle technique » sans respecter ceux 
+issus du SIV, au 1er janvier 2018. Il s’agit par exemple des véhicules qui sont détruits 
+après leur dernière visite de contrôle mais sans attendre la fin de sa durée de 
+validité.  
+ 
+  
+
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 47  
+Tableau 9 : nombre de véhicules dans le parc au 1er janvier 2018 selon les critères 
+utilisés pour déminer le parc 
+ Calcul Poids 
+lourd 
+Voiture VUL 
+Parc au 01/01  
+Critères CT et SIV vérifiés A 591 010 38 127 610 6 240 430 
+Parc fictif au 01/01 
+En appliquant uniquement les critères CT  B 612 910 40 282 540 6 517 160 
+Parc fictif au 01/01  
+En appliquant uniquement les critères SIV C 779 040 46 017 620 7 899 380 
+Véhicules vérifiant un seul critère au 01/01 
+Critère CT vérifié mais critère SIV non 
+vérifié 
+B-A 21 900 2 154 930 276 730 
+Véhicules vérifiant un seul critère au 01/01 
+Critère SIV vérifié mais critère CT non 
+vérifié 
+C-A 188 030 7 890 010 1 658 950 
+Source : SDES, fichiers annuels RSVERO au 10e, 2022 
+5.5. État statistique du véhicule et distances parcourues 
+Cette section présente l’impact de l’état statistique d’un véhicule sur le calcul des 
+distances. Elle justifie l’hypothèse de considérer que les véhicules ne parcourent 
+aucune distance quand ils sont « temporairement immobilisés » (voir section 4.1). 
+Elle explique ensuite pourquoi certaines incohérences entre les informations issues 
+des contrôles techniques et du SIV conduisent à une légère sous -estimation des 
+distances parcourues dans les fichiers annuels.  
+La figure 15  présente la part des durées séparant  deux contrôles techniques 
+pendant lesquelles le véhicule n’est pas en circulation, c’est -à-dire hors parc ou 
+temporairement immobilisé (voir section 3.4 pour la définition de l’état statistique 
+du véhicule). Ces durées hors circulation correspondent à div erses situations  : un 
+événement SIV de sortie de parc (éventuellement suivi d’un événement SIV 
+conduisant au retour dans le parc), une immobilisation temporaire, un retard 
+excessif séparant les deux visites (auquel cas, le véhicule en circulation uniquement 
+pendant la durée de validité du premier contrôle). La figure 15  indique que la part 
+des durées intervisites où le véhicule ne circule pas est plus élevée pour les VUL et 
+plus faible pour les poids lourds, comparée aux voitures. Elle indique également 
+que cette part varie modérément d’une année sur l’autre, entre 3 et 6 % pour les 
+voitures par exemple.  
+  
+ 
+ 48 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+Figure 15 : part de la durée entre deux contrôles techniques durant laquelle le véhicule 
+n’est pas en circulation 
+Note de lecture : en moyenne en 2018, 5,2 % des voitures en règle vis-à-vis de leur contrôle technique 
+sont considérées comme temporairement immobilisées ou hors parc. 
+Source : SDES, fichiers annuels RSVERO au 10e, 2022 
+ 
+En application des règles de répartition des distances présentées d ans la section 
+4.1, les distances parcourues entre deux contrôles techniques sont réparties 
+uniquement sur les durées où le véhicule est considéré comme en circulation. 
+Aucune distance n’est donc parcourue pendant les périodes hors parc ou 
+d’immobilisation temporaire.  
+La validité de cette hypothèse est testée à l’aide de la régression log -linéaire 
+suivante : 
+𝑙𝑙𝑙𝑙𝑙𝑙(∆𝑘𝑘𝑚𝑚𝑖𝑖)  =  𝛽𝛽0 + �
+𝑗𝑗
+𝛽𝛽𝑗𝑗 𝑥𝑥𝑖𝑖𝑗𝑗 + 𝛼𝛼 𝑙𝑙𝑙𝑙𝑙𝑙(𝐷𝐷𝑖𝑖 ) + 𝛿𝛿 𝑙𝑙𝑙𝑙𝑙𝑙(𝐼𝐼𝑖𝑖 ) + 𝜀𝜀𝑖𝑖 
+avec Δkmi, la distance parcourue entre la visite  i et la précédente, D i la d urée 
+d’activité (en jours) entre ces deux visites, I i la durée d’inactivité (hors parc ou 
+immobilisation temporaire) et xij  les caractéristiques du conducteur et du véhicule. 
+Le paramètre ɑ  peut être interprété comme l’élasticité de la distance totale 
+parcourue entre deux visites en fonction du nombre de jours d’activité qui les 
+séparent, δ étant le paramètre symétrique pour les jours d’inactivité.  
+La figure 16  présente les valeurs de exp( ɑ)-1 et exp(δ)-1 selon la catégorie de 
+véhicule. La première série de paramètres est proche de 1 : quand on augmente de 
+10 % le nombre de jours d’activité entre deux visites, la distance parcourue varie 
+dans des proportions similaires. Au contraire, la série de paramètres exp(δ)-1 est 
+proche de zéro : quand le nombre de jours d’immobilisation entre deux contrôles 
+techniques croît, la distance totale parcourue entre ces deux visites varie peu ou 
+pas. Les résultats de cette régression valident donc l’hypothèse que les véhicules 
+ne circulent pas pendant les périodes d'immobilité, déterminées à l’aide des 
+informations du SIV. Ils soulignent la cohérence globale des informations issues du 
+SIV et des contrôles techniques. 
+ 
+ 
+  
+
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 49  
+Figure 16 : élasticité de la distance parcourue entre deux visites de contrôle selon le  
+nombre de jours d’activité et d’inactivité 
+ 
+Note de lecture : quand la durée d’activité entre deux visites de contrôle technique double, la distance 
+parcourue par un camion entre ces deux visites augmente d’environ 66 %.  
+Source : SDES, fichiers annuels RSVERO au 10e, 2022 
+ 
+Il arrive néanmoins qu’un véhicule soit considéré comme intégralement immobilisé 
+entre deux visites. Pour des raisons évidentes de cohérence, il n’est pas possible 
+d’attribuer une distance non nulle à un véhicule hors circulation. Cela signifie donc 
+que la distance parcourue entre ces deux visites, issue des relevés kilométriques  
+n’est pas comptabilisée dans les fichiers annuels.  
+La figure 17 présente la part de ces distances non comptabilisées selon l’année de 
+passage de la visite, co mprise entre 0,5 % et 2 % du total. Si, les critères SIV 
+apparaissent donc en général  pertinents pour déterminer les périodes 
+d’immobilisation des véhicules et sont donc utiles, ils peuvent  cependant parfois 
+conduire à une sous-estimation des distances totales. 
+Figure 17 : part des distances intervisites durant lesquelles les véhicules sont 
+totalement hors circulation  
+ 
+Note de lecture : pour les voitures ayant passé une visite de contrôle en 2018, 1,2 % des distances 
+relevées (hors valeurs aberrantes) ne sont pas comptabilisées car le véhicule est considéré comme hors 
+circulation sur la totalité de la durée écoulée depuis la visite précédente. 
+Source : SDES, fichiers annuels RSVERO au 10e, 2022 
+ 
+
+ 
+ 50 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+5.6. Fin de vie des véhicules 
+Cette section détaille le traitement des véhicules en fin de vie, mentionné dans les 
+sections 3.2 (pour l’appartenance au parc) et 4.2 (pour les distances). Pour rappel, 
+il existe deux types principaux de sortie (définitive ou non) : l’enregistrement d’une 
+opération SIV de sor tie de parc ou l’absence prolongée de visite de contrôle 
+technique. Contrairement au premier, le second type de sortie ne permet pas de 
+connaître la date de sortie avec certitude. Comme précisé dans la section 3.2, celle-
+ci est fixée par convention à la fi n de la période de validité du dernier contrôle 
+connu (en l’absence de sortie de parc SIV antérieure).  
+L’impossibilité de connaître la date exacte de fin de vie du véhicule, pour les 
+véhicules n’étant plus présentés au contrôle technique, est source d’incertitude sur 
+le nombre de véhicules dans le parc. Cependant, c’est pour les distances que cette 
+période comporte le plus d'incertitudes. En effet, par construction, on ne dispose 
+pas de relevé kilométrique pour déterminer les distances parcourues après la 
+dernière visite. Sachant que l’utilisation du véhicule ne cesse pas immédiatement, 
+il est nécessaire d’imputer, intégralement, les distances parcourues jusqu’à la sortie 
+de parc.  
+La figure 18 détaille le poids de ces imputations selon la présence du véhicule dans 
+le parc et, le cas échéant, le motif de sortie. Elle indique que les distances 
+parcourues par des véhicules sortis du parc pour défaut de contrôle technique 
+pèsent autant que celles des véhicules sortis après une opération SIV. Au total, les 
+distances parcourues après le dernier contrôle technique pèsent environ 6 % du 
+total pour les années les plus éloignées. Pour les années plus récentes, la dernière 
+visite enregistrée est antérieure au 31 décembre pour une part importante des 
+voitures présentes dans le parc. Le poids des distances estimées est donc 
+nettement plus important, et même majoritaire pour la dernière année disponible, 
+concernant les véhicules légers.  
+Figure 18 : poids des distances postérieures au dernier contrôle technique selon la 
+présence dans le parc et le type de sortie 
+ 
+Note de lecture : dans le millésime 2022 des fichiers annuels, les distances parcourues postérieurement 
+au dernier contrôle technique représentent 18,2 % des distances totales parcourues par des voitures en 
+2019. 10,5 % concernent des véhicules dans le parc, 4,5 % des véhicules sortis du parc après une 
+opération SIV, 3,2 % des véhicules sortis pour défaut de contrôle technique. 
+Source : SDES, fichiers annuels RSVERO au 10e, 2022. 
+  
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+Poids lourds
+Sor�e (CT)
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+VUL
+Dans le parc
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+Voiture
+Sor�e (SIV)
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 51  
+5.7. Modélisation des durées entre deu x visites de 
+contrôle  
+Cette section présente l’estimation des fonctions de survie mentionnées dans la 
+section 3.5. Deux types de fonctions sont estimées, le premier se rapporte à la 
+durée entre deux visites de contrôle et le second à la durée entre une vi site de 
+contrôle et la première sortie de parc de type SIV qui survient ensuite. Ces 
+fonctions sont estimées avec l’estimateur de Kaplan -Meier et le résultat des 
+estimations est présenté dans la figure 19. Elles sont estimées séparément pour 
+chaque catégor ie de contrôle technique ( voir section 3.2 ), la première visite 
+(courbes en pointillés), des suivantes (courbes pleines).  
+Ces fonctions de survie indiquent, selon la durée écoulée depuis le dernier contrôle 
+technique (en abscisse), la part des véhicules pour lesquels l’événement considéré 
+est survenu (en ordonnée), à savoir :  
+• la part des véhicules ayant déjà passé un contrôle technique (courbes 
+bleues) ;  
+• la part des véhicules ayant déjà connu une sortie de parc (courbes orange).  
+ 
+On remarque que, généralement, la fonction de survie modélisant la durée entre 
+deux visites décroît fortement au moment des délais réglementaires de validité 
+(courbes verticales grises). Ceci confirme que les véhicules sont très 
+majoritairement présentés a u contrôle technique juste avant ou juste après ces 
+dates. Comme mentionné dans la section 3.2, on constate également une forte 
+diminution des survies à d’autres dates, pour les camping -cars lourds et les autres 
+VASP légers. Ceci est dû à l’hétérogénéité d es règles applicables au sein de ces 
+catégories. Comme indiqué dans la section 3.2, on retient dans ce cas particulier 
+les délais réglementaires les plus favorables, c’est-à-dire les plus longs.  
+  
+ 
+ 52 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+Figure 19 : fonctions de survie de la durée entre deux visites de contrôle et de la durée 
+entre une visite et la première opération SIV de sortie de parc suivante (en jours)  
+ 
+Source : SDES, fichiers annuels RSVERO, 2022 
+
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 53  
+5.8. Distances aberrantes 
+Cette section détaille le choix des seuils de distances aberrantes, présenté dans la 
+section 4.2.  
+Le tableau 10  détaille les percentiles supérieurs des distances annualisées 
+parcourues entre deux contrôles techniques, telles qu’elles ressortent des relevés 
+bruts des contrôles techniques. Ces distances présentent des valeurs extrêmes, 
+largement supérieures à une utilisation des véhicules 24h/24, à 130 km/h (environ 
+1 140 000 km/an). Elles doivent donc être exclues des calculs pour éviter de biaiser 
+l’utilisation des véhicules dans les fichiers annuels. Cette section détaille la fixation 
+des distances maximales, au -delà desquelles l’utilisation du véhicule entre deux 
+contrôles techniques est considérée aberrante. Dans ce cas de figure, les valeurs 
+issues des relevés sont remplacées par une valeur imputée.  
+Une première approche classique consiste à fixer un quantile, calculé pour chaque 
+catégorie de véhicule, à partir duquel les valeurs sont considérées comme 
+aberrantes. Cette solution ne semble pas adaptée au cas présent. Considérons par 
+exemple le percentile à 99,5 %, il correspond à une valeur manifestement aberrante 
+pour les poids lourds (1  427 392 km/an) mais, au contraire, pertinente pour les 
+voitures (63 920 km/an soit environ 170 km/jour, utilisation tout à fait réaliste pour 
+un taxi ou un représentant de commerce). On pré fère donc fixer un kilométrage 
+maximal, fixé à dire d’expert et variable selon les catégories de véhicule pour 
+prendre en compte les spécificités d’usage. La distance issue des relevés est 
+considérée aberrante, si elle dépasse :  
+• 100 000 km/an pour les voitures ; 
+• 150 000 km/an pour les VUL ; 
+• 250 000 km par an pour les véhicules lourds.  
+Un peu moins de 2 % des visites de contrôle de véhicules lourds sont considérées 
+comme aberrantes, contre seulement 0,2 % pour les VUL et 0,1 % pour les voitures 
+particulières. La vérification de quelques cas particuliers semble indiquer que les 
+relevés kilométriques sont plus souvent tronqués ou sujets à erreur de saisie quand 
+ils contiennent beaucoup de chiffres, ce qui pourrait expliquer que les valeurs 
+aberrantes soient p lus répandues parmi les véhicules lourds. Par ailleurs, environ 
+1 % des valeurs sont négatives.  
+  
+ 
+ 54 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+Tableau 10 : valeurs extrêmes des distances annualisées entre deux contrôles 
+techniques (2018)  
+ Poids lourd Voiture VUL 
+Valeur négative 1,22 % 0,83 % 0,97 % 
+Médiane 25 768 10 331 8 703 
+90 % 115 587 22 313 24 659 
+95 % 137 989 27 005 31 739 
+96 % 146 778 28 621 34 218 
+97 % 161 623 30 934 37 649 
+98 % 188 087 34 763 43 284 
+99 % 363 868 44 768 56 045 
+99,5 % 1 427 392 63 920 81 940 
+99,6 % 2 255 449 71 744 99 379 
+99,7 % 3 519 417 83 954 125 802 
+99,8 % 5 885 128 110 323 203 468 
+99,9 % 14 351 464 297 073 482 168 
+Note de lecture : 99 % des relevés kilométriques effectués lors d’un contrôle technique indiquent une 
+distance annualisée inférieure à 363 868 km/an pour les poids lourds.  
+Source : SDES, fichiers annuels RSVERO au 10e, 2022. 
+La figure 20 présente l’effet du choix du seuil de valeur aberrante sur la distance 
+annuelle moyenne annualisée (tronquée). Elle souligne l’impact non négligeable 
+d’un tel changement, de l’ordre de quelques pourcents, notamment lorsque ce 
+seuil diminue. Par a illeurs, les véhicules lourds, qui sont davantage concernés par 
+les valeurs aberrantes, seraient logiquement le plus impactés par un changement 
+de seuil.   
+Figure 20 : variation des distances annuelles moyennes relevées en 2018 selon le seuil 
+de valeur maximale 
+ 
+Note : lorsque le seuil de valeur aberrante est fixé à 200 000 km/an plutôt que 250 000 km/an, la 
+distance moyenne tronquée des poids lourds ayant passé un contrôle technique en 2018 est plus basse 
+de 2,5 %.  
+Source : SDES, fichiers annuels RSVERO au 10e, 2022 
+  
+
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 55  
+Figure 21 : nombre de véhicules légers actifs pendant la crise sanitaire  
+(base 100 en 2018) 
+ 
+Note de lecture : en fixant le nombre de VUL en circulation au 1er janvier 2018, 3 ans plus tard, il s’élève à 
+100,17 sans correction, à 100,39 avec la correction « réglementaire », à 100,5 avec la correction 
+complémentaire et à 101,09 avec la correction « maximale ».  
+Source : SDES, fichiers annuels RSVERO au 10e, 2022 
+5.9. Estimation du parc pendant la crise sanitaire 
+Cette section détaille l’adaptation des méthodes de calcul du parc dans le 
+contexte de la crise sanitaire, mentionnée dans la section 3.8. Elle présente 
+plusieurs méthodes alternatives visant à prendre en compte l’effet de la fermeture 
+des centres de cont rôle technique pendant le premier confinement et des délais 
+exceptionnels accordés aux utilisateurs de véhicules routiers pour le passage d’une 
+visite.  
+La fermeture des centres de contrôle technique pendant le premier confinement 
+de 2020 a conduit les pouvoirs publics à une prolongation exceptionnelle du délai 
+entre deux contrôles techniques. Trois méthodes de correction ont été testées 
+pour prendre en compte ce changement temporaire. Elles visent toutes à allonger 
+la durée du retard acceptable de trois mois pour les véhicules légers et de 15 jours 
+pour les véhicules lourds26 mais la correction ne porte pas sur les mêmes véhicules 
+selon la méthode choisie : 
+• sans correction : application des durées habituelles de retard, sans 
+adaptation particulière à la crise sanitaire ;  
+• correction « réglementaire » (méthode  retenue) :  application stricte d e 
+l’augmentation exceptionnelle de la durée de validité des contrôles 
+techniques accordée par les pouvoir publics, la durée du retard acceptable 
+est augmentée pour les seuls véhicules dont le contrôle technique arrivait 
+à expiration entre le 12 mars 2020 et le 23 juin 2020 ;  
+• correction « complémentaire » : on augmente également la durée de retard 
+acceptable pour les véhicules dont le contrôle technique arrivait à 
+échéance juste après le 23 juin 2020, afin de tenir compte de l’engorgement 
+des centres de contrôle technique en mai et juin ; pour ces véhicules, on 
+allonge la date de retard maximal acceptable afin qu’ils n’aient pas à passer 
+ 
+26 La date de passage réglementaire reste en revanche inchangée, ce qui permet de ne pas prolonger la présence dans 
+le parc des véhicules qui en sortent définitivement pendant la crise sanitaire.  
+99
+100
+101
+102
+103
+2018 2019 2020 2021 2022
+Voiture
+Réglementaire Sans
+99
+100
+101
+102
+103
+2018 2019 2020 2021 2022
+VUL
+Maximale Complémentaire
+ 
+ 56 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+leur visite avant les véhicules do nt le contrôle technique arrivait à 
+expiration le 23 juin 202027 ;  
+• correction « maximale » :  la durée du retard acceptable est également 
+augmentée pour les véhicules déjà en retard au début du premier 
+confinement, sans que ce retard ne soit excessif au 12 /03/2020. L’idée de 
+cette deuxième correction est de prendre en compte les difficultés de 
+passage d’une visite pendant le premier confinement pour ces véhicules 
+déjà en retard.  
+La figure 21 présente l’évolution du parc selon le type de véhicule et la corr ection 
+appliquée, uniquement pour les véhicules légers 28. Elle suggère que la correction 
+« réglementaire » produit les séries les moins heurtées pour les voitures, elle est 
+donc retenue. Au contraire, la correction «  maximale » semble provoquer une 
+surestimation du parc au 1er janvier 2020.  
+5.10. Estimation des distances parcourues pendant la 
+crise sanitaire 
+Cette section détaille l’adaptation des méthodes de calcul des distances au cas 
+spécifique de la crise sanitaire, abordée dans la section 4.5.  
+La crise san itaire a provoqué une baisse importante de l’utilisation des véhicules, 
+qui se traduit logiquement dans les relevés kilométriques des voitures ayant passé 
+un contrôle technique pendant ou après cette période ( figures 22a et 22b). Dès le 
+2e trimestre 2020, on constate une diminution de la distance journalière moyenne 
+parcourue par les véhicules présentés au contrôle technique, depuis leur visite 
+précédente. Cette distance continue de diminuer au cours des trimestres suivants : 
+comme l’indique la courbe vert e, la crise sanitaire représente une part croissante 
+de la période qui sépare la visite considérée de la précédente. Sur la figure 22b , la 
+distance journalière moyenne augmente de nouveau à partir du 3 e trimestre 2022, 
+à mesure que la période de la crise s anitaire représente une part de plus en plus 
+faible de la période qui sépare les deux dernières visites de contrôle technique. Il 
+existe donc un décalage entre la crise sanitaire, les restrictions de mobilité 
+débutant au 1 er trimestre 2020 et cessant total ement au 2 e trimestre 2021, et sa 
+traduction dans les relevés des contrôles techniques 29. 
+ 
+  
+ 
+27 Par exemple, pour une voiture A devant passer sa première visite de contrôle le 23 juin 2020, la correction conduit 
+à considérer un retard comme acceptable jusqu’à 21 mois au lieu de 18, soit jusqu’au 23 février 2022. Une voiture B 
+devant passer sa première visite de contrôle le 5 juillet 2020, n’est pas concernée par la correction dite « 
+réglementaire ». Le retard est considéré acceptable jusqu’au 5 janvier 2020, soit avant la voiture A alors qu’elle avait 
+passé sa précédente visite après. Pour éviter ce type d'incohérence, on prolonge la durée de retard acceptable de la 
+voiture B jusqu’au 23 février 2022. 
+28 Les véhicules lourds ne sont pas représentés, les corrections mises en œuvre n'entraînant que des modifications 
+marginales. 
+29 Prenons l’exemple de deux voitures utilisées de façon identique par leurs propriétaires (hors crise sanitaire) et 
+passant des visites de contrôle espacées de deux ans. La voiture A a passé une visite de contrôle au 3e trimestre 2020, 
+la précédente ayant eu lieu au début du 3 e trimestre 2018. La voiture A aura circulé normalement pendant les six 
+premiers trimestres, les restrictions de circulation n’affectant que les 2 derniers trimestres. La voiture B passe une visite 
+au début du 1er trimestre 2022, la précédente ayant eu lieu au 1er trimestre 2020. La période entre les deux visites inclut 
+donc les six trimestres de la crise sanitaire, seuls deux trimestres se déroulant en période normale. La distance moyenne 
+parcourue entre les deux visites est donc plus basse pour la voiture B que pour la A, la crise sanitaire ayant réduit son 
+utilisation pendant les trois quarts de la période séparant les deux visites, contre seulement un quart pour la A.  
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 57  
+Figure 22a : distance journalière moyenne et circulation pendant la crise sanitaire selon 
+le trimestre de passage du contrôle technique (voitures, première visite)  
+ 
+Note de lecture : les voitures ayant passé le premier contrôle technique au T3 2021 ont parcouru en 
+moyenne 41,7 km par jour depuis leur première mise en circulation. Par ailleurs, 36,6 % de la période 
+écoulée depuis la première mise en circulation se déroule pendant la crise sanitaire (du T1 2020 au 
+T2 2021), en moyenne.  
+Source : SDES, RSVERO au 10e 
+ 
+Figure 22b : distance journalière moyenne et circulation pendant la crise sanitaire selon 
+le trimestre de passage du contrôle technique (voitures, hors première visite)  
+ 
+Note de lecture : les voitures ayant passé un contrôle technique (hors première visite) au T3 2021 ont 
+parcouru en moyenne 27,6 km par jour depuis la précédente visite et la crise sanitaire (du T1 2020 au 
+T2 2021) a concerné 71,6 % de cette période.   
+Source : SDES, RSVERO au 10e 
+ 
+Les relevés kilométriques effectués lors des visites de contrôle reflètent donc 
+clairement la diminution de la circulation routière pendant la crise sanitaire mais 
+indirectement. On part du principe que cette baisse n’est pas uniforme, les 
+restrictions de circulation variant au cours de la crise sanitaire et selon le ty pe 
+d’utilisateur, les camions livrant les magasins d’alimentation n’ayant pas connu les 
+mêmes contraintes que les véhicules des particuliers sans obligation 
+professionnelle. On cherche donc, pour une catégorie de véhicule donnée, la 
+diminution moyenne de la circulation, trimestre par trimestre du T1 2020 au 
+T2 2021. L’idée générale est d’exploiter le décalage temporel des visites, illustré par 
+les figures 22a et 22b : plus le temps avance à partir du 2 e trimestre 2020, plus les 
+véhicules ont circulé pendant  la crise sanitaire en proportion du temps écoulé 
+depuis leur dernière visite et plus la distance parcourue baisse.  
+
+ 
+ 58 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+On s’appuie sur un simple modèle de régression linéaire visant à expliquer la 
+distance journalière parcourue entre deux visites. Pour l’estimation des coefficients 
+de circulation pendant la crise sanitaire, on introduit les variables d t mesurant la 
+part de la durée entre les deux visites se déroulant pendant un trimestre t donné 
+en 2020 et 2021 : ces variables varient de 0 si la période inter-visite est disjointe du 
+trimestre t à 1 si elle y est incluse en totalité. On ajoute également le même type 
+de variables dy, sur une base annuelle, avant 2019 et après 2022. L’objectif des 
+variables dy est de prendre en compte d’éventuelles variations ten dancielles de 
+l’utilisation des véhicules hors crise sanitaire. On a donc : 
+�
+𝑡𝑡
+𝑑𝑑𝑡𝑡  + �
+𝑦𝑦∉{2020,2021}
+𝑑𝑑𝑦𝑦  = 1  
+ 
+La deuxième série de variables de contrôles concerne la durée séparant les deux 
+visites, celle -ci étant nettement corrélée à l’intensité d’utilisation des véhicules. 
+Cette durée ayant été fortement affectée par la crise sanitaire, elle n’est pas 
+introduite directement dans la régression. On considère à la place les groupes de 
+quantiles de cette durée, à une date de contrôle technique donnée. 
+Concrètement, les véhicules sont partagés en douze groupes d , le premier 
+correspondant au 12 e des véhicules passant l a visite suivante en premier (c’est -à-
+dire avec la durée inter -visite la plus courte) et ainsi de suite. Cette série de 
+variables est introduite sous forme d’une série d’indicatrices Rd.  
+Pour optimiser les temps de traitement, les régressions ne sont pas estimées sur 
+données individuelles mais sur des données agrégées par semaine de passage de la 
+visite précédente et tranche de durée inter -visite. Avec k désignant la tranche 
+d’agrégation semaine × durée inter-visite, on estime la régression linéaire suivante :  
+ 
+𝑘𝑘𝑚𝑚𝑗𝑗𝑘𝑘
+𝑘𝑘𝑚𝑚𝑗𝑗 = 𝛽𝛽0 + ∑𝑡𝑡 𝛼𝛼𝑡𝑡𝑑𝑑𝑡𝑡𝑘𝑘  + ∑𝑦𝑦∉{2019,2020,2021} 𝛼𝛼𝑦𝑦𝑑𝑑𝑦𝑦𝑘𝑘   + ∑𝑑𝑑 𝛽𝛽𝑑𝑑 𝑅𝑅𝑑𝑑𝑘𝑘   + 𝜀𝜀𝑘𝑘   
+ 
+La variable dépendante correspond à la distance journalière moyenne kmjk dans la 
+tranche k, normalisée par 𝑘𝑘𝑚𝑚𝑘𝑘 la distance journalière moyenne observée en 201930. 
+Pour plus de robustesse, on contraint les coefficients trimestriels 2020 et 2021 à 
+prendre leurs valeurs entre -0,9 et 0.  
+Les coefficients ɑ peuvent ainsi être interprétés comme la variation en 
+pourcentage de la distance journalière parcourue pendant les trimestres de la crise 
+sanitaire (ou les années antérieures et postérieures), avec pour référence 
+l’année 2019. Ils sont reportés dans le tableau 11 . On remarque que les baisses de 
+circulation pendant la crise sanitaire sont, sans exception, d’une magnitude bien 
+plus importante que les variations observées durant les années précédentes. Ceci 
+justifie, sans surprise, l’abandon de l’hypothèse de circulation constante des 
+véhicules entre deux visites, appliquée en temps normal. On note également que 
+le paramètre 2022 est beaucoup plus volatile, ce qui s’observe de manière générale 
+pour la période la plus récente et conduit à limiter cette méthode de répartition 
+non uniforme des distances aux années 2020 et 2021.  
+ 
+  
+ 
+30 On préfère cette spécification à une modélisation log -linéaire car elle permet d’additionner les coefficients ɑ  
+obtenus. 
+  
+Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues - 59  
+Tableau 11 : coefficients annuels et trimestriels de circulation (en %) 
+Catég. Strate COVID < 2015 2015 2016 2017 2018 2019 2020 T1 2020 T2 2020 T3 2020 T4 2021 T1 2021 T2 2021 T3 2021 T4 2022 
+VASP lourd 
+Autre VASP lourd - 8 - 5 - 4 - 1 0 réf - 8 - 27 0 - 5 - 2 - 3 0 - 11 4 
+Camping-car lourd 15 17 17 10 17 réf - 13 - 54 0 0 - 90 - 21 0 0 - 12 
+Tracteur routier -4 3 1 2 1 réf - 14 - 12 0 0 0 0 0 - 6 5 
+Camion -10 - 2 - 2 - 1 - 1 réf - 22 - 14 0 - 3 - 5 0 0 - 9 3 
+Autocar -5 2 2 0 1 réf - 13 - 76 - 19 - 23 - 19 - 28 - 16 - 11 - 4 
+Camping-car 
+1er CT - 24 - 16 - 19 - 9 - 40 réf - 90 - 90 0 0 - 90 - 50 0 - 18 - 16 
+CT suiv. - 14 1 - 7 0 - 18 réf - 46 - 72 0 - 8 - 90 - 49 0 0 5 
+Autobus 1 - 2 - 2 - 1 - 1 réf - 12 - 33 0 0 0 - 10 - 12 0 - 6 
+VASP léger 
+Véhicule sanitaire - 8 - 6 - 3 - 4 - 2 réf - 6 - 27 0 0 0 0 0 0 7 
+Autre VASP léger - 4 8 6 - 6 - 6 réf - 25 - 33 - 1 - 10 0 0 0 0 4 
+Camion-
+nette 
+1er CT/part. 1 - 12 6 - 17 - 8 réf 0 - 83 0 0 - 14 - 49 0 - 42 - 45 
+1er CT/pro. 7 4 3 6 14 réf 0 - 37 0 0 0 0 - 12 0 12 
+CT suiv./part. - 1 2 1 0 0 réf - 15 - 26 0 - 4 - 13 - 5 0 0 - 5 
+CT suiv./pro. - 2 2 2 1 - 1 réf - 17 - 18 0 0 - 1 0 0 0 1 
+Dérivé VP 
+1er CT 17 9 13 12 13 réf - 1 - 33 0 0 0 - 8 0 0 8 
+CT suiv. 5 5 4 2 1 réf - 10 - 35 0 - 8 - 13 - 10 - 4 - 1 - 10 
+Voiture 
+1er CT/diesel/part. - 11 - 9 - 3 - 15 - 3 réf 0 - 42 0 - 20 - 16 - 38 - 17 0 - 28 
+1er CT/diesel/pro. - 4 - 3 - 1 - 1 8 réf - 24 - 53 0 0 - 42 0 0 - 6 6 
+1er CT/autre carb./part. - 14 - 12 6 - 16 - 4 réf 0 - 41 - 4 0 0 - 20 - 7 0 - 26 
+1er CT/autre carb./pro. - 20 - 22 - 8 - 31 - 6 réf - 12 - 83 - 5 0 0 - 78 0 0 - 17 
+CT spécialisé - 34 - 24 - 16 - 7 - 6 réf - 8 - 62 - 15 - 22 - 2 - 10 0 0 19 
+CT suiv./diesel/<10a - 2 0 1 1 - 1 réf - 7 - 54 0 - 8 - 28 - 13 0 0 - 4 
+CT suiv./diesel/10-15a - 3 - 1 2 1 - 2 réf - 14 - 44 0 - 12 - 28 - 14 0 - 11 - 4 
+CT suiv./diesel/15-20a - 9 - 4 2 4 0 réf - 8 - 35 0 - 2 - 21 - 17 0 - 8 3 
+CT suiv./diesel/>20a 3 3 8 4 2 réf - 26 - 28 0 - 2 - 5 - 26 0 0 6 
+CT suiv./autre carb./<10a - 6 - 4 - 3 - 4 - 4 réf - 14 - 51 0 - 2 - 35 - 2 0 0 0 
+CT suiv./autre carb./10-15a - 6 - 3 2 - 1 - 2 réf - 14 - 46 0 0 - 47 - 8 0 - 12 0 
+CT suiv./autre carb./15-20a - 15 - 7 - 1 1 0 réf - 8 - 37 0 0 - 36 - 8 0 - 5 5 
+CT suiv./autre carb./>20a - 30 - 17 - 8 - 5 - 15 réf - 29 - 26 0 0 - 34 - 20 0 0 27 
+Note de lecture : au 2e trimestre 2020, la circulation des voitures de 15 à 20 ans, roulant au diesel, a 
+chuté de 35 % par rapport à l’année 2019.  
+Source : SDES, fichiers annuels RSVERO au 10e, 2022 
+ 
+ 
+ 
+ 60 - Méthodologie pour l’estimation des parcs de véhicules et des distances parcourues 
+1. Synthèse et précautions d’utilisation ............................................................................ 4 
+ABSTRACT IN ENGLISH Summary and usage guidelines ..................................................... 7 
+2. Caractéristiques des véhicules ..................................................................................... 10 
+2.1. Catégories de véhicules ..................................................................................... 10 
+2.2. Caractéristiques techniques du véhicule ........................................................ 11 
+2.3. Utilisateur du véhicule ........................................................................................ 12 
+2.4. Émissions de GES et consommation des voitures ........................................ 12 
+2.4.1. Les émissions du réservoir à la roue ................................................................. 12 
+2.4.2. Appariement RSVERO et spritmonitor.de ....................................................... 14 
+2.4.3. Calage RSVERO et Secten/Citepa .................................................................... 16 
+3. Parc ..................................................................................................................................... 18 
+3.1. Appartenance au parc : SIV .............................................................................. 18 
+3.1.1. Type d’utilisateur ................................................................................................. 18 
+3.1.2. Sortie administrative du parc ............................................................................ 18 
+3.1.3. Changement de catégorie statistique ............................................................. 19 
+3.2. Appartenance au parc : contrôles techniques .............................................. 19 
+3.2.1. Règles de passage et retard acceptable .......................................................... 19 
+3.2.2. Règles d’appartenance au parc......................................................................... 22 
+3.3. Véhicules de collection ...................................................................................... 24 
+3.4. État statistique du véhicule ............................................................................... 24 
+3.5. Entrées et sorties de parc .................................................................................. 26 
+3.6. Retards de durée incertaine .............................................................................. 27 
+3.7. Révisions annuelles .............................................................................................. 29 
+3.8. Crise sanitaire ....................................................................................................... 29 
+4. Distances annuelles ........................................................................................................ 30 
+4.1. Relevés kilométriques et distances annuelles ................................................ 30 
+4.2. Distance inconnue ............................................................................................... 32 
+4.3. Méthode d’imputation des distances inconnues .......................................... 33 
+4.4. Révisions annuelles .............................................................................................. 36 
+4.5. Crise sanitaire ....................................................................................................... 38 
+5. Tests de sensibilité et choix méthodologiques alternatifs ..................................... 41 
+5.1. Estimation des émissions de GES des voitures .............................................. 41 
+5.2. Retard maximal acceptable .............................................................................. 43 
+5.3. Changement d’état statistique des véhicules ............................................... 44 
+5.4. Comparaison des critères SIV et contrôle technique d’appartenance au 
+parc......................................................................................................................... 46 
+5.5. État statistique du véhicule et distances parcourues .................................. 47 
+5.6. Fin de vie des véhicules ...................................................................................... 50 
+5.7. Modélisation des durées entre deux visites de contrôle ............................. 51 
+5.8. Distances aberrantes .......................................................................................... 53 
+5.9. Estimation du parc pendant la crise sanitaire ............................................... 55 
+5.10. Estimation des distances parcourues pendant la crise sanitaire ............... 56 
+ 
+Table des matières  
+ 
+ 
+ 
+ 
+Commissariat général 
+au développement durable 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Service des données et études statistiques  
+Sous-direction des statistiques du transport  
+Tour Séquoia – 92055 La Défense cedex 
+Courriel : diffusion.cgdd@developpement-durable.gouv.fr   
+ 
+ 
+www.statistiques.developpement-durable.gouv.fr 

@@ -1,0 +1,624 @@
+{
+  "rid": "1582861b-e042-4490-9161-6429d8229703",
+  "title": "Données sur le parc de véhicules au niveau communal",
+  "description": "Données sur le parc de véhicules au niveau communal par motorisation, vignette Crit'Air, statut de l'utilisateur et type de véhicule.",
+  "created_at": "2025-05-20T07:50:33.165Z",
+  "last_modified": "2026-07-10T10:15:16.822Z",
+  "published": "2025-05-20T07:48:56.000Z",
+  "temporal_coverage": {
+    "start": "2011-01-01",
+    "end": "2026-01-01"
+  },
+  "legal_notice": "SDES",
+  "millesime": "2026-06",
+  "refs": [],
+  "availableValues": [
+    {
+      "column": "COMMUNE_CODE",
+      "values": []
+    },
+    {
+      "column": "COMMUNE_NOM",
+      "values": []
+    },
+    {
+      "column": "CARBURANT",
+      "values": []
+    },
+    {
+      "column": "CRIT_AIR",
+      "values": [
+        "Crit'Air 3",
+        "Crit'Air 2",
+        "Non classé",
+        "Crit'Air 5",
+        "Crit'Air E",
+        "Crit'Air 1",
+        "Crit'Air 4",
+        "Inconnu"
+      ]
+    },
+    {
+      "column": "STATUT_UTILISATEUR",
+      "values": [
+        "Professionel",
+        "Particulier"
+      ]
+    },
+    {
+      "column": "GROUPE",
+      "values": [
+        "PL",
+        "VUL",
+        "VP",
+        "TCP"
+      ]
+    },
+    {
+      "column": "CATEGORIE",
+      "values": [
+        "CAMION",
+        "CAMTTE",
+        "VASP",
+        "DERIVP",
+        "VP",
+        "CAMPCAR",
+        "AUTREPL",
+        "TRACTEUR",
+        "CAR",
+        "BUS"
+      ]
+    },
+    {
+      "column": "PARC_2011",
+      "values": []
+    },
+    {
+      "column": "PARC_2012",
+      "values": []
+    },
+    {
+      "column": "PARC_2013",
+      "values": []
+    },
+    {
+      "column": "PARC_2014",
+      "values": []
+    },
+    {
+      "column": "PARC_2015",
+      "values": []
+    },
+    {
+      "column": "PARC_2016",
+      "values": []
+    },
+    {
+      "column": "PARC_2017",
+      "values": []
+    },
+    {
+      "column": "PARC_2018",
+      "values": []
+    },
+    {
+      "column": "PARC_2019",
+      "values": []
+    },
+    {
+      "column": "PARC_2020",
+      "values": []
+    },
+    {
+      "column": "PARC_2021",
+      "values": []
+    },
+    {
+      "column": "PARC_2022",
+      "values": []
+    },
+    {
+      "column": "PARC_2023",
+      "values": []
+    },
+    {
+      "column": "PARC_2024",
+      "values": []
+    },
+    {
+      "column": "PARC_2025",
+      "values": []
+    },
+    {
+      "column": "PARC_2026",
+      "values": []
+    }
+  ],
+  "extendedFilters": [],
+  "geoFields": [],
+  "columns": [
+    {
+      "name": "COMMUNE_CODE",
+      "description": "Code insee de la commune",
+      "unit": "n/a",
+      "type": "string",
+      "filters": [
+        "contains",
+        "eq",
+        "ne",
+        "startsWith",
+        "endsWith",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "COMMUNE_NOM",
+      "description": "Libellé de la commune",
+      "unit": "n/a",
+      "type": "string",
+      "filters": [
+        "contains",
+        "eq",
+        "ne",
+        "startsWith",
+        "endsWith",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "CARBURANT",
+      "description": "Motorisation du véhicule",
+      "unit": "n/a",
+      "type": "string",
+      "filters": [
+        "contains",
+        "eq",
+        "ne",
+        "startsWith",
+        "endsWith",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "CRIT_AIR",
+      "description": "Vignette Crit'air du véhicule",
+      "unit": "n/a",
+      "type": "string",
+      "filters": [
+        "contains",
+        "eq",
+        "ne",
+        "startsWith",
+        "endsWith",
+        "in",
+        "nin"
+      ],
+      "availableValues": [
+        "Crit'Air 3",
+        "Crit'Air 2",
+        "Non classé",
+        "Crit'Air 5",
+        "Crit'Air E",
+        "Crit'Air 1",
+        "Crit'Air 4",
+        "Inconnu"
+      ]
+    },
+    {
+      "name": "STATUT_UTILISATEUR",
+      "description": "Statut de l'utilisateur ",
+      "unit": "n/a",
+      "type": "string",
+      "filters": [
+        "contains",
+        "eq",
+        "ne",
+        "startsWith",
+        "endsWith",
+        "in",
+        "nin"
+      ],
+      "availableValues": [
+        "Professionel",
+        "Particulier"
+      ]
+    },
+    {
+      "name": "GROUPE",
+      "description": "Groupe du véhicule",
+      "unit": "n/a",
+      "type": "string",
+      "filters": [
+        "contains",
+        "eq",
+        "ne",
+        "startsWith",
+        "endsWith",
+        "in",
+        "nin"
+      ],
+      "availableValues": [
+        "PL",
+        "VUL",
+        "VP",
+        "TCP"
+      ]
+    },
+    {
+      "name": "CATEGORIE",
+      "description": "Catégorie du véhicule",
+      "unit": "n/a",
+      "type": "string",
+      "filters": [
+        "contains",
+        "eq",
+        "ne",
+        "startsWith",
+        "endsWith",
+        "in",
+        "nin"
+      ],
+      "availableValues": [
+        "CAMION",
+        "CAMTTE",
+        "VASP",
+        "DERIVP",
+        "VP",
+        "CAMPCAR",
+        "AUTREPL",
+        "TRACTEUR",
+        "CAR",
+        "BUS"
+      ]
+    },
+    {
+      "name": "PARC_2011",
+      "description": "parc au 1er janvier 2011",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2012",
+      "description": "parc au 1er janvier 2012",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2013",
+      "description": "parc au 1er janvier 2013",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2014",
+      "description": "parc au 1er janvier 2014",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2015",
+      "description": "parc au 1er janvier 2015",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2016",
+      "description": "parc au 1er janvier 2016",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2017",
+      "description": "parc au 1er janvier 2017",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2018",
+      "description": "parc au 1er janvier 2018",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2019",
+      "description": "parc au 1er janvier 2019",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2020",
+      "description": "parc au 1er janvier 2020",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2021",
+      "description": "parc au 1er janvier 2021",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2022",
+      "description": "parc au 1er janvier 2022",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2023",
+      "description": "parc au 1er janvier 2023",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2024",
+      "description": "parc au 1er janvier 2024",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2025",
+      "description": "parc au 1er janvier 2025",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    },
+    {
+      "name": "PARC_2026",
+      "description": "parc au 1er janvier 2025_1",
+      "unit": "s/u",
+      "type": "number",
+      "precision": null,
+      "filters": [
+        "eq",
+        "ne",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "in",
+        "nin"
+      ],
+      "availableValues": []
+    }
+  ],
+  "rows": 2128015,
+  "date_diffusion": "2026-07-10T12:00:00.000Z",
+  "weburl": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=datafile&datafileRid=1582861b-e042-4490-9161-6429d8229703&datafileMillesime=2026-06",
+  "views": 3728,
+  "downloads": 19129,
+  "dataset": {
+    "id": "682c33e7d455a8571c7d00ff",
+    "title": "Parc de véhicules routiers",
+    "description": "Les données fournies concernent le parc de véhicules au niveau communal, par motorisation, vignette Crit'Air, statut de l'utilisateur et type de véhicule, au 1er janvier de chaque année depuis 2011 jusqu'à 2026.\nLe nombre de véhicules est estimé et révisable pendant plusieurs années suite à la réception de nouveaux contrôles techniques, avec un caractère révisable plus prononcé pour les données les plus récentes. Ainsi, les données sont provisoires au 01/01/2026 pour tous les véhicules, définitives aux 01/01/2024 et années précédentes pour les véhicules lourds, définitives aux 01/01/2023 et années précédentes pour les véhicules légers.\nUne notice méthodologique précisant les définitions pour chaque type de véhicule est disponible à l'adresse suivante : https://www.statistiques.developpement-durable.gouv.fr/donnees-sur-le-parc-automobile-francais-au-1er-janvier-2026",
+    "topic": "Transports",
+    "tags": [
+      "automobile",
+      "circulation",
+      "transport",
+      "vehicule"
+    ],
+    "license": "fr-lo",
+    "frequency": "annual",
+    "frequency_date": "2027-07-10",
+    "spatial": {
+      "zones": [
+        "country:fr"
+      ],
+      "granularity": "other"
+    },
+    "temporal_coverage": {
+      "start": "2011-01-01",
+      "end": "2026-01-01"
+    },
+    "caution": "La localisation du véhicule à la commune est déterminée à partir de l’adresse indiquée sur le certificat d’immatriculation du véhicule. Dans le cas d’un véhicule en location longue durée ou en crédit-bail, l’adresse correspond au locataire du véhicule et non à son propriétaire. Lorsque la commune de l'utilisateur n'est pas précisément identifiée, un code commune fictif est attribué au véhicule (composé du numéro de département suivi de 000 si le département est connu).\nLe total recalculé à partir de ces données peut différer du total national publié par ailleurs sur le site du sdes pour des raisons d'arrondis.\n",
+    "created_at": "2025-05-20T07:48:55.511Z",
+    "last_modified": "2026-07-10T10:15:16.839Z",
+    "last_update": "2026-07-10T10:15:16.839Z",
+    "organization": {
+      "id": "60cf529007db02177dd0071e",
+      "title": "Bureau des statistiques de la route et des véhicules",
+      "description": "Bureau des statistiques de la route et des véhicules",
+      "acronym": "CGDD/SDES/SDST/BSRV"
+    },
+    "weburl": "https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=dataset&datasetId=682c33e7d455a8571c7d00ff",
+    "views": 8339,
+    "attachments": [
+      {
+        "rid": "6e8c4d0d-95df-4cc0-9559-54562d4ae48f",
+        "type": "documentation",
+        "title": "Note méthodologique",
+        "description": "Méthodologie pour l'estimation des parcs de véhicules et des distances parcourues",
+        "published": "2025-05-20T07:50:41.000Z",
+        "url": "https://data.statistiques.developpement-durable.gouv.fr/dido/api/files/6e8c4d0d-95df-4cc0-9559-54562d4ae48f",
+        "created_at": "2025-05-20T07:50:42.131Z",
+        "last_modified": "2025-05-20T07:50:42.759Z",
+        "downloads": 1902
+      }
+    ]
+  }
+}

@@ -1,0 +1,527 @@
+Plan de projet Python — Fréquentation des gares en France
+13 octobre 2026 · Éléonore Samson
+Problématique et ligne directrice
+Problématique proposée : le rail suit-il la France qui grandit ? Croissance démographique, fréquentation des gares et émissions du transport dans les territoires (2015-2024), à l'heure de la transition climatique.
+L'idée : la population se redistribue (métropoles, littoral atlantique, périurbain, sud) pendant que d'autres territoires se vident. Si le train ne suit pas ces trajectoires, la croissance démographique se fait en voiture (ou en avion), donc en émissions.
+Le point focal est la gare (et sa commune) : c'est l'unité commune à toutes les sources, ce qui donne une clé de jointure et une logique interne. Chaque idée du brouillon devient une sous-question :
+Trajectoires démographiques : où la population croît-elle, où décroît-elle, et à quel rythme (taux de croissance annuel moyen, solde naturel vs migratoire) ?
+Le rail suit-il ? La fréquentation des gares croît-elle plus ou moins vite que la population de leur territoire ? Quelles gares « décrochent » d'un territoire en croissance ?
+Empreinte climatique : les territoires en croissance mal desservis sont-ils ceux où la voiture et les émissions du transport par habitant sont les plus élevées ?
+Train contre voiture : la fréquentation monte-t-elle là où la motorisation et la part de la voiture (est ce que le fait de remettre voiture c’est pas redondant)  dans les trajets domicile-travail baissent (effet d'éviction) ?
+Les oubliés du rail : quelle part de la population, et de la croissance démographique, vit loin de toute gare ?
+Et demain ? Superposer les projections de population à l'horizon 2050 au réseau actuel : où les besoins de desserte vont-ils monter ?
+L’avion face au train: le train remplace-t-il l’avion pour les vols intérieurs ? 3 axes d’entrées: le climat, la concurrence des modes de transport, évaluation des politiques publiques ( la loi Climat et résilience de 2021 prévoit d'interdire les vols intérieurs quand une alternative en train de moins de 2h30 existe. Le décret n° 2023-385 du 22 mai 2023 n'a retenu que trois liaisons : Paris-Orly vers Nantes, Lyon et Bordeaux. Il était valable trois ans au plus : vérifiez s'il a été prolongé ou modifié depuis mai 2026.)
+Le climat devient un axe central, plus une piste secondaire : on le mesure par les émissions du transport routier, la part modale voiture et des émissions évitées estimées grâce au train. Qualité de l'air et investissement restent facultatifs. Mieux vaut six questions bien illustrées que dix survolées, le barème valorise l'effort de synthèse.
+À noter : le barème ENSAE 2026 ne note plus la modélisation (données 4 pts, analyse descriptive 4, démarche et reproductibilité 5, code 2, soutenance 5). Un projet passé portait déjà sur les retards SNCF : l'angle démographie / climat vous en distingue, à faire valider tôt par le chargé de TD.
+Vue d'ensemble : l'essentiel d'abord, puis l'approfondissement
+On construit d'abord une version 1 complète mais simple (socle essentiel), qui doit tourner de bout en bout et suffire à elle seule pour un rendu correct. On ne passe à la version 2 qu'une fois la version 1 finie et poussée sur GitHub. Les numéros renvoient aux étapes détaillées plus bas.
+Bloc
+Ce qu'on fait
+Priorité
+Qui fait quoi ?
+Problématique
+sous-questions 1 (trajectoires démographiques), 2 (le rail suit-il ?), 3 en version simple, 5 (oubliés du rail)
+1 · Essentiel (urgent)
+
+Organisation (étape 0)
+dépôt GitHub, branches et pull requests, SSP Cloud, données sur S3
+1 · Essentiel (urgent)
+
+Collecte (étape 1)
+fréquentation et liste des gares (API SNCF), recensement et séries historiques (pynsee), parc auto SDES, contours cartiflette, tracés du réseau, un scraping Wikipédia
+1 · Essentiel (urgent)
+
+Nettoyage (étape 2)
+2a à 2c, variables de base de 2d
+1 · Essentiel (urgent)
+Mathilde, Tamsir, Eléonore
+DIMANCHE 25 OCTOBRE 2026
+
+
+
+Statistiques (étape 3)
+points 1, 2, 3, 4, 6 
+analyse des variables séparés
+analyses croisées ( donc évolution de A par rapport B, moyenne, écart-type etc). 
+premières conclusions 
+1 · Essentiel (urgent)
+Mathilde: fréquentation des gares (2 et 4)
+Tamsir: démographie (1 et 5)
+Eléonore: empreinte climatique et futur (3 et 6)
+Climat, version simple
+part modale voiture (recensement) et émissions évitées estimées avec la Base Carbone
+1 · Essentiel (urgent)
+Eléonore
+Visualisation (étape 4)
+cartes 1, 2 et 5 ; nuage de points en quadrants ; courbes base 100 ; heatmap des corrélations
+1 · Essentiel (urgent)
+même répartition que stat descriptives
+Rendu (étape 6)
+notebook qui tourne sans erreur, README à jour, historique Git propre
+1 · Essentiel (urgent)
+Mathilde, Tamsir, Eléonore
+DEADLINE : 2 NOVEMBRE 2026
+
+
+
+Sous-questions 4 et 6
+effet d'éviction train / voiture, projections 2050
+2 · Approfondissement
+
+Sources complémentaires
+inventaires d'émissions, flux domicile-travail, Omphale, GTFS (desserte), Filosofi
+2 · Approfondissement
+
+Statistiques complémentaires
+points 5, 7, 9 et 10 de l'étape 3
+2 · Approfondissement
+
+Cartes complémentaires
+cartes 3 (bivariée), 4, 6 et 7 ; carte animée
+2 · Approfondissement
+
+Extras
+application Streamlit, qualité de l'air (Geod'air), étape 5 (KMeans, régression)
+3 · Bonus
+
+Extras
+Avion, et comment les effets d’éviction lié à ça, travail complémentaire
+3. Bonus
+
+Légende :  Essentiel (urgent)     Approfondissement     Bonus 
+Règle d'équipe : tant qu'une ligne « Essentiel » n'est pas terminée, personne ne commence une ligne « Approfondissement ».
+Étape 0 : organisation du groupe et du dépôt (en amont)
+À faire avant d'écrire la moindre ligne d'analyse : le barème note le travail collaboratif réel (commits fréquents, pull requests), pas un simple upload final.
+Dépôt GitHub public créé dès la semaine 1, chaque membre clone et commite depuis son propre compte.
+Arborescence modulaire à définir ensemble, par exemple : data/ (ignoré par Git), src/ (fonctions .py : collecte, nettoyage, graphiques), notebooks/ (exploration perso), main.ipynb (rapport final), README.md, pyproject.toml ou requirements.txt.
+Règles Git : une branche par tâche, merge via pull request relue par un autre membre, jamais deux personnes sur le même notebook en même temps. Piste : nb-clean pour retirer les sorties avant commit.
+Secrets et données : clés d'API dans un .env (avec python-dotenv), jamais dans le code ; fichiers volumineux sur le stockage S3 (MinIO) du SSP Cloud, pas sur Git.
+Suivi : issues GitHub ou un tableau Projects avec une colonne par étape ci-dessous.
+Répartition à 3 : une personne par grande famille de sources en phase de collecte (SNCF / INSEE / desserte et géo), puis rotation sur l'analyse pour que chacun touche à tout.
+À décider : environnement commun (SSP Cloud recommandé par le cours, pour la reproductibilité).
+Étape 1 : collecte des données
+Objectif : au moins trois modes d'accès différents (fichier plat, API, scraping), c'est ce qui fait monter la note « Données ». Les sources ci-dessous sont des pistes à vérifier vous-mêmes (disponibilité, années, maille).
+Source
+Variables utiles
+Méthode d'accès
+Clé de jointure
+SNCF open data : fréquentation en gares
+voyageurs annuels par gare, 2015 à aujourd'hui
+API Opendatasoft (requests, pagination) ou CSV par URL
+code UIC, nom de gare
+SNCF open data : liste des gares
+coordonnées, commune, type (TER/TGV)
+même API
+code UIC, code commune INSEE
+GTFS SNCF (transport.data.gouv.fr)
+nombre de départs par gare et par jour = desserte
+téléchargement ZIP, lecture stop_times / stops
+identifiant d'arrêt → UIC
+INSEE : recensement
+population, ménages motorisés, mode de transport domicile-travail
+pynsee ou API Melodi
+code commune
+INSEE : Filosofi
+niveau de vie médian, taux de pauvreté
+pynsee ou fichier par URL
+code commune
+INSEE : grille de densité
+typologie urbain / rural
+fichier par URL
+code commune
+SDES : parc automobile
+voitures particulières par commune, par année, par motorisation 
+CSV data.gouv.fr
+code commune
+Contours géographiques
+communes, départements
+cartiflette (vu en cours)
+code commune
+Wikipédia
+dates d'ouverture / fermeture de lignes, arrivée du TGV
+scraping BeautifulSoup (ou pandas.read_html), multi-pages
+nom de gare / commune
+
+Méthodes à mobiliser :
+API : comprendre la pagination et les filtres, écrire une fonction get_dataset(nom, params) réutilisable plutôt que des appels copiés-collés.
+Scraping : respecter le robots.txt, mettre un délai entre requêtes, prévoir que le site change (sauvegarder une copie brute sur S3 avec sa date).
+Reproductibilité : le notebook final part toujours des données brutes, importées par URL ou depuis S3.
+Sources supplémentaires pour l'axe démographie et climat (à vérifier : années, maille, licence)
+Source
+Variables utiles
+Méthode d'accès
+Clé de jointure
+INSEE : séries historiques du recensement
+population communale depuis 1968, soldes naturel et migratoire
+pynsee ou fichier par URL
+code commune
+INSEE : projections Omphale
+population projetée à 2050 (départements, zones d'emploi)
+fichier par URL
+code département
+INSEE : mobilités professionnelles
+flux domicile-travail entre communes, mode de transport
+fichier détail (gros : Parquet + duckdb)
+codes commune origine / destination
+Inventaires d'émissions (observatoires régionaux de l'air, CITEPA)
+CO2 du transport routier par commune ou EPCI
+téléchargement ou API selon la région
+code commune / EPCI
+ADEME Base Carbone
+facteurs d'émission train vs voiture (g CO2 / voyageur.km)
+API ADEME
+aucune (constantes)
+SNCF Réseau : lignes du réseau ferré
+tracés des lignes, statut (exploitée, fermée), électrification
+API Opendatasoft, GeoJSON
+géométrie (fond de carte)
+Geod'air (facultatif)
+concentrations NO2, PM2.5 par station
+API Geod'air
+coordonnées → jointure spatiale
+
+Les flux domicile-travail sont une belle source pour les cartes de flux (flèches) de l'étape 4 ; les tracés de lignes servent de couche de fond sur toutes les cartes.
+Étape 2 : nettoyage, contrôles et jointures
+C'est l'étape la plus longue et la plus invisible : documentez chaque choix dans le notebook, le correcteur ne connaît pas vos données.
+2a. Nettoyage table par table (une fonction clean_xxx() par source dans src/)
+Passer en format long (une ligne = gare × année) avec pandas.melt si les années sont en colonnes.
+Types : codes INSEE et UIC en chaînes (attention aux zéros initiaux : « 01001 », pas 1001), années en entiers.
+Valeurs manquantes : les repérer (isna), décider gare par gare entre suppression et signalement, ne pas imputer à l'aveugle.
+Noms de gares : normaliser avec des expressions régulières (accents, « St » / « Saint », tirets) pour les jointures sur le nom.
+2b. Jointures (vues dans le TP Pandas)
+Gare → commune par code INSEE ; à défaut, jointure spatiale geopandas.sjoin (point de la gare dans le polygone de la commune).
+Commune → INSEE, SDES, densité par code commune.
+Piège majeur : les fusions de communes changent les codes d'une année à l'autre. Choisir un millésime du Code officiel géographique et y ramener toutes les tables.
+Paris, Lyon, Marseille : arrondissements ou commune entière, à trancher une fois pour toutes.
+Commune sans gare : distance à la gare la plus proche avec sjoin_nearest, en projection Lambert 93 (EPSG:2154) pour avoir des mètres.
+2c. Contrôles de cohérence (vos « tests de sécurité »)
+Taux de réussite de chaque jointure : combien de gares sans commune, de communes sans données ? Les afficher dans le rapport.
+assert sur les clés uniques, les totaux positifs, l'absence de doublons après jointure.
+Comparer un total national recalculé avec un chiffre publié par la SNCF ou le SDES.
+Repérer les ruptures : 2020-2021 (Covid), ouverture ou fermeture d'une gare, changement de méthode de comptage.
+Valeurs extrêmes : les grandes gares parisiennes écrasent tout, d'où des échelles logarithmiques ou un traitement à part.
+2d. Variables construites : évolution 2019-2024 en %, voyageurs par habitant, voitures par ménage, départs quotidiens par gare, classes de taille de commune, typologie urbain / rural.
+Pour l'axe démographie et climat : taux de croissance annuel moyen de la population (1999-2010, 2010-2021), écart entre croissance de la fréquentation et croissance démographique, CO2 transport par habitant, part modale voiture, population à moins de 5 / 10 km d'une gare, émissions évitées estimées (voyageurs × distance moyenne × écart de facteur d'émission voiture / train).
+Sortie : une table finale propre au format Parquet, déposée sur S3.
+Étape 3 : statistiques descriptives
+Règle du cours : chaque tableau et chaque chiffre est commenté. Un describe() sans interprétation ne rapporte rien.
+Décrire la base : nombre de gares, de communes couvertes, d'années ; taux de couverture des jointures ; table de synthèse mise en forme avec great_tables.
+Trajectoires démographiques : distribution des taux de croissance par commune, typologie « croissance forte / stable / déclin » ; décomposition solde naturel / migratoire par région.
+Distributions de fréquentation : très concentrée, donc médiane, quantiles, part des 10 % plus grandes gares ; courbe de Lorenz ou indice de Gini.
+Le rail suit-il la population ? Comparer, territoire par territoire, croissance de la fréquentation et croissance démographique ; repérer les quatre cas (les deux montent, les deux baissent, et les deux décalages).
+Comparaisons par groupe (groupby, pivot_table) : fréquentation, motorisation et CO2 par habitant selon la trajectoire démographique, la densité, la région, le type de desserte.
+Évolutions : indice base 100 en 2019 ; séparer avant Covid, choc 2020, reprise.
+Matrices de transition : quintiles de fréquentation 2015 → 2024 avec pd.crosstab(..., normalize="index") ; même exercice pour les classes de croissance démographique.
+Corrélations : Pearson et Spearman entre croissance démographique, fréquentation par habitant, motorisation, CO2 par habitant, niveau de vie, desserte. Corrélation n'est pas causalité, à écrire noir sur blanc.
+Bilan climat : ordre de grandeur des émissions évitées par le train, par région, comparé aux émissions du transport routier ; présenter comme une estimation avec ses hypothèses.
+Les oubliés du rail : part de la population et de la croissance démographique située loin d'une gare.
+Étape 4 : visualisations et cartographie
+C'est la dimension à approfondir, et le fil conducteur du rapport : la carte de France revient à chaque sous-question, enrichie d'une couche à chaque fois. Chaque visuel a un titre qui énonce la conclusion (« Le rail ne suit pas la croissance de l'Ouest »), des axes nommés, des unités, une légende et deux lignes de commentaire.
+4a. Cartes signatures, en couches superposées (geopandas + cartiflette pour les fonds, matplotlib pour les cartes statiques, folium ou plotly pour l'interactif)
+Carte
+Couche de fond
+Couches superposées
+Message visé
+1. La France qui grandit
+choroplèthe de la croissance démographique annuelle par commune ou EPCI, palette divergente (rouge = déclin, bleu = croissance)
+tracés du réseau ferré en gris fin
+où va la population
+2. Le rail suit-il ?
+même fond démographique, atténué
+bulles par gare : taille = voyageurs, couleur = évolution 2015-2024
+décalages entre croissance et fréquentation
+3. Carte bivariée
+palette 3 × 3 croisant croissance démographique et évolution de la fréquentation
+contours des régions, étiquettes des grandes villes
+les quatre profils de territoires en une seule image
+4. Empreinte climatique
+choroplèthe du CO2 transport par habitant
+lignes ferrées colorées selon le nombre de trains par jour ; points des gares
+où la voiture pèse le plus sur le climat
+5. Les oubliés du rail
+communes colorées par distance à la gare la plus proche
+zones tampons de 5 et 10 km autour des gares (buffer), semi-transparentes
+qui vit hors de portée du train
+6. Flux du quotidien
+fond clair (tuiles contextily ou fond départemental)
+flèches domicile-travail, épaisseur = volume, couleur = part de la voiture
+quelles navettes pourraient passer au rail
+7. Et demain ?
+choroplèthe de la population projetée 2050 (évolution en %)
+réseau actuel et gares
+où les besoins de desserte vont monter
+
+Les cartes 2 et 4 se prêtent bien à une version interactive : survol d'une gare pour afficher son nom, sa fréquentation et la croissance de sa commune, bascule des couches (folium.LayerControl).
+4b. Graphiques par sous-question
+Sous-question
+Graphique
+Outil
+Trajectoires démographiques
+barres empilées solde naturel / migratoire par région ; histogramme des taux de croissance
+plotnine ou seaborn
+Le rail suit-il ?
+nuage de points croissance démographique × croissance de la fréquentation, quadrants colorés, taille = voyageurs
+plotly.express
+Évolutions
+courbes base 100 par type de territoire ; « dumbbell » ou « slope chart » 2015 → 2024
+plotnine
+Gares qui montent ou décrochent
+heatmap de la matrice de transition
+seaborn.heatmap
+Distributions
+violons ou ridgeline par trajectoire démographique
+seaborn / joypy
+Climat
+barres horizontales des émissions évitées par région ; « waffle » de la part modale train vs voiture
+matplotlib, pywaffle
+Corrélations
+heatmap avec palette divergente centrée sur 0
+seaborn
+
+4c. Le temps qui passe : carte animée année par année (curseur animation_frame de plotly) ou petits multiples (une carte par année, même échelle de couleur), pour montrer le choc Covid et la reprise.
+Conseils couleur et lisibilité :
+Palette séquentielle (viridis, YlOrRd) pour une quantité, divergente (RdBu) pour une évolution positive / négative, et la même palette pour la même variable dans tout le rapport.
+Discrétiser les choroplèthes en classes (quantiles ou Jenks) plutôt qu'un dégradé continu.
+Une fonction plot_xxx() par type de graphique dans src/, pour un style homogène.
+Bonus apprécié mais non requis : une petite application Streamlit avec une carte filtrable par année et par région.
+4d. Bien superposer des couches
+Toutes les couches dans la même projection avant de les empiler (to_crs, Lambert 93 pour la France métropolitaine) ; DOM à part ou en encarts.
+Ordre fixe : fond choroplèthe en bas, lignes au milieu, points et étiquettes en haut (zorder dans matplotlib).
+Transparence (alpha) sur les bulles et les zones tampons pour voir le fond à travers ; bulles triées de la plus grande à la plus petite pour que les petites restent visibles.
+Une seule variable en couleur par carte (sauf carte bivariée, avec sa légende en carré 3 × 3) ; la deuxième variable passe par la taille ou l'épaisseur.
+Simplifier les géométries (simplify) pour que les cartes interactives restent légères.
+Étape 5 : analyse complémentaire légère (facultative)
+La modélisation n'est plus notée pour l'ENSAE : n'y allez que si elle renforce le descriptif, et restez simples.
+Typologie des communes : KMeans (scikit-learn) sur variables standardisées (densité, niveau de vie, motorisation, desserte), puis carte des groupes. Très visuel, et ça donne une variable de groupe pour les graphiques de l'étape 4.
+Régression simple : fréquentation par habitant expliquée par la desserte et la motorisation (statsmodels), lue comme une corrélation conditionnelle, pas comme un effet causal.
+Contrefactuel descriptif : comparer l'évolution de la fréquentation dans les gares dont la desserte a augmenté à celle des gares comparables dont elle n'a pas bougé. Prudence sur l'interprétation.
+Étape 6 : rendu final, rapport et soutenance (en aval)
+Condition éliminatoire : le notebook final doit tourner de la première à la dernière cellule sans erreur, depuis un environnement vierge.
+Le rapport (main.ipynb ou site Quarto)
+Introduction : contexte (place du train, enjeux climatiques, fermetures de petites lignes), problématique, plan.
+Données : sources, mode de collecte, nettoyage, choix et limites (taux de jointure, ruptures Covid).
+Analyse : une partie par sous-question, chaque graphique suivi de son interprétation.
+Conclusion : réponse à la problématique, limites, pistes.
+Le notebook importe les fonctions de src/ : peu de code visible, beaucoup de texte et de graphiques.
+Le dépôt GitHub
+README, à mettre à jour pour le rendu final : c'est la première page que lit le correcteur. Il doit contenir la problématique en deux phrases, les principaux résultats (une ou deux cartes en image), la structure du dépôt, l'installation (pip install -r requirements.txt ou uv), la commande pour lancer le notebook, l'emplacement et la source des données, les limites, et les noms des trois membres. Le créer dès la semaine 1 en version courte, puis le compléter à chaque version.
+Historique propre : commits de chacun, pull requests, issues fermées.
+Test final : un membre qui n'a pas écrit le code clone le dépôt sur un SSP Cloud neuf, suit uniquement le README et exécute tout.
+La soutenance (5 pts) : sélectionner 5 à 6 visuels forts, raconter l'histoire de la problématique, répartir la parole à trois, préparer les questions sur les limites et les choix de nettoyage. Chacun doit pouvoir expliquer tout le code : le vibe coding est interdit et l'usage de l'IA doit rester maîtrisé.
+
+Q7: Avion? 
+Les données disponibles
+La source principale est la DGAC, qui publie en open data le trafic aérien commercial mensuel depuis 1990, par aéroport, compagnie, liaison et paire d'aéroports, ainsi que des indices de prix et des émissions de CO2. Les fichiers sont des CSV réexploitables sans licence, sur data.gouv.fr. Les sources marquées « à vérifier » sont des pistes que je n'ai pas contrôlées en détail.
+Source
+Contenu
+Méthode d'accès
+Clé de jointure
+DGAC, série APT
+trafic mensuel de chaque aéroport français (passagers au départ, à l'arrivée, en transit)
+CSV par URL (data.gouv.fr)
+code OACI de l'aéroport (LFxx)
+DGAC, série PAP
+trafic mensuel par liaison entre deux aéroports depuis 1990
+CSV par URL
+paire de codes OACI
+DGAC, série LSN
+trafic par segment, faisceau et liaison par pays
+CSV par URL
+pays / faisceau
+DGAC, émissions nettes de CO2
+émissions annuelles depuis 2000, en tonnes et en g de CO2 par passager-km
+CSV par URL
+année, faisceau (dont intérieur)
+OurAirports (à vérifier)
+coordonnées, codes OACI et IATA de tous les aéroports
+CSV sur GitHub
+code OACI
+Eurostat, avia_par_fr (à vérifier)
+passagers par liaison, pour recouper la DGAC
+paquet eurostat (API)
+paire d'aéroports
+GTFS SNCF (déjà dans le plan)
+horaires, donc durée du trajet direct le plus rapide entre deux gares
+ZIP, stop_times
+identifiant de gare
+OpenSky Network (bonus, à vérifier)
+vols individuels, trajectoires
+API REST (requests)
+code OACI
+
+Points d'attention sur ces données :
+Secret statistique sur la série PAP : seules les liaisons avec au moins trois opérateurs, dont aucun ne dépasse 85 % du trafic, sont publiées. Les grandes liaisons intérieures sont bien couvertes, mais une partie des lignes en monopole manque. À signaler dans le rapport.
+Délai de publication : les données d'une année ne sont ouvertes que trois mois après la fin de son dernier mois.
+Seuil : les petits aérodromes (moins de 1 000 passagers par mois) sont regroupés en une ligne Métropole et une ligne Outre-mer.
+Comment rattacher l'avion au reste du projet
+Le lien se fait par la ville : un aéroport et une gare desservent la même agglomération.
+Aéroport → commune : placer chaque aéroport sur la carte avec ses coordonnées (OurAirports), puis sjoin avec les contours des communes. Les codes OACI français commencent par « LF ».
+Ville → gare principale : construire à la main une petite table de correspondance (une quinzaine de villes : Paris, Lyon, Marseille, Toulouse, Nice, Bordeaux, Nantes…), versionnée dans le dépôt et documentée. Attention aux villes à plusieurs aéroports ou plusieurs gares (Paris-CDG / Orly ; Gare de Lyon / Montparnasse…).
+Liaison aérienne → liaison ferroviaire : pour chaque paire d'aéroports, retrouver la paire de gares et la durée du train direct le plus rapide dans le GTFS.
+Avec les questions existantes : la population et la croissance démographique (Q1) des villes desservies, la fréquentation de leurs gares (Q2), le bilan climat (Q3).
+Fiche Q7 : le train face à l'avion
+Données : séries APT et PAP de la DGAC ; coordonnées des aéroports ; GTFS ; facteurs d'émission (DGAC pour l'avion, Base Carbone pour le train).
+Étapes :
+Calculer le trafic annuel de chaque aéroport (départs + arrivées) et comparer 2019 à la dernière année disponible.
+Garder les liaisons intérieures de la série PAP (les deux codes commencent par « LF ») et sortir le top 20.
+Calculer la distance entre les deux aéroports, en Lambert 93 (distance) ou avec la formule de haversine.
+Associer la durée du train direct le plus rapide et classer les liaisons : moins de 2h30, 2h30 à 4h, plus de 4h (ou pas de train direct).
+Estimer les émissions : passagers × distance × facteur d'émission, pour l'avion puis pour un trajet équivalent en train. Écrire les hypothèses.
+Étude de cas (bonus) : séries base 100 en 2019 du trafic aérien et de la fréquentation des gares sur Paris–Bordeaux, Paris–Nantes et Paris–Lyon.
+Chiffres à sortir : part des passagers aériens intérieurs sur des liaisons où le train fait moins de 4h ; ordre de grandeur du CO2 qui serait évité par un report vers le train.
+Carte : voir ci-dessous.
+Graphique : nuage de points distance × passagers par liaison (échelles log), couleur = classe de durée en train.
+Visualisations
+Carte 8. Les flux aériens intérieurs face au rail (même recette que les autres cartes, avec une couche de lignes en plus)
+Fond : contours des départements en gris clair, ou la carte de Q1 atténuée.
+Couche 1 : tracés du réseau ferré en gris fin.
+Couche 2 : un arc par liaison aérienne entre les deux aéroports ; épaisseur = passagers, couleur = durée en train (vert : moins de 2h30, orange : 2h30 à 4h, rouge : plus de 4h).
+Couche 3 : aéroports en bulles bleues (taille = passagers) et grandes gares en bulles orange, pour comparer les deux réseaux d'un coup d'œil.
+from shapely.geometry import LineString
+import geopandas as gpd
+ 
+# une ligne droite par liaison, entre les coordonnées des deux aéroports
+liaisons["geometry"] = [LineString([(x1, y1), (x2, y2)])
+                        for x1, y1, x2, y2 in zip(liaisons.lon1, liaisons.lat1,
+                                                  liaisons.lon2, liaisons.lat2)]
+arcs = gpd.GeoDataFrame(liaisons, crs=4326).to_crs(2154)
+ 
+couleurs = {"< 2h30": "green", "2h30 - 4h": "orange", "> 4h": "red"}
+arcs.plot(ax=ax, linewidth=arcs["passagers"] / 200_000,
+          color=arcs["classe_train"].map(couleurs), alpha=0.7)
+
+Version interactive : arcs.explore(m=m, column="classe_train"), avec le nom de la liaison et ses passagers au survol.
+Carte 9. Aéroports et gares côte à côte : deux cartes de même échelle (plt.subplots(1, 2)), bulles des aéroports à gauche, bulles des gares à droite. Elle montre que le rail irrigue tout le territoire alors que l'avion se concentre sur quelques pôles.
+Graphiques d'accompagnement
+Question
+Graphique
+Outil
+Quels aéroports ont retrouvé leur trafic d'avant Covid ?
+« dumbbell » 2019 → dernière année par aéroport
+plotnine / matplotlib
+La distance explique-t-elle le trafic ?
+nuage distance × passagers, couleur = durée en train
+plotly.express
+Combien de CO2 en jeu ?
+barres horizontales par liaison : émissions avion vs équivalent train
+seaborn
+Les liaisons interdites
+courbes base 100 trafic aérien et fréquentation des gares
+plotnine
+Évolution d'ensemble
+courbe mensuelle des passagers intérieurs avec moyenne sur 12 mois
+pandas + matplotlib
+
+Limites à écrire dans le rapport
+Correspondances : une partie des passagers sur les vols intérieurs vers Paris-CDG continuent vers l'international ; le train ne les remplace pas forcément. La loi exclut d'ailleurs les vols en correspondance.
+Covid et décisions antérieures : les liaisons Orly–Bordeaux, Nantes et Lyon avaient déjà été abandonnées par Air France en 2020, en contrepartie d'un soutien financier. Comparer avant et après 2023 ne mesure donc pas l'effet du seul décret.
+Facteurs d'émission : ce sont des moyennes, à présenter comme des ordres de grandeur avec leurs hypothèses.
+Corrélation n'est pas causalité : une baisse du trafic aérien peut venir des prix, de la conjoncture ou de l'offre des compagnies, pas seulement du train.
+Sources
+Trafic aérien commercial mensuel français – DGAC, data.gouv.fr : description des séries APT, LSN, PAP et CIE.
+Bulletin statistique trafic aérien commercial 2025 – DGAC : méthode et accès aux données ouvertes.
+Exemples d'exploitation des données DGAC (F. Geerolf) : séries, secret statistique de la série PAP, émissions de CO2.
+Suppression des vols intérieurs de courte durée : le décret est paru – Banque des Territoires : critères du décret n° 2023-385 et liaisons concernées.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rail (SNCF)
+Fréquentation en gares : https://www.data.gouv.fr/datasets/frequentation-en-gares. Ce jeu couvre la fréquentation annuelle de l’ensemble des 3000 gares voyageurs de 2015 à 2024. data
+Liste des gares (coordonnées, code commune, code UIC) : https://ressources.data.sncf.com/explore/dataset/gares-de-voyageurs/ (copie sur data.gouv : https://www.data.gouv.fr/datasets/gares-de-voyageurs-1). C’est le jeu à utiliser : l’ancien référentiel des gares va être supprimé de la plateforme SNCF OPENDATA. data
+Horaires SNCF (GTFS, pour la desserte et les durées de trajet) : https://transport.data.gouv.fr/datasets/horaires-sncf. Les anciens jeux TER, TGV et Intercités séparés sont maintenant fusionnés au niveau national dans celui-ci. data
+Tracés du réseau ferré : https://www.data.gouv.fr/datasets/fichier-de-formes-des-lignes-du-reseau-ferre-national. Le fichier reprend l’ensemble des lignes du réseau ferré national, avec leur statut (exploitée, fermée…). data
+Lignes par statut (version tableau) : https://www.data.gouv.fr/datasets/lignes-par-statut
+Population, revenus, territoires (INSEE)
+Séries historiques du recensement (millésime 2023) : https://www.insee.fr/fr/statistiques/9003931. Les indicateurs sont disponibles pour 1968, 1975, 1982, 1990, 1999, 2007, 2012, 2017 et 2023. Le plan mentionnait 2010 et 2021 : prenez plutôt deux dates de cette série. insee
+Filosofi (niveau de vie médian, pauvreté par commune) : https://www.insee.fr/fr/statistiques/7756729. Le millésime 2021 de Filosofi est le dernier disponible. insee
+Grille communale de densité : https://www.insee.fr/fr/information/8571524. La grille de densité 2025 remplace la précédente, qui datait de 2022. insee
+Projections de population Omphale (départements, horizon 2070) : https://www.insee.fr/fr/statistiques/6652134 (tableaux détaillés : https://www.insee.fr/fr/statistiques/7747107).
+Mobilités professionnelles (fichier détail domicile-travail) : https://www.insee.fr/fr/statistiques/8589904. Le fichier est disponible au format Parquet (.parquet) ou Csv (.csv). Un millésime 2023 existe aussi dans la liste des fichiers détail. insee
+Flux domicile-travail agrégés par commune (plus léger) : https://www.insee.fr/fr/statistiques/8582949
+Catalogue de données et API Melodi : https://catalogue-donnees.insee.fr/fr/catalogue/recherche, documentation de l’API sur https://portail-api.insee.fr/catalog/api/a890b735-159c-4c91-90b7-35159c7c9126/doc
+Package pynsee : https://pynsee.readthedocs.io/ (code : https://github.com/InseeFrLab/pynsee)
+Voiture et climat: Eléonore 
+Parc automobile par commune (SDES) : https://www.data.gouv.fr/datasets/parc-de-vehicules-routiers. 
+
+Il donne le parc au 1er janvier de chaque année depuis 2011 jusqu’à 2026, par motorisation et vignette Crit’Air. Page méthodologique : https://www.statistiques.developpement-durable.gouv.fr/donnees-sur-le-parc-automobile-francais-au-1er-janvier-2026 data
+Base Carbone de l’ADEME (facteurs d’émission) : https://www.data.gouv.fr/datasets/base-carbone-r-2, API : https://www.data.gouv.fr/dataservices/base-carbone-r
+Émissions de GES par commune (inventaire territorialisé du Citepa) : rapport méthodologique sur https://www.citepa.org/wp-content/uploads/2025/06/Rapport-IGT_ed2023-d.pdf. Vérifiez sur le site du Citepa comment télécharger les données communales.
+Qualité de l’air, Geod’air : https://www.geodair.fr/. API Atmo Data des associations régionales : https://admindata.atmo-france.org/api/doc
+Fonds de carte
+cartiflette : https://github.com/InseeFrLab/cartiflette. Le chapitre géographie du cours précise qu’il est expérimental et s’installe depuis GitHub. github 
+
+Oui, c'est possible. cartiflette ne fait que télécharger et préparer pour vous les contours officiels de l'IGN. Si vous partez des fichiers bruts, vous choisissez vous-mêmes le millésime, le niveau de détail et les DROM, et vous voyez exactement ce qui est fait. Voici les sources, de la plus « officielle » à la plus « à partir de zéro ».
+1. Les contours officiels, en direct
+IGN Admin Express, la source que cartiflette utilise en arrière-plan : https://www.data.gouv.fr/datasets/admin-express/ (catalogue IGN : https://geoservices.ign.fr/adminexpress). Elle contient les chefs-lieux, les communes, les communes associées ou déléguées (anciennes communes avant fusion), les EPCI, les cantons, les arrondissements départementaux, les départements et les régions. Les versions COG prennent en compte le COG (Code Officiel Géographique) de l'INSEE, ce qui garantit que vos codes communes collent avec ceux de l'INSEE. C'est la version à prendre pour vos jointures.
+Contours administratifs d'Etalab, en GeoJSON : https://www.data.gouv.fr/datasets/contours-administratifs. Ce jeu est disponible au format GeoJSON et GeoJSON compressé, avec plusieurs niveaux de simplification. Si vous avez des besoins avec peu de précision (déterminer des points dans des contours, etc.), il est possible d'utiliser des données fortement généralisées (légères, rapides à télécharger et à afficher dans une interface web).
+france-geojson, le plus simple pour démarrer : https://github.com/gregoiredavid/france-geojson. Les fichiers proviennent d'une conversion des tracés depuis le format SHP fourni par l'IGN vers le format GeoJSON et ont été simplifiés. Ils sont parfaits pour une carte par département, mais leur millésime peut être ancien.
+2. Partir de la latitude et de la longitude
+API Découpage administratif (geo.api.gouv.fr) : c'est exactement votre besoin. Elle permet de rechercher par coordonnées : https://geo.api.gouv.fr/communes?lat=47.0482944&lon=-1.1501568. Avec les bons paramètres, elle renvoie le centre ou le contour de la commune, par exemple https://geo.api.gouv.fr/communes?lat=47.0482944&lon=-1.1501568&format=geojson&geometry=contour. Pratique pour rattacher une gare ou un aéroport à sa commune. Deux limites : elle utilise exclusivement des coordonnées géographiques WGS-84 et elle est disponible à hauteur de 50 appels par seconde et par adresse IP. Mettez donc une petite pause dans votre boucle. Documentation : https://geo.api.gouv.fr/decoupage-administratif/communes
+Vos propres points, sans aucun fond : avec gpd.points_from_xy(lon, lat), vous transformez n'importe quelle table de coordonnées (gares, aéroports) en couche cartographique. Vous ajoutez ensuite le fond de votre choix.
+3. Un fond de carte « réel » derrière vos données
+contextily : https://github.com/geopandas/contextily. Il permet de récupérer des tuiles de carte depuis internet et de les ajouter comme fond aux figures matplotlib, par exemple OpenStreetMap ou CartoDB. Point important : convertir les données en EPSG:3857 avant d'ajouter le fond de carte est indispensable pour un bon alignement. Gardez Lambert 93 (2154) pour les cartes sans tuiles et passez en 3857 pour celles qui en ont.
+4. Dessiner le réseau vous-mêmes depuis OpenStreetMap
+OSMnx : avec ox.features_from_place("France", tags={"railway": ["rail", "station"]}), vous récupérez les voies et les gares d'OpenStreetMap sous forme de GeoDataFrame. À l'échelle de la France entière, la requête est lourde : travaillez région par région ou avec le fichier de formes SNCF déjà listé. Les tags à utiliser sont décrits ici : https://wiki.openstreetmap.org/wiki/Subway_station
+Voici un squelette « à partir de zéro », sans cartiflette. Je ne l'ai pas exécuté : adaptez le chemin du fichier et les noms de colonnes.
+import geopandas as gpd
+import contextily as cx
+import matplotlib.pyplot as plt
+
+# contours téléchargés depuis l'une des sources ci-dessus
+deps = gpd.read_file("departements.geojson")
+
+# vos gares, à partir de leurs coordonnées
+gares = gpd.GeoDataFrame(df_gares,
+                         geometry=gpd.points_from_xy(df_gares["lon"], df_gares["lat"]),
+                         crs=4326)
+
+# même projection que les tuiles web
+deps, gares = deps.to_crs(3857), gares.to_crs(3857)
+
+fig, ax = plt.subplots(figsize=(10, 10))
+deps.plot(ax=ax, facecolor="none", edgecolor="grey", linewidth=0.5)
+gares.plot(ax=ax, color="crimson", markersize=5, alpha=0.7)
+cx.add_basemap(ax, source=cx.providers.CartoDB.Positron)
+ax.set_axis_off()
+Pour le projet, je vous conseille Admin Express COG pour les jointures et les choroplèthes, l'API Découpage administratif pour rattacher des points à leur commune, et contextily pour le fond. Si vous voulez, j'ajoute cette alternative dans la recette de base des cartes du plan.
+
+LES DIFFERENTES BASES A UTILISER (SI POSSIBLE TU PEUX UTILISER D’AUTRES POUR ENRICHIR)
+
+Avion (volet complémentaire)
+Trafic aérien commercial mensuel de la DGAC (séries APT, PAP, LSN, CIE) : https://www.data.gouv.fr/datasets/64808a5811da153f1439914c
+Série PAP, liaisons entre aéroports : https://www.data.gouv.fr/fr/datasets/trafic-aerien-commercial-mensuel-francais-par-paire-daeroports-par-sens-depuis-1990/
+Émissions de CO2 du trafic aérien : jeu publié par la DGAC sur data.gouv.fr. Je n’ai pas trouvé son lien direct ; cherchez « Émissions nettes de CO2 du trafic aérien » dans l’organisation DGAC. Présentation et exemples sur https://fgeerolf.com/data/dgac/
+Bulletin statistique DGAC 2025 (méthode) : https://www.ecologie.gouv.fr/sites/default/files/documents/Bulletin_Statistiques_transport_aerien_2025.pdf
+OurAirports (coordonnées et codes des aéroports) : https://ourairports.com/data/, fichier direct : https://davidmegginson.github.io/ourairports-data/airports.csv
+Eurostat, liaisons des aéroports français (code avia_par_fr) : à chercher avec ce code dans le databrowser https://ec.europa.eu/eurostat/databrowser/. Métadonnées France : https://ec.europa.eu/eurostat/cache/metadata/EN/avia_pa_esms_fr.htm
+OpenSky Network : https://opensky-network.org, documentation de l’API : https://opensky-network.org/apidoc/. L’accès à l’historique nécessite une authentification. pypi
+Décret 2023-385 sur les vols intérieurs : https://www.banquedesterritoires.fr/suppression-des-vols-interieurs-de-courte-duree-le-decret-est-paru

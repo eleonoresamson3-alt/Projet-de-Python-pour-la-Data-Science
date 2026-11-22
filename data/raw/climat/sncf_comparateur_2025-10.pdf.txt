@@ -1,0 +1,127 @@
+COMPARATEUR CARBONE
+DES TRANSPORTS
+Prendre le train en France,  
+c’est réduire de 90 % en moyenne le CO2e émis
+pour un trajet équivalent par la route ou par les airs*
+Émissions d’un voyageur parcourant un kilomètre  en France  
+en prenant en compte l’impact de l’usage,  de la fabrication et de la maintenance.
+*La valeur relative au train agrège la mobilité longue distance (TGV et INTERCITÉS), la mobilité moyenne distance régionale (TER) et la mobilité en Île-de-France (Transilien), sur la 
+base des consommations d’énergie de chacun, du taux d’occupation moyen annuel de chacun et de la répartition des kilomètres parcourus par un voyageur.
+Comparaison moyenne sur l’ensemble des trajets réalisés en France selon leur distance.
+Voiture : taux d’occupation de 1,6 passagers pour les courtes et moyennes distances en France, définis par l’ADEME.
+Mix voiture : voiture thermique et voiture électrique.
+Pour modes de transports SNCF, valeurs 2024 pour partie usage, fabrication et maintenance (les émissions liées à la maintenance incluent uniquement les consommations d’énergie 
+utilisées pour la maintenance de nos trains).
+Pour autres modes de transports, valeurs Base Empreinte ADEME pour partie usage et fabrication et valeurs Étude Carbone 4/SNCF pour partie maintenance.
+T otal
+Lyria 4g 3g 0,6g 0,4g
+Intercités 6,7g 5,1g 0,3g 1,3g
+Usage Fabrication Maintenance
+3,5gTGV France 2,5g 0,6g 0,4g
+9,9gTGVItalie 8,9g 0,6g 0,4g
+5,3gTGVEspagne 4,3g 0,6g 0,4g
+9,1gDB& SNCF 8,1g 0,6g 0,4g
+6,8gEurostarGroup 5,8g 0,6g 0,4g
+Transilien 12,3g 6,3g 4,9g 1,1g
+TER 23,8g 19,4g 3,2g 1,2g
+OUIGO
+Espagne 11,7g 10,7g 0,6g 0,4g
+T otal Usage Fabrication Maintenance
+Transilien 12,3g 6,3g 4,9g 1,1g
+TER 23,8g 19,4g 3,2g 1,2g
+T otal Usage Fabrication Maintenance
+TGV 3,5g 2,5g 0,6g 0,4g
+Voiture
+électrique 97g 12g 84g 1g Voiture 89g 58g 29g 2g
+Voiture 
+thermique 112g 84g 26g 2g 125gAvion 123g 0,4g 2g
+ Autocar 38g 33g 2g 3g Autocar 89g 84g 2g 3g
+Intercités 6,7g 5,1g 0,3g 1,3g
+Longue distanceProximité
+Transporteurs ferroviaires
+T otal
+Lyria 4g 3g 0,6g 0,4g
+Intercités 6,7g 5,1g 0,3g 1,3g
+Usage Fabrication Maintenance
+3,5gTGV France 2,5g 0,6g 0,4g
+9,9gTGVItalie 8,9g 0,6g 0,4g
+5,3gTGVEspagne 4,3g 0,6g 0,4g
+9,1gDB& SNCF 8,1g 0,6g 0,4g
+6,8gEurostarGroup 5,8g 0,6g 0,4g
+Transilien 12,3g 6,3g 4,9g 1,1g
+TER 23,8g 19,4g 3,2g 1,2g
+OUIGO
+Espagne 11,7g 10,7g 0,6g 0,4g
+T otal Usage Fabrication Maintenance
+Transilien 12,3g 6,3g 4,9g 1,1g
+TER 23,8g 19,4g 3,2g 1,2g
+T otal Usage Fabrication Maintenance
+TGV 3,5g 2,5g 0,6g 0,4g
+Voiture
+électrique 97g 12g 84g 1g Voiture 89g 58g 29g 2g
+Voiture 
+thermique 112g 84g 26g 2g 125gAvion 123g 0,4g 2g
+ Autocar 38g 33g 2g 3g Autocar 89g 84g 2g 3g
+Intercités 6,7g 5,1g 0,3g 1,3g
+Longue distanceProximité
+Transporteurs ferroviaires
+T otal
+Lyria 4g 3g 0,6g 0,4g
+Intercités 6,7g 5,1g 0,3g 1,3g
+Usage Fabrication Maintenance
+3,5gTGV France 2,5g 0,6g 0,4g
+9,9gTGVItalie 8,9g 0,6g 0,4g
+5,3gTGVEspagne 4,3g 0,6g 0,4g
+9,1gDB& SNCF 8,1g 0,6g 0,4g
+6,8gEurostarGroup 5,8g 0,6g 0,4g
+Transilien 12,3g 6,3g 4,9g 1,1g
+TER 23,8g 19,4g 3,2g 1,2g
+OUIGO
+Espagne 11,7g 10,7g 0,6g 0,4g
+T otal Usage Fabrication Maintenance
+Transilien 12,3g 6,3g 4,9g 1,1g
+TER 23,8g 19,4g 3,2g 1,2g
+T otal Usage Fabrication Maintenance
+TGV 3,5g 2,5g 0,6g 0,4g
+Voiture
+électrique 97g 12g 84g 1g Voiture 89g 58g 29g 2g
+Voiture 
+thermique 112g 84g 26g 2g 125gAvion 123g 0,4g 2g
+ Autocar 38g 33g 2g 3g Autocar 89g 84g 2g 3g
+Intercités 6,7g 5,1g 0,3g 1,3g
+Longue distanceProximité
+Transporteurs ferroviaires
+T otal
+Lyria 4g 3g 0,6g 0,4g
+Intercités 6,7g 5,1g 0,3g 1,3g
+Usage Fabrication Maintenance
+3,5gTGV France 2,5g 0,6g 0,4g
+9,9gTGVItalie 8,9g 0,6g 0,4g
+5,3gTGVEspagne 4,3g 0,6g 0,4g
+9,1gDB& SNCF 8,1g 0,6g 0,4g
+6,8gEurostarGroup 5,8g 0,6g 0,4g
+Transilien 12,3g 6,3g 4,9g 1,1g
+TER 23,8g 19,4g 3,2g 1,2g
+OUIGO
+Espagne 11,7g 10,7g 0,6g 0,4g
+T otal Usage Fabrication Maintenance
+Transilien 12,3g 6,3g 4,9g 1,1g
+TER 23,8g 19,4g 3,2g 1,2g
+T otal Usage Fabrication Maintenance
+TGV 3,5g 2,5g 0,6g 0,4g
+Voiture
+électrique 97g 12g 84g 1g Voiture 89g 58g 29g 2g
+Voiture 
+thermique 112g 84g 26g 2g 125gAvion 123g 0,4g 2g
+ Autocar 38g 33g 2g 3g Autocar 89g 84g 2g 3g
+Intercités 6,7g 5,1g 0,3g 1,3g
+Longue distanceProximité
+Transporteurs ferroviaires
+Train 
+en moyenne 8,3g 6g 1,6g 0,7g
+Longue distance
+Courte et moyenne distances
+Total Usage Fabrication Maintenance
+Total Usage Fabrication Maintenance
+Total Usage Fabrication Maintenance
+Total Usage Fabrication Maintenance

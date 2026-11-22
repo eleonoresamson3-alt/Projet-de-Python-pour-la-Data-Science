@@ -1,0 +1,7 @@
+id_mode_ademe,mode,kgco2e_par_voyageur_km,gco2e_par_voyageur_km,perimetre,date_collecte
+2,TGV,0.00293,2.9299999999999997,API Impact CO2 includeConstruction=1; taux voiture=1 occupant; parametres archives,2026-10-26T15:18:14.407593+00:00
+3,Intercités,0.00898,8.98,API Impact CO2 includeConstruction=1; taux voiture=1 occupant; parametres archives,2026-10-26T15:18:14.407593+00:00
+4,Voiture thermique,0.14225341222954335,142.25341222954336,API Impact CO2 includeConstruction=1; taux voiture=1 occupant; parametres archives,2026-10-26T15:18:14.407593+00:00
+5,Voiture électrique,0.06736526222954337,67.36526222954336,API Impact CO2 includeConstruction=1; taux voiture=1 occupant; parametres archives,2026-10-26T15:18:14.407593+00:00
+14,RER ou Transilien,0.00978,9.780000000000001,API Impact CO2 includeConstruction=1; taux voiture=1 occupant; parametres archives,2026-10-26T15:18:14.407593+00:00
+15,TER,0.02769,27.689999999999998,API Impact CO2 includeConstruction=1; taux voiture=1 occupant; parametres archives,2026-10-26T15:18:14.407593+00:00
