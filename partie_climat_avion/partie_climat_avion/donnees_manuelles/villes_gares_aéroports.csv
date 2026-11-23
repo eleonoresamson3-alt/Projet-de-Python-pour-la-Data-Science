@@ -1,0 +1,36 @@
+ville;type;code;nom
+Paris;aeroport;LFPG;Paris-Charles de Gaulle
+Paris;aeroport;LFPO;Paris-Orly
+Paris;gare;87686006;Paris Gare de Lyon
+Paris;gare;87686667;Paris Bercy
+Paris;gare;87547000;Paris Austerlitz
+Paris;gare;87391003;Paris Montparnasse
+Paris;gare;87271007;Paris Gare du Nord
+Paris;gare;87113001;Paris Est
+Paris;gare;87384008;Paris Saint-Lazare
+Toulouse;aeroport;LFBO;Toulouse-Blagnac
+Toulouse;gare;87611004;Toulouse Matabiau
+Nice;aeroport;LFMN;Nice-Côte d'Azur
+Nice;gare;87756056;Nice-Ville
+Marseille;aeroport;LFML;Marseille-Provence
+Marseille;gare;87751008;Marseille Saint-Charles
+Lyon;aeroport;LFLL;Lyon-Saint-Exupéry
+Lyon;gare;87723197;Lyon Part-Dieu
+Nantes;aeroport;LFRS;Nantes-Atlantique
+Nantes;gare;87481002;Nantes
+Bordeaux;aeroport;LFBD;Bordeaux-Mérignac
+Bordeaux;gare;87581009;Bordeaux Saint-Jean
+Montpellier;aeroport;LFMT;Montpellier-Méditerranée
+Montpellier;gare;87773002;Montpellier Saint-Roch
+Montpellier;gare;87688887;Montpellier Sud de France
+Lille;aeroport;LFQQ;Lille-Lesquin
+Lille;gare;87286005;Lille Flandres
+Lille;gare;87223263;Lille Europe
+Rennes;aeroport;LFRN;Rennes-Saint-Jacques
+Rennes;gare;87471003;Rennes
+Strasbourg;aeroport;LFST;Strasbourg-Entzheim
+Strasbourg;gare;87212027;Strasbourg
+Mulhouse;aeroport;LFSB;Bâle-Mulhouse
+Mulhouse;gare;87182063;Mulhouse
+Ajaccio;aeroport;LFKJ;Ajaccio-Napoléon-Bonaparte
+Bastia;aeroport;LFKB;Bastia-Poretta

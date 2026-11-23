@@ -1,0 +1,78 @@
+# Paramètres du projet. Toute valeur non vérifiée est notée A_VERIFIER.
+
+# période principale : les deux dernières dates des séries historiques INSEE 2023
+# (Tamsir utilise 2016-2022 : écart d'un an à signaler dans le rapport)
+annee_debut: 2017
+annee_fin: 2023
+
+# horizon des projections de population (Q6)
+annee_projection: 2050
+
+# avion : année de référence avant Covid et dernière année complète publiée par la DGAC
+annees_avion: [2019, 2025]
+# classes de durée du train le plus rapide (minutes) : 2h30 et 4h (loi Climat et résilience : 2h30)
+seuils_duree_train_min: [150, 240]
+# dernière année publiée pour les émissions unitaires de l'avion (DGAC)
+annee_emissions_avion: 2024
+
+# millésime du COG
+annee_cog: 2025
+
+# en dessous de ce nombre d'actifs, la part modale tirée du fichier détail est jugée imprécise
+# (choix fondé sur le contrôle avec Tamsir : écart médian de 1,2 point entre 1 000 et 5 000 actifs)
+actifs_min_fiable: 1000
+# hypothèse : un aller-retour domicile-travail par jour travaillé
+trajets_par_jour: 2
+# typologie en 4 profils (Q3) : seuils choisis par nous
+seuil_tcam_croissance: 0      # TCAM > 0 % par an = commune en croissance (même choix que Tamsir)
+seuil_distance_gare_km: 10    # centre à 10 km ou moins d'une gare = commune desservie
+# Lambert 93
+crs: 2154
+
+dossiers:
+  brut: data/raw
+  propre: data/clean
+  figures: figures
+
+# remplies pendant la phase 1 (collecte), après vérification de chaque lien
+urls:
+  # SNCF, jeu « Gares de voyageurs » (ressources.data.sncf.com), licence ODbL
+  gares: https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/gares-de-voyageurs/exports/geojson
+  # SNCF Réseau, jeu « Lignes par statut » (tracés + statut), licence ODbL, mis à jour en 2022
+  lignes: https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/lignes-par-statut/exports/geojson
+  # INSEE, Mobilités professionnelles 2022, fichier détail (insee.fr/fr/statistiques/8589904)
+  mobpro: https://www.insee.fr/fr/statistiques/fichier/8589904/RP2022_mobpro.parquet
+  # INSEE, Séries historiques en 2023 (insee.fr/fr/statistiques/9003931), géographie COG 2025
+  population: https://www.insee.fr/fr/statistiques/fichier/9003931/DS_RP_SERIE_HISTORIQUE_2023.parquet
+  # INSEE, Projections de population Omphale 2022, scénario central (insee.fr/fr/statistiques/6652134)
+  projections: https://www.insee.fr/fr/statistiques/fichier/6652134/projections_scenario_central.xlsx
+  # SDES, Parc de véhicules au niveau communal, API DiDo (data.gouv : parc-de-vehicules-routiers), Licence Ouverte
+  parc_auto: https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/datafiles/1582861b-e042-4490-9161-6429d8229703/csv
+  # DGAC, Trafic aérien commercial mensuel, série PAP (paires d'aéroports), data.gouv.fr, Licence Ouverte v2
+  dgac_pap: https://static.data.gouv.fr/resources/trafic-aerien-commercial-mensuel-francais-par-paire-daeroports-par-sens-depuis-1990/20260903-120658/asp-pap-1990-2025.zip
+  # DGAC, même jeu, série APT (trafic par aéroport)
+  dgac_apt: https://static.data.gouv.fr/resources/trafic-aerien-commercial-mensuel-francais-par-paire-daeroports-par-sens-depuis-1990/20260731-122942/asp-apt-1990-2025.zip
+  # DGAC, même jeu, série LSN (trafic par faisceau, dont les vols intérieurs à la métropole)
+  dgac_lsn: https://static.data.gouv.fr/resources/trafic-aerien-commercial-mensuel-francais-par-paire-daeroports-par-sens-depuis-1990/20260731-113311/asp-lsn-1990-2025.zip
+  # DGAC, Émissions nettes annuelles de CO2 du trafic aérien, en g CO2 par passager équivalent.km (data.gouv.fr)
+  dgac_emissions: https://static.data.gouv.fr/resources/emissions-nettes-annuelles-de-co2-du-trafic-aerien-commercial-en-france/20251119-135435/emi-uni-2000-2024.csv
+  # OurAirports, référentiel des aéroports (ourairports.com/data), domaine public
+  ourairports: https://davidmegginson.github.io/ourairports-data/airports.csv
+  # SNCF, GTFS national TGV, Intercités, TER (transport.data.gouv.fr : horaires-sncf), offre en cours seulement
+  gtfs_sncf: https://eu.ftp.opendatasoft.com/sncf/plandata/Export_OpenData_SNCF_GTFS_NewTripId.zip
+  # ADEME, Base Carbone, API data-fair (data.ademe.fr), Licence Ouverte
+  base_carbone: https://data.ademe.fr/data-fair/api/v1/datasets/base-carboner/lines
+
+# table faite à la main : codes OACI des aéroports et codes UIC des gares principales par ville
+# (vérifiés dans la DGAC, le référentiel des gares SNCF et le GTFS)
+table_villes: donnees_manuelles/villes_gares_aeroports.csv
+
+# table finale de Tamsir (copiée à la main, sert seulement de contrôle de cohérence)
+table_tamsir: data/raw/tamsir/dataset_final_communes.csv
+
+# identifiants Base Carbone des facteurs d'émission utilisés (vérifiés le 22/11/2026)
+facteurs_base_carbone:
+  voiture: "43791"     # Voiture, motorisation moyenne, 2023 : kgCO2e par km (par véhicule)
+  ter: "43255"         # TER 2022, traction moyenne : kgCO2e par passager.km
+  intercites: "43272"  # Intercités 2022 : kgCO2e par passager.km
+  tgv: "43256"         # TGV 2022 : kgCO2e par passager.km
